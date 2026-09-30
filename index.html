@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ליל שבת ויומה · הלכות שבת</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* מ-build/portal_template.html — רצף ויזואלי עם הפורטל */
+  --ink:#151A21; --ink-2:#4C5768; --ink-3:#8B95A5;
+  --line:#E4E8ED; --line-2:#F1F4F7; --bg:#FAFBFC; --panel:#fff;
+  --day:#4F7396; --day-lt:#EDF3F8;
+  --topic:#5C6B5A; --topic-lt:#EFF3EE;
+  --moss:#2F6B4F; --moss-lt:#E9F4EE;
+  --rust:#A63D2F; --rust-lt:#FBEDEB;
+  --brass:#A8791C; --brass-lt:#FDF6E5;
+  --r:8px;
+  --serif:"Frank Ruhl Libre","David",Georgia,"Times New Roman",serif;
+  --sans:"Segoe UI","Arial Hebrew",Arial,system-ui,sans-serif;
+}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:56px 20px 88px}
+
+header{margin-bottom:44px}
+.eyebrow{font-size:11px;letter-spacing:.11em;color:var(--ink-3);margin-bottom:10px}
+h1{font-family:var(--serif);font-size:27px;font-weight:700;letter-spacing:-.01em}
+.meta{font-size:13.5px;color:var(--ink-3);margin-top:5px}
+.purpose{font-size:15px;color:var(--ink-2);margin-top:18px;max-width:56ch}
+
+.wk{border-top:1px solid var(--line)}
+.wk:last-of-type{border-bottom:1px solid var(--line)}
+.wk h2{font:inherit}
+.tog{width:100%;display:grid;grid-template-columns:1fr auto;gap:14px;
+  align-items:start;padding:22px 2px;background:none;border:0;font:inherit;
+  color:inherit;text-align:right;cursor:pointer}
+.tog:hover .axis{color:var(--day)}
+.tog:focus-visible{outline:2px solid var(--day);outline-offset:3px;border-radius:4px}
+.num{font-size:11px;letter-spacing:.09em;color:var(--ink-3);display:block;margin-bottom:5px}
+.axis{font-family:var(--serif);font-size:19px;font-weight:700;line-height:1.35;
+  display:block;transition:color .15s}
+.simline{display:block;font-size:13.5px;color:var(--ink-2);margin-top:7px}
+.chev{width:11px;height:11px;border-right:1.5px solid var(--ink-3);
+  border-bottom:1.5px solid var(--ink-3);transform:rotate(45deg);
+  margin-top:12px;transition:transform .18s}
+.tog[aria-expanded="true"] .chev{transform:rotate(-135deg);margin-top:17px}
+
+.panel{padding:0 2px 34px}
+.sec{margin-top:26px}
+.sec:first-child{margin-top:0}
+.sech{font-size:11px;letter-spacing:.11em;color:var(--ink-3);
+  padding-bottom:8px;border-bottom:1px solid var(--line-2);margin-bottom:14px}
+
+.sim{display:flex;gap:11px;align-items:baseline;padding:7px 0}
+.sim b{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--day);
+  min-width:3.6em;flex-shrink:0}
+.sim .t{font-size:14.5px}
+.sim .sf{font-size:12.5px;color:var(--ink-2);background:var(--day-lt);
+  padding:1px 7px;border-radius:4px;white-space:nowrap}
+.sim .all{font-size:12px;color:var(--ink-3)}
+
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:13px;color:var(--ink-2);background:var(--topic-lt);
+  padding:4px 10px;border-radius:4px}
+
+/* המחלוקות — לב העמוד */
+.mach{border-right:2px solid var(--day);padding:2px 16px 2px;margin-bottom:26px}
+.mach:last-child{margin-bottom:0}
+.mq{font-family:var(--serif);font-size:17.5px;font-weight:700;line-height:1.45}
+.lyh{font-size:10.5px;letter-spacing:.09em;color:var(--ink-3);margin:15px 0 3px}
+.layers{list-style:none;counter-reset:l;margin:0}
+.layers li{font-size:14px;color:var(--ink-2);padding:6px 26px 6px 0;position:relative;
+  counter-increment:l}
+.layers li::before{content:counter(l);position:absolute;right:0;top:7px;width:17px;
+  height:17px;border-radius:50%;background:var(--line-2);color:var(--ink-3);
+  font-size:10.5px;line-height:17px;text-align:center}
+.layers li::after{content:"";position:absolute;right:8px;top:26px;bottom:-2px;
+  width:1px;background:var(--line)}
+.layers li:last-child::after{display:none}
+.sides{list-style:none;margin:13px 0 0}
+.sides li{font-size:14.5px;color:var(--ink-2);padding:5px 15px;position:relative}
+.sides li::before{content:"";position:absolute;right:2px;top:14px;
+  width:5px;height:5px;border-radius:50%;background:var(--ink-3)}
+.nosides{font-size:13px;color:var(--ink-3);margin-top:11px;font-style:italic}
+.nafka{margin-top:14px;background:var(--moss-lt);border-radius:var(--r);padding:11px 14px}
+.nafka span{font-size:10.5px;letter-spacing:.09em;color:var(--moss);display:block;
+  margin-bottom:4px}
+.nafka p{font-size:14px;color:var(--ink-2)}
+.mnote{font-size:13.5px;color:var(--ink-2);margin-top:12px;padding-right:13px;
+  border-right:1px solid var(--line)}
+.tag{display:inline-block;font-size:10.5px;letter-spacing:.05em;padding:2px 8px;
+  border-radius:20px;margin-right:9px;vertical-align:middle;white-space:nowrap}
+.tag.v{background:var(--moss-lt);color:var(--moss)}
+.tag.d{background:var(--brass-lt);color:var(--brass)}
+.warn{margin-top:12px;background:var(--rust-lt);border-radius:var(--r);padding:10px 13px;
+  font-size:13px;color:var(--ink-2)}
+.warn span{color:var(--rust);font-size:10.5px;letter-spacing:.09em;display:block;
+  margin-bottom:3px}
+
+.lm{list-style:none}
+.lm li{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+  padding:8px 0;border-top:1px solid var(--line-2)}
+.lm li:first-child{border-top:0}
+.lm b{font-size:14.5px;font-weight:600}
+.lm em{font-style:normal;font-size:11.5px;color:var(--ink-3)}
+.lm .ref{margin-right:auto;font-size:13px;color:var(--ink-2);
+  background:var(--brass-lt);padding:2px 9px;border-radius:4px}
+.lm .noref{margin-right:auto;font-size:12px;color:var(--ink-3)}
+.wnote{font-size:13.5px;color:var(--ink-2);background:var(--line-2);
+  border-radius:var(--r);padding:13px 16px;line-height:1.7}
+.tr{margin-bottom:18px}
+.tr:last-child{margin-bottom:0}
+.trh{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;
+  padding-right:9px;border-right:2px solid var(--day)}
+.tr.iyun .trh{border-right-color:var(--topic)}
+.trh em{font-style:normal;font-weight:400;font-size:11.5px;color:var(--ink-3);
+  display:block;margin-top:1px}
+.tr ul{list-style:none;padding-right:11px}
+.tr li{font-size:13.5px;color:var(--ink-2);padding:4px 0}
+.tr li b{font-weight:600;color:var(--ink)}
+.tr li i{font-style:normal;color:var(--ink-3);font-size:12.5px}
+.np{display:inline-block;font-size:10.5px;background:var(--rust-lt);color:var(--rust);
+  padding:1px 7px;border-radius:20px;margin-right:7px;white-space:nowrap}
+.ng{display:inline-block;font-size:10.5px;background:var(--line-2);color:var(--ink-3);
+  padding:1px 7px;border-radius:20px;margin-right:7px;white-space:nowrap}
+.srcs{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.srcs.three{grid-template-columns:repeat(3,1fr);gap:18px}
+.srch{font-size:12px;color:var(--ink-3);margin-bottom:7px}
+.srcs ul{list-style:none;font-size:13.5px;color:var(--ink-2)}
+.srcs li{padding:3px 0}
+
+.rev{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:18px 20px}
+.rev h4{font-family:var(--serif);font-size:15px;font-weight:700;margin-bottom:3px}
+.rev .from{font-size:11.5px;color:var(--ink-3)}
+.rev ul{list-style:none;margin-top:16px}
+.rev ul li{padding:9px 0;border-top:1px solid var(--line-2)}
+.rev ul li:first-child{border-top:0}
+.rev .k{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--day)}
+.rev .v{font-size:13.5px;color:var(--ink-2);margin-top:3px}
+
+footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink-3);line-height:1.75}
+
+@media (max-width:620px){
+  .wrap{padding:36px 17px 64px}
+  h1{font-size:23px}
+  .axis{font-size:17px}
+  .srcs,.srcs.three{grid-template-columns:1fr;gap:18px}
+  .sim{flex-wrap:wrap;gap:8px}
+}
+
+@media print{
+  body{background:#fff;font-size:11pt}
+  .wrap{max-width:none;padding:0}
+  .panel{display:block!important;padding-bottom:22px}
+  .tog{cursor:default;padding:16px 0 10px}
+  .chev,.hint{display:none!important}
+  .wk{break-inside:avoid;border-top:1px solid #999}
+  .mach,.rev{break-inside:avoid}
+  .nafka,.chip,.sim .sf,.warn{background:#fff;border:1px solid #ccc}
+  footer{border-top:1px solid #999}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.subt{font-family:var(--serif);font-size:17px;color:var(--ink-2);margin-top:4px;
+  line-height:1.45}
+.dt{color:var(--ink-3);font-size:11px;letter-spacing:.04em}
+.caln{font-size:12.5px;color:var(--brass);background:var(--brass-lt);
+  border-radius:var(--r);padding:7px 12px;display:inline-block}
+.thesis{font-family:var(--serif);font-size:16px;line-height:1.7;color:var(--ink);
+  padding-right:14px;border-right:2px solid var(--brass)}
+.chron{list-style:none;position:relative;padding-right:18px}
+.chron::before{content:"";position:absolute;right:4px;top:8px;bottom:8px;
+  width:1px;background:var(--line)}
+.chron li{position:relative;padding:5px 0}
+.chron li::before{content:"";position:absolute;right:-18px;top:12px;width:9px;height:9px;
+  border-radius:50%;background:var(--panel);border:1.5px solid var(--day)}
+.chron .p{font-size:14px;color:var(--ink)}
+.chron .cn{font-size:13px;color:var(--ink-2);margin-top:4px}
+.case{background:var(--panel);border:1px solid var(--line);border-right:3px solid var(--brass);
+  border-radius:var(--r);padding:14px 18px}
+.case h4{font-family:var(--serif);font-size:16px;font-weight:700;margin-bottom:5px}
+.case p{font-size:13.5px;color:var(--ink-2)}
+.xr{display:block;font-size:12px;color:var(--ink-3);margin-top:2px}
+.inote{display:block;font-size:12px;color:var(--rust);background:var(--rust-lt);
+  border-radius:4px;padding:3px 8px;margin-top:4px}
+@media print{.case,.caln{background:#fff;border:1px solid #ccc}}
+
+.dax{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:12px}
+.dax span{font-size:12.5px;color:var(--ink-2);background:var(--line-2);
+  padding:3px 10px;border-radius:4px}
+.dax i{font-style:normal;color:var(--ink-3);font-size:12px}
+.focus{border-right:2px solid var(--day);padding:2px 16px;margin-bottom:30px}
+.focus:last-child{margin-bottom:0}
+.focus h3{font-family:var(--serif);font-size:17.5px;font-weight:700;line-height:1.45}
+.focus .pr{font-size:14px;color:var(--ink-2);margin-top:10px}
+.fq{margin-top:12px;padding:10px 14px;background:var(--day-lt);border-radius:var(--r)}
+.fq q{font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink);quotes:none}
+.fq cite{display:block;font-style:normal;font-size:12px;color:var(--ink-3);margin-top:4px}
+.ftw{overflow-x:auto;margin-top:14px}
+.ft{border-collapse:collapse;width:100%;font-size:13.5px;min-width:480px}
+.ft caption{text-align:right;font-size:12px;color:var(--ink-3);padding-bottom:6px}
+.ft th{text-align:right;font-size:11px;letter-spacing:.06em;color:var(--ink-3);
+  font-weight:600;border-bottom:1px solid var(--line);padding:6px 8px}
+.ft td{border-bottom:1px solid var(--line-2);padding:7px 8px;color:var(--ink-2);
+  vertical-align:top}
+.ft td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+.fp{list-style:none;margin-top:12px}
+.fp li{font-size:14px;color:var(--ink-2);padding:5px 15px 5px 0;position:relative}
+.fp li::before{content:"";position:absolute;right:2px;top:14px;width:5px;height:5px;
+  border-radius:50%;background:var(--ink-3)}
+.fl{list-style:none;margin-top:12px}
+.fl li{padding:6px 0;font-size:14px;color:var(--ink-2)}
+.fl b{display:block;font-size:12.5px;color:var(--ink);margin-bottom:2px}
+.tens{margin-top:14px;background:var(--brass-lt);border-radius:var(--r);padding:10px 14px;
+  font-size:14px;color:var(--ink-2)}
+.tens span{display:block;font-size:10.5px;letter-spacing:.09em;color:var(--brass);
+  margin-bottom:3px}
+.theme{margin-bottom:24px}
+.theme:last-child{margin-bottom:0}
+.theme h4{font-family:var(--serif);font-size:15.5px;font-weight:700}
+.elbox{margin-top:34px;border:1px dashed var(--line);border-radius:var(--r);
+  padding:16px 18px;background:var(--panel)}
+.elbox h4{font-family:var(--serif);font-size:15px;font-weight:700;margin-bottom:6px}
+.elbox>p{font-size:13.5px;color:var(--ink-2)}
+.elbox .fq{background:var(--line-2)}
+.elbox .chron{margin-top:14px}
+.intl{font-size:12px;color:var(--ink-2);background:var(--rust-lt);border-radius:var(--r);
+  padding:10px 14px}
+.intl ul{list-style:none;padding-right:12px}
+.intl li{padding:2px 0}
+@media print{.elbox,.fq,.tens,.intl{background:#fff;border:1px solid #ccc}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<p class="eyebrow">הלכות שבת · הכנה לבחינות הסמכה</p>
+<h1>ליל שבת ויומה</h1>
+<p class="subt">מן התפילה אל הבית, מן הקידוש אל ההבדלה</p>
+<p class="meta">12.10–13.12.2026 · תשעה שבועות</p>
+</header>
+<main>
+<section class="wk">
+<h2>
+<button class="tog" id="b1" aria-expanded="true" aria-controls="p1">
+<span>
+<span class="num">שבוע 1 <span class="dt">· 12–18.10</span></span>
+<span class="axis">ליל שבת: מן הציבור אל הבית</span>
+<span class="simline">רס&quot;ז · רס&quot;ח · רס&quot;ט · ר&quot;ע · ר&quot;פ</span>
+</span>
+<span class="chev" aria-hidden="true"></span>
+</button>
+</h2>
+<div class="panel" id="p1" role="region" aria-labelledby="b1">
+<div class="sec">
+<p class="sech">התזה של השבוע</p>
+<p class="thesis">ליל שבת בבית הכנסת הוא מבנה רב-שכבתי. כל שכבה נוצרה מצורך אחר, וכל אחת הולידה בעיות הלכתיות משלה.</p>
+<div class="dax"><span>חז&quot;ל</span><i>←</i><span>גאונים</span><i>←</i><span>צפת, המאה ה-16</span><i>←</i><span>סדר התפילה המאוחר</span></div>
+</div>
+<div class="sec">
+<p class="sech">הסימנים</p>
+<div class="sim">
+<b>רס&quot;ז</b>
+<span class="t">תפילת ערבית של שבת</span>
+<span class="all">כל הסימן · 3 סעיפים</span>
+</div>
+<div class="sim">
+<b>רס&quot;ח</b>
+<span class="t">טעה והזכיר של חול; ברכה מעין שבע</span>
+<span class="all">כל הסימן · 13 סעיפים</span>
+</div>
+<div class="sim">
+<b>רס&quot;ט</b>
+<span class="t">קידוש בבית הכנסת</span>
+<span class="all">כל הסימן · סעיף אחד</span>
+</div>
+<div class="sim">
+<b>ר&quot;ע</b>
+<span class="t">אמירת &quot;במה מדליקין&quot;</span>
+<span class="all">כל הסימן · שני סעיפים</span>
+</div>
+<div class="sim">
+<b>ר&quot;פ</b>
+<span class="t">תשמיש המיטה בשבת</span>
+<span class="all">כל הסימן · שני סעיפים</span>
+</div>
+</div>
+<div class="sec">
+<p class="sech">נושאים עיקריים</p>
+<div class="chips"><span class="chip">ערבית של שבת והקדמתה</span><span class="chip">מנייני פלג</span><span class="chip">טעה והתפלל של חול</span><span class="chip">ויכולו</span><span class="chip">ברכה מעין שבע</span><span class="chip">קידוש בבית הכנסת</span><span class="chip">במה מדליקין</span><span class="chip">עונה בליל שבת</span></div>
+</div>
+<div class="sec">
+<p class="sech">מוקדי השבוע</p>
+<div class="focus"><h3>ברכת מעין שבע: תקנה או חובה?</h3><div class="fq"><q>כי לא תקנוה אלא בשבת, ואפילו בשבת אינו חובה מצד הדין, רק שתקנוה משום סכנה... ומה דתיקון תיקון ואין להוסיף עליה</q><cite>מ&quot;ב רס&quot;ח ס&quot;ק כג</cite></div><div class="ftw"><table class="ft"><thead><tr><th>שאלה</th><th>מקור</th><th>הכרעה</th></tr></thead><tbody><tr><td>הטעם המקורי</td><td>מ&quot;ב ס&quot;ק כ</td><td>סכנת מזיקים — בתי הכנסת היו בשדה, ויש המאחרים לבוא; &quot;וגם האידנא לא זזה תקנה ממקומה&quot;</td></tr><tr><td>בית חתנים ואבלים</td><td>שו&quot;ע ס&quot;י</td><td>אין אומרים — &quot;דליכא טעמא דמאחרין לבא&quot;</td></tr><tr><td>גבול המניין</td><td>מ&quot;ב ס&quot;ק כד</td><td>מניין בבית, או לפרקים — לא; קביעות עם ספר תורה, &quot;וכמו בירידים דומה לבהכ&quot;נ קבוע ואומרים&quot;</td></tr><tr><td>מחלוקת אחרונים</td><td>מ&quot;ב ס&quot;ק כה</td><td>המ&quot;א בשם הרדב&quot;ז — במקום שנוהגים אין למחות; הפמ&quot;ג מפקפק, &quot;דהוי ספק ברכה לבטלה&quot;</td></tr><tr><td>יחיד</td><td>שו&quot;ע ס&quot;ח ורמ&quot;א</td><td>אין היחיד אומר; הרוצה להחמיר — &quot;בלא פתיחה ובלא חתימה&quot;</td></tr><tr><td>היקף האמירה</td><td>מ&quot;ב ס&quot;ק כא–כב</td><td>מ&quot;מגן אבות&quot; עד &quot;זכר למעשה בראשית&quot;; &quot;כי עיקר התקנה היה שהש&quot;ץ יברך אותה&quot;</td></tr><tr><td>שבת שאחר יו&quot;ט</td><td>שו&quot;ע ס&quot;יא</td><td>אומרים</td></tr></tbody></table></div><div class="tens"><span>המתח</span>ס&quot;י מוותר על הברכה כשאין טעם; ס&quot;ק כ אומר שלא זזה ממקומה. המ&quot;ב מחזיק את שני הקצוות ביודעין — וזו הנקודה שראוי להעמיד עליה.</div></div>
+<div class="focus"><h3>קידוש בבית הכנסת: ברכה לבטלה, או תקנה שאינה בטלה?</h3><div class="fq"><q>ועכשיו אע&quot;ג דלא אכלי אורחים בבי כנישתא לא בטלה התקנה... אבל יותר טוב להנהיג שלא לקדש בבהכ&quot;נ, וכן מנהג א&quot;י</q><cite>שו&quot;ע רס&quot;ט</cite></div><div class="fq"><q>ובמדינתנו נוהגין לקדש בבהכ&quot;נ... ואין לבטל המנהג כי הרבה גאונים יסדוהו כמ&quot;ש הרשב&quot;א</q><cite>מ&quot;ב רס&quot;ט ס&quot;ק ה</cite></div><ul class="fp"><li>המקדש אינו טועם, אלא מטעימו לקטן — &quot;דאין קידוש אלא במקום סעודה&quot;; והשו&quot;ע מפנה בעצמו לרע&quot;ג (שו&quot;ע רס&quot;ט)</li><li>לאיזה קטן: י&quot;א — רק לשלא הגיע לחינוך; המ&quot;א — אף לשהגיע, &quot;ואדרבה אם יתן רק לקטן שלא הגיע לחינוך יהיה ברכת המברך לבטלה&quot; (מ&quot;ב ס&quot;ק א)</li><li>אף שהמקדש עצמו לא יצא — &quot;מוציא את האחרים&quot; (מ&quot;ב ס&quot;ק ד)</li></ul></div>
+<div class="focus"><h3>טעה והתפלל של חול: מה הדין מגלה על מבנה תפילת שבת</h3><p class="pr">ברכות החול ראויות מצד עצמן, וחכמים קיצרון מפני כבוד שבת — ולכן אם התחיל, גומר אותה ברכה. &quot;בדין הוא דבעי לצלויי י&quot;ח ברכות בשבת כמו בחול... ורק משום כבוד שבת לא אטרחוהו רבנן... ולכן בדיעבד שהתחיל הברכה גומרה שהיא ראויה לו מן הדין&quot; (מ&quot;ב רס&quot;ח ס&quot;ק ב)</p><ul class="fp"><li>שו&quot;ע ס&quot;ב: גומר אותה ברכה — בערבית, בשחרית, מוסף ומנחה; &quot;וי&quot;א דבמוסף פוסק אפילו באמצע ברכה&quot;; ומ&quot;ב ס&quot;ק ה: &quot;וכן פסקו האחרונים משום ספק ברכה לבטלה&quot;</li><li>שו&quot;ע ס&quot;ו: החליף של זו בזו אינו חוזר — &quot;וי&quot;א שאם החליף של מוסף באחרת או אחרת בשל מוסף חוזר&quot;; ומ&quot;ב ס&quot;ק יז: אף שהזכיר מעניין שבת חוזר, &quot;כיון שאמר מוסף תוך תפלתו ושקר לפני המקום&quot;</li><li>שו&quot;ע ס&quot;ג ומ&quot;ב ס&quot;ק ו: תיבת &quot;אתה&quot; — הב&quot;י סובר שאף בערבית ומנחה מקרי התחיל בשל חול; והמ&quot;א חולק: דווקא בשחרית, ש&quot;מינכר בדבורו&quot;</li><li>שו&quot;ע ס&quot;ד–ה: לא הזכיר של שבת — עקר רגליו, חוזר לראש; ומ&quot;ב ס&quot;ק ט: ספק — חוזר, &quot;דמסתמא התפלל של חול כמו שהוא רגיל&quot;</li><li>שו&quot;ע ס&quot;יג: שמע משליח ציבור ברכה מעין שבע מראש ועד סוף — יצא</li></ul><div class="tens"><span>המתח</span>מוסף חריג פעמיים, מאותו שורש: &quot;דבמוסף לא שייך כלל תפלת י&quot;ח ברכות דאף בחול א&quot;א רק שבע ברכות&quot; (מ&quot;ב ס&quot;ק ד) — ולכן &quot;ראויה לו מן הדין&quot; אינו חל עליו.</div></div>
+<div class="focus"><h3>ערבית מבעוד יום: מה מקבלים כשמקדימים</h3><ul class="fp"><li>שו&quot;ע ס&quot;ב: מפלג המנחה &quot;יכול להדליק ולקבל שבת בתפל&#x27; ערבי&#x27; ולאכול מיד&quot;</li><li>תרתי דסתרי: המ&quot;א מתיר ערבית מפלג אף לנוהגים להתפלל בזמנה — אך יתפלל מנחה קודם פלג, &quot;כדי שלא יהיה תרתי דסתרי אהדדי&quot; (מ&quot;ב ס&quot;ק ג)</li><li>שיעור פלג: י&quot;א שעה ורביע קודם הלילה, וי&quot;א שעה ורביע קודם השקיעה (מ&quot;ב ס&quot;ק ד)</li><li>אכילה מבעוד יום: השו&quot;ע — &quot;ולאכול מיד&quot;; ויש חולקין, שימשוך סעודתו ויאכל כזית בלילה — &quot;ולכתחלה נכון לחוש לדבריהם&quot; (מ&quot;ב ס&quot;ק ה)</li><li>קריאת שמע: יחזור ויקרא בלילה, בלא הברכות (מ&quot;ב ס&quot;ק ו)</li><li>חתימת השכיבנו: &quot;דבשבת א&quot;צ שמירה, כי השבת בעצמו הוא השומר אותנו&quot; (מ&quot;ב ס&quot;ק ז)</li></ul><div class="nafka"><span>נפקא מינה</span><p>מנייני פלג בקיץ.</p></div><span class="xr">← רס&quot;ג ס&quot;ד — יחידה א&#x27;, שבוע 3: שיעור פלג המנחה. המ&quot;ב (ס&quot;ק ד) מפנה לשם בעצמו</span></div>
+</div>
+<div class="sec">
+<p class="sech">ידע ומבנה</p>
+<div class="theme"><h4>ויכולו — שתי שכבות, לא מחלוקת</h4><ol class="fl"><li><b>למה חוזרים עליו אחרי העמידה</b>שו&quot;ע רס&quot;ח ס&quot;ז: &quot;חוזרים לומר ויכלו משום יום טוב שחל להיו&#x27; בשב&#x27; שאין אומרים אותו בתפלה, וגם להוציא למי שאינו יודע&quot;; ומ&quot;ב ס&quot;ק יח: &quot;ואגב שבת זה תקנו לכל השבתות&quot;</li><li><b>למה בקול, בעמידה וביחד</b>מ&quot;ב ס&quot;ק יט: &quot;לפי שבזה אנו מעידים להקב&quot;ה במעשה בראשית, ודין עדים בעמידה, כדכתיב ועמדו שני האנשים&quot;; &quot;וטוב לומר אותה ביחד בצבור, דעדה שלמה בעינן להעיד להקב&quot;ה, ועכ&quot;פ יהיה בשנים&quot;</li></ol><div class="ftw"><table class="ft"><caption>יו&quot;ט שחל בשבת — אותו מקרה בלוח, שתי תוצאות הפוכות, במרחק שני סעיפים</caption><thead><tr><th></th><th>יו&quot;ט שחל בשבת</th></tr></thead><tbody><tr><td>ויכולו (ס&quot;ז)</td><td>הסיבה לאמירה הציבורית — נוסח יו&quot;ט השמיטו</td></tr><tr><td>מעין שבע (ס&quot;ט)</td><td>אינו משנה דבר — &quot;ומה דתיקון תיקון ואין להוסיף עליה&quot; (מ&quot;ב ס&quot;ק כג)</td></tr></tbody></table></div><ul class="fp"><li>וההכרעה ליחיד מחזיקה את שתי השכבות במשפט אחד (מ&quot;ב ס&quot;ק יט): י&quot;א שאינו חוזר לאומרו, &quot;דאין עדות ליחיד&quot;; וי&quot;א שיכול, בלא עמידה — &quot;וטוב שגם היחיד יאמר, אבל לא יתכוין לשם עדות אלא כקורא בתורה&quot;</li></ul></div>
+<div class="theme"><h4>חוט שלישי: היחיד בשלושת מוסדות הלילה</h4><ul class="fp"><li>ויכולו — &quot;אין עדות ליחיד&quot;, אך יאמר שלא בתורת עדות (מ&quot;ב רס&quot;ח ס&quot;ק יט)</li><li>מעין שבע — &quot;אין היחיד אומר אותה&quot;, ולרמ&quot;א בלא פתיחה ובלא חתימה (שו&quot;ע רס&quot;ח ס&quot;ח)</li><li>קידוש בבית הכנסת — נתקן לאורחים, והמקדש עצמו אינו יוצא (שו&quot;ע רס&quot;ט; מ&quot;ב ס&quot;ק ד)</li></ul></div>
+<div class="theme"><h4>במה מדליקין — ריבוי טעמים ומנהגים</h4><ul class="fp"><li>למה אומרים: &quot;לפי שיש בו דין הדלקה וג&#x27; דברים שצריך אדם לומר בתוך ביתו ע&quot;ש עם חשכה&quot; (מ&quot;ב ר&quot;ע ס&quot;ק א)</li><li>מתי: הספרדים קודם ערבית, והשו&quot;ע — &quot;והוא הנכון&quot;, &quot;דלאחר תפלת ערבית מאי נ&quot;מ&quot; (מ&quot;ב ס&quot;ק ב); והנוהגים לאומרו אחריה — במנהגי מהרא&quot;ק, כדי שהמאחר יספיק להתפלל</li><li>יו&quot;ט שחל בערב שבת — &quot;שאין מעשרין ביו&quot;ט&quot;; ויו&quot;ט שחל בשבת — &quot;משום לא פלוג&quot; (מ&quot;ב ס&quot;ק ג)</li><li>שבת של חנוכה — &quot;מפני שנזכר בה פסול שמנים שהם אסורים בשבת ולא בחנוכה&quot; (מ&quot;ב ס&quot;ק ד); ורמ&quot;א: &quot;ואין נוהגין כן בחנוכה&quot;</li></ul><span class="xr">← שבוע 9 — שבת חנוכה</span></div>
+<div class="theme"><h4>ר&quot;פ — פרט בתוך תפיסת עונג שבת</h4><ul class="fp"><li>שו&quot;ע ס&quot;א: &quot;תשמיש המטה מתענוגי שבת הוא, לפיכך עונת תלמידי חכמים הבריאים מליל שבת לליל שבת&quot;</li><li>מ&quot;ב ס&quot;ק ג: לבד ליל טבילה; &quot;וצריך להזהר שקודם שיגיע הלילה חייב להראות חבה יתירה ואהבה עם אשתו, וא&quot;צ לומר שלא ירגיל שום קטטה בע&quot;ש&quot; (ב&quot;ח)</li><li>מ&quot;ב ס&quot;ק א: מצוה לאכול שום בערב שבת או בליל שבת</li></ul></div>
+</div>
+<div class="sec">
+<p class="sech">מקורות</p>
+<div class="srcs three">
+<div>
+<p class="srch">יסוד — תנאים ואמוראים</p>
+<ul><li>שבת קיט ע&quot;א — ר&#x27; חנינא מיעטף וקאי; ר&#x27; ינאי &quot;בואי כלה בואי כלה&quot;</li><li>שבת קיט ע&quot;ב — &quot;נעשה שותף להקב&quot;ה במעשה בראשית&quot;</li><li>פסחים קא ע&quot;א — אורחים דאכלו ושתו וגנו בבי כנישתא</li><li>ירושלמי ברכות ח, א (ומקבילה פסחים י, ב) — ר&#x27; יוסי בי רבי בון: במקום שאין יין, שליח ציבור אומר ברכה אחת מעין שבע, וחותם &quot;מקדש ישראל ואת יום השבת&quot;</li><li>עירובין מג ע&quot;ב — &quot;אין אליהו בא לא בערבי שבתות ולא בערבי ימים טובים, מפני הטורח&quot;</li><li>גיטין לח ע&quot;ב — שתי משפחות, אחת בשבת ואחת בערב שבת, ושתיהן נעקרו</li><li>בבא קמא לב ע&quot;א–ע&quot;ב — &quot;ומודה איסי בערב שבת בין השמשות שהוא פטור מפני שרץ ברשות&quot;; &quot;בערב שבת מאי ברשות איכא?&quot; — &quot;כדרבי חנינא&quot;<span class="xr">← שבת קיט ע&quot;א — הבבלי עצמו מנמק קולא בנזיקין בקבלת פני השבת</span></li><li>ברכות כז ע&quot;ב</li><li>שבת כד ע&quot;ב</li><li>שבת כד ע&quot;א</li><li>כתובות סב ע&quot;ב</li></ul>
+</div>
+<div>
+<p class="srch">ראשונים</p>
+<ul><li>סדר רב עמרם גאון — &quot;ולאחר שמקדשין בבית הכנסת אומר פרק ממס&#x27; שבת, וזה הוא הפרק במה מדליקין&quot;</li><li>ספר חסידים סי&#x27; קנ&quot;ד — &quot;מצוה לשנות ארבעים מלאכות חסר אחת כדי שלא ישכח איזו מלאכה אסורה... אחר התפלה תקנו וקבעו לומר במה מדליקין בבית הכנסת&quot;</li><li>ריטב&quot;א החדש ושלטי הגיבורים — ויכולו כעדות</li><li>רי&quot;ף ברכות</li><li>רא&quot;ש ברכות פ&quot;ד</li><li>רמב&quot;ם תפילה פ&quot;י ה&quot;ו–ה&quot;ז</li></ul>
+</div>
+<div>
+<p class="srch">אחרונים ועיונים</p>
+<ul><li>שו&quot;ע רס&quot;ז ס&quot;א–ג</li><li>שו&quot;ע רס&quot;ח ס&quot;ב–יג</li><li>שו&quot;ע רס&quot;ט</li><li>שו&quot;ע ר&quot;ע ס&quot;א–ב</li><li>שו&quot;ע ר&quot;פ ס&quot;א–ב</li><li>מ&quot;ב רס&quot;ז ס&quot;ק א–ט</li><li>מ&quot;ב רס&quot;ח ס&quot;ק ה–ט, טז–כו</li><li>מ&quot;ב רס&quot;ט ס&quot;ק א–ו</li><li>מ&quot;ב ר&quot;ע ס&quot;ק א–ה</li><li>מ&quot;ב ר&quot;פ ס&quot;ק א–ד</li></ul>
+</div>
+</div>
+</div>
+<div class="sec">
+<p class="sech">להרחבה</p>
+<div class="tr halakhic"><p class="trh">הרחבה הלכתית<em>מרחיב את הידע ההלכתי או פותח נושא חדש</em></p><ul>
+<li><b>הרב שריה דבליצקי</b>, חמישה מנהגים לעדות הספרדים למקום אמירתו של פרק במה מדליקין בליל שבת<i> · מוריה ריט–רכ (אלול תשנ&quot;ג)</i></li>
+<li><b>הרב גדליה אוברלנדר</b>, מנהג אמירת &quot;במה מדליקין&quot; בליל שבת<i> · אור ישראל מו (תשס&quot;ז)</i></li>
+<li><b>הרב אמנון בזק</b>, אמירת ויכולו בשבת<i> · עלון שבות 146</i></li>
+</ul></div>
+<div class="tr iyun"><p class="trh">העשרה עיונית<em>היסטורי, פילולוגי, ריאלי, ביקורתי</em></p><ul>
+<li><b>ד&quot;ר יעל קליין</b>, עיונים בסידור התפילה — במה מדליקין<i> · דפי מאורות, ואתחנן תשע&quot;ה</i></li>
+<li><b>Joseph Heinemann</b>, One Benediction Comprising Seven<i> · Revue des études juives 125 (1966)</i></li>
+<li><b>Joseph Heinemann</b>, &quot;משום סכנה&quot; כטעם לברכה מעין שבע — הסבר מאוחר<i> · One Benediction Comprising Seven, REJ 125 (1966)</i></li>
+<li><b>ר&#x27; משה בן מכיר</b>, ספר סדר היום<i> · שער &quot;הכנת יום הששי לכבוד שבת&quot; (שס&quot;ה)</i></li>
+<li><b>R. J. Z. Werblowsky</b>, Joseph Karo: Lawyer and Mystic<i> (1962)</i></li>
+<li><b>Lawrence Fine</b>, Physician of the Soul, Healer of the Cosmos<i> (2003)</i></li>
+<li><b>Lawrence Fine (ed.)</b>, Safed Spirituality: Rules of Mystical Piety<i></i></li>
+<li><b>Lawrence Fine</b>, Pietistic Customs from Safed<i> · Lawrence Fine (ed.), Judaism in Practice</i></li>
+<li><b>Morris Faierstein</b>, Jewish Customs of Kabbalistic Origin<i></i></li>
+<li><b>Arthur Green</b>, Some Aspects of Qabbalat Shabbat<i> · The Heart of the Matter</i></li>
+<li><b>פרופ&#x27; משה אידל</b>, שבת: על תפיסות הזמן במיסטיקה היהודית<i> · שבת: רעיון, היסטוריה, מציאות</i></li>
+</ul></div>
+</div>
+<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">שבוע ידע ועיצוב מפה, לא שבוע מחלוקת: המיומנות היא לקרוא סימנים קצרים כשרידים של מערכת היסטורית שלמה. אחרי אלול, שכולו מחלוקות כבדות, זה שינוי מכוון.</p></div>
+<aside class="elbox">
+<h4>חיבור לאלול: רגע קבלת השבת</h4>
+<p>את הדין — מאיזה רגע נאסרת המלאכה — למדנו ברס&quot;א. כאן רואים כיצד שכבת קבלת השבת הצפתית נכנסה בפועל לפני ערבית.</p>
+<div class="fq"><q>משום דהוי נהיגי עלמא לקבל עליהם שבת מכי פתח הש&quot;ץ ברכו, וכדלעיל בסימן רס&quot;א ס&quot;ד</q><cite>מ&quot;ב רס&quot;ז ס&quot;ק ב — ההפניה היא של המ&quot;ב</cite></div>
+<ol class="chron"><li><p class="p">בית יוסף — הושלם ~1542, נדפס ונציה שנות ה-1550</p></li><li><p class="p">דרכי משה — &quot;ובמדינות אלו אין נוהגין לומר מזמור בכניסת השבת&quot;</p></li><li><p class="p">מפה (הגהות שו&quot;ע) — אין הגהה על רס&quot;א ס&quot;ד</p></li><li><p class="p">האר&quot;י — הגיע לצפת ה&#x27;ש&quot;ל (1570), נפטר ה&#x27;של&quot;ב (1572)</p><p class="cn">דברי הב&quot;י קודמים לבוא האר&quot;י בכ-15 שנה לפחות ובסבירות בכ-30. עדות מתוארכת לכך שקבלת שבת התקיימה בצפת לפני האר&quot;י, ושמרן תיעד את שלב הרמ&quot;ק–אלקבץ.</p></li></ol>
+</aside>
+</div>
+</section>
+<section class="wk">
+<h2>
+<button class="tog" id="b2" aria-expanded="true" aria-controls="p2">
+<span>
+<span class="num">שבוע 2 <span class="dt">· 19–25.10</span></span>
+<span class="axis">החיים לאור הנר: שמא יטה</span>
+<span class="simline">רע&quot;ה · רע&quot;ז · רע&quot;ח</span>
+</span>
+<span class="chev" aria-hidden="true"></span>
+</button>
+</h2>
+<div class="panel" id="p2" role="region" aria-labelledby="b2">
+<div class="sec">
+<p class="sech">הסימנים</p>
+<div class="sim">
+<b>רע&quot;ה</b>
+<span class="t">קריאה לאור הנר</span>
+<span class="all">כל הסימן · 12 סעיפים</span>
+</div>
+<div class="sim">
+<b>רע&quot;ז</b>
+<span class="t">טלטול הנר ופתיחת הדלת כנגדו</span>
+<span class="all">כל הסימן · 5 סעיפים</span>
+</div>
+<div class="sim">
+<b>רע&quot;ח</b>
+<span class="t">כיבוי הנר בשביל החולה</span>
+<span class="all">כל הסימן · סעיף אחד</span>
+</div>
+</div>
+<div class="sec">
+<p class="sech">נושאים עיקריים</p>
+<div class="chips"><span class="chip">קריאה לאור הנר</span><span class="chip">גזירת שמא יטה</span><span class="chip">טלטול הנר ופתיחת הדלת כנגדו</span><span class="chip">כיבוי הנר לחולה</span></div>
+</div>
+<div class="sec">
+<p class="sech">מקורות</p>
+<div class="srcs three">
+<div>
+<p class="srch">יסוד — תנאים ואמוראים</p>
+<ul><li>שבת יב ע&quot;א–ע&quot;ב</li><li>ביצה כב ע&quot;א</li></ul>
+</div>
+<div>
+<p class="srch">ראשונים</p>
+<ul><li>רש&quot;י שבת יב ע&quot;ב</li></ul>
+</div>
+</div>
+</div>
+<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רע&quot;ה הועבר לכאן מחטיבה 2 (D-004): אותה גזירה — שמא יטה — כרע&quot;ז; קיבוץ לפי מנגנון ולא לפי אובייקט. רע&quot;ט בסקירה — עיון בגוש 8. רע&quot;ח: פתח לגוש 11.</p></div>
+</div>
+</section>
+<section class="wk">
+<h2>
+<button class="tog" id="b3" aria-expanded="true" aria-controls="p3">
+<span>
+<span class="num">שבוע 3 <span class="dt">· 26.10–1.11</span></span>
+<span class="axis">זכור — מהי מצוות קידוש</span>
+<span class="simline">רע&quot;א</span>
+</span>
+<span class="chev" aria-hidden="true"></span>
+</button>
+</h2>
+<div class="panel" id="p3" role="region" aria-labelledby="b3">
+<div class="sec">
+<p class="sech">הסימנים</p>
+<div class="sim">
+<b>רע&quot;א</b>
+<span class="t">קידוש — מצוותו וחיובו</span>
+<span class="sf">ס&quot;א–ח</span>
+</div>
+</div>
+<div class="sec">
+<p class="sech">נושאים עיקריים</p>
+<div class="chips"><span class="chip">קידוש דאורייתא</span><span class="chip">&quot;זכור&quot; ו&quot;שמור&quot;</span><span class="chip">חיוב נשים — &quot;הואיל ואיתנהו בשמירה איתנהו בזכירה&quot;</span><span class="chip">יין לקידוש מול צורכי הסעודה</span><span class="chip">אסור לטעום</span><span class="chip">תשלומין למחר</span></div>
+</div>
+<div class="sec">
+<p class="sech">מקורות</p>
+<div class="srcs three">
+<div>
+<p class="srch">יסוד — תנאים ואמוראים</p>
+<ul><li>פסחים קו ע&quot;א</li><li>ברכות כ ע&quot;ב</li><li>שבועות כ ע&quot;ב</li><li>נזיר ד ע&quot;א</li><li>פסחים קה ע&quot;א</li></ul>
+</div>
+<div>
+<p class="srch">ראשונים</p>
+<ul><li>רש&quot;י פסחים קו ע&quot;א</li><li>תוס&#x27; ברכות כ ע&quot;ב ד&quot;ה &quot;בתפילה&quot;</li><li>רמב&quot;ם שבת פכ&quot;ט ה&quot;א</li><li>רא&quot;ש פסחים פ&quot;י</li></ul>
+</div>
+</div>
+</div>
+<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רע&quot;א הוא הכבד בסדר היום, ולכן נפרס על שבועיים. החיתוך נקבע מול סעיפי השו&quot;ע: ס&quot;א–ח הם החיוב — מהירות לאכול, נשים, יין מול סעודה, איסור טעימה, תשלומין; ס&quot;ט–יז הם דיני הכוס. חיוב נשים: הבן את המהלך ואת הנפ&quot;מ להוצאת אחרים.</p></div>
+</div>
+</section>
+<section class="wk">
+<h2>
+<button class="tog" id="b4" aria-expanded="true" aria-controls="p4">
+<span>
+<span class="num">שבוע 4 <span class="dt">· 2–8.11</span></span>
+<span class="axis">הכוס והיין</span>
+<span class="simline">רע&quot;א · רע&quot;ב</span>
+</span>
+<span class="chev" aria-hidden="true"></span>
+</button>
+</h2>
+<div class="panel" id="p4" role="region" aria-labelledby="b4">
+<div class="sec">
+<p class="sech">הסימנים</p>
+<div class="sim">
+<b>רע&quot;א</b>
+<span class="t">קידוש — מצוותו וחיובו</span>
+<span class="sf">ס&quot;ט–יז</span>
+</div>
+<div class="sim">
+<b>רע&quot;ב</b>
+<span class="t">על איזה יין מקדשים; חמר מדינה</span>
+<span class="all">כל הסימן · 10 סעיפים</span>
+</div>
+</div>
+<div class="sec">
+<p class="sech">נושאים עיקריים</p>
+<div class="chips"><span class="chip">סדר הקידוש</span><span class="chip">כוס של ברכה</span><span class="chip">מלא לוגמיו</span><span class="chip">יין ראוי</span><span class="chip">יין מגתו</span><span class="chip">חמר מדינה</span><span class="chip">קידוש על הפת</span></div>
+</div>
+<div class="sec">
+<p class="sech">מקורות</p>
+<div class="srcs three">
+<div>
+<p class="srch">יסוד — תנאים ואמוראים</p>
+<ul><li>פסחים קז ע&quot;א</li><li>ברכות נא ע&quot;א</li><li>ב&quot;ב צז ע&quot;ב</li><li>פסחים קו ע&quot;ב</li></ul>
+</div>
+<div>
+<p class="srch">ראשונים</p>
+<ul><li>רשב&quot;ם פסחים קז ע&quot;א</li><li>תוס&#x27; שם</li><li>רא&quot;ש פסחים פ&quot;י סי&#x27; יז</li><li>רמב&quot;ם שבת פכ&quot;ט ה&quot;ט, הי&quot;ז</li></ul>
+</div>
+</div>
+</div>
+<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רע&quot;ב כבד. חמר מדינה: ב&quot;י מול מ&quot;ב מול פוסקי ספרד — בירה? מיץ ענבים?</p></div>
+</div>
+</section>
+<section class="wk">
+<h2>
+<button class="tog" id="b5" aria-expanded="true" aria-controls="p5">
+<span>
+<span class="num">שבוע 5 <span class="dt">· 9–15.11</span></span>
+<span class="axis">אין קידוש אלא במקום סעודה</span>
+<span class="simline">רע&quot;ג · רע&quot;ד · רפ&quot;ט</span>
+</span>
+<span class="chev" aria-hidden="true"></span>
+</button>
+</h2>
+<div class="panel" id="p5" role="region" aria-labelledby="b5">
+<div class="sec">
+<p class="sech">הסימנים</p>
+<div class="sim">
+<b>רע&quot;ג</b>
+<span class="t">קידוש במקום סעודה</span>
+<span class="all">כל הסימן · 7 סעיפים</span>
+</div>
+<div class="sim">
+<b>רע&quot;ד</b>
+<span class="t">בציעה על לחם משנה</span>
+<span class="all">כל הסימן · 4 סעיפים</span>
+</div>
+<div class="sim">
+<b>רפ&quot;ט</b>
+<span class="t">קידושא רבה וסעודת שחרית</span>
+<span class="all">כל הסימן · שני סעיפים</span>
+</div>
+</div>
+<div class="sec">
+<p class="sech">נושאים עיקריים</p>
+<div class="chips"><span class="chip">קידוש במקום סעודה</span><span class="chip">שיעור הסעודה</span><span class="chip">שינוי מקום</span><span class="chip">בציעה על לחם משנה</span><span class="chip">קידושא רבה — מעמדו ביחס לקידוש הלילה</span></div>
+</div>
+<div class="sec">
+<p class="sech">מקורות</p>
+<div class="srcs three">
+<div>
+<p class="srch">יסוד — תנאים ואמוראים</p>
+<ul><li>פסחים קא ע&quot;א</li><li>פסחים קב ע&quot;א</li><li>שבת קיז ע&quot;ב</li><li>פסחים קו ע&quot;א — קידושא רבה</li></ul>
+</div>
+<div>
+<p class="srch">ראשונים</p>
+<ul><li>רשב&quot;ם פסחים קא ע&quot;א ד&quot;ה &quot;אין קידוש&quot;</li><li>תוס&#x27; שם ד&quot;ה &quot;ידי קידוש&quot;</li><li>רא&quot;ש פסחים פ&quot;י סי&#x27; ה</li><li>רמב&quot;ם שבת פכ&quot;ט הי&quot;ב</li></ul>
+</div>
+</div>
+</div>
+<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רע&quot;ג: רשב&quot;ם (לצורך סעודה) מול תוס&#x27; (מקום ממש) — שאלת עיון מרכזית. רפ&quot;ט נלמד כאן, ליד קידוש הלילה, ולא עם סעודות היום.</p></div>
+</div>
+</section>
+<section class="wk">
+<h2>
+<button class="tog" id="b6" aria-expanded="true" aria-controls="p6">
+<span>
+<span class="num">שבוע 6 <span class="dt">· 16–22.11</span></span>
+<span class="axis">תפילות היום: שחרית, קריאה, מוסף, מנחה</span>
+<span class="simline">רפ&quot;א · רפ&quot;ב · רפ&quot;ג · רפ&quot;ד · רפ&quot;ו · רצ&quot;ב</span>
+</span>
+<span class="chev" aria-hidden="true"></span>
+</button>
+</h2>
+<div class="panel" id="p6" role="region" aria-labelledby="b6">
+<div class="sec">
+<p class="sech">הסימנים</p>
+<div class="sim">
+<b>רפ&quot;א</b>
+<span class="t">תפילת שחרית של שבת</span>
+<span class="all">כל הסימן · סעיף אחד</span>
+</div>
+<div class="sim">
+<b>רפ&quot;ב</b>
+<span class="t">קריאת התורה בשבת</span>
+<span class="all">כל הסימן · 7 סעיפים</span>
+</div>
+<div class="sim">
+<b>רפ&quot;ג</b>
+<span class="t">מספר העולים לתורה</span>
+<span class="all">כל הסימן · סעיף אחד</span>
+</div>
+<div class="sim">
+<b>רפ&quot;ד</b>
+<span class="t">הפטרה וברכותיה</span>
+<span class="all">כל הסימן · 7 סעיפים</span>
+</div>
+<div class="sim">
+<b>רפ&quot;ו</b>
+<span class="t">תפילת מוסף וזמנה</span>
+<span class="all">כל הסימן · 5 סעיפים</span>
+</div>
+<div class="sim">
+<b>רצ&quot;ב</b>
+<span class="t">תפילת מנחה של שבת</span>
+<span class="all">כל הסימן · שני סעיפים</span>
+</div>
+</div>
+<div class="sec">
+<p class="sech">נושאים עיקריים</p>
+<div class="chips"><span class="chip">שחרית של שבת</span><span class="chip">קריאת התורה</span><span class="chip">מספר העולים</span><span class="chip">הפטרה ומפטיר</span><span class="chip">מוסף וזמנו</span><span class="chip">תפילת מנחה</span></div>
+</div>
+<div class="sec">
+<p class="sech">מקורות</p>
+<div class="srcs three">
+<div>
+<p class="srch">יסוד — תנאים ואמוראים</p>
+<ul><li>מגילה כא ע&quot;ב</li><li>מגילה כג ע&quot;א</li><li>מגילה כט ע&quot;ב</li></ul>
+</div>
+<div>
+<p class="srch">ראשונים</p>
+<ul><li>רמב&quot;ם תפילה פי&quot;ב–פי&quot;ג</li></ul>
+</div>
+</div>
+</div>
+<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">שיא העומס ביחידה — עלות דחיסת חטיבה 4 לשני שבועות. החלוקה בין שבוע זה לבא אחריו היא ציבור מול יחיד, והיא מהדהדת את שבוע 1: מן הציבור אל הבית.</p></div>
+</div>
+</section>
+<section class="wk">
+<h2>
+<button class="tog" id="b7" aria-expanded="true" aria-controls="p7">
+<span>
+<span class="num">שבוע 7 <span class="dt">· 23–29.11</span></span>
+<span class="axis">יומו של היחיד: שנים מקרא, תענית, סעודות</span>
+<span class="simline">רפ&quot;ה · רפ&quot;ז · רפ&quot;ח · ר&quot;צ · רצ&quot;א</span>
+</span>
+<span class="chev" aria-hidden="true"></span>
+</button>
+</h2>
+<div class="panel" id="p7" role="region" aria-labelledby="b7">
+<div class="sec">
+<p class="sech">הסימנים</p>
+<div class="sim">
+<b>רפ&quot;ה</b>
+<span class="t">שניים מקרא ואחד תרגום</span>
+<span class="all">כל הסימן · 7 סעיפים</span>
+</div>
+<div class="sim">
+<b>רפ&quot;ז</b>
+<span class="t">ביקור חולים ותנחומין בשבת</span>
+<span class="all">כל הסימן · סעיף אחד</span>
+</div>
+<div class="sim">
+<b>רפ&quot;ח</b>
+<span class="t">איסור תענית בשבת; צום חלום</span>
+<span class="all">כל הסימן · 10 סעיפים</span>
+</div>
+<div class="sim">
+<b>ר&quot;צ</b>
+<span class="t">סעודת שחרית; שינה ותלמוד תורה</span>
+<span class="all">כל הסימן · שני סעיפים</span>
+</div>
+<div class="sim">
+<b>רצ&quot;א</b>
+<span class="t">סעודה שלישית</span>
+<span class="all">כל הסימן · 6 סעיפים</span>
+</div>
+</div>
+<div class="sec">
+<p class="sech">נושאים עיקריים</p>
+<div class="chips"><span class="chip">שניים מקרא ואחד תרגום</span><span class="chip">ביקור חולים ותנחומין בשבת</span><span class="chip">איסור תענית בשבת</span><span class="chip">צום חלום</span><span class="chip">סעודת שחרית</span><span class="chip">שינה ותלמוד תורה</span><span class="chip">סעודה שלישית</span></div>
+</div>
+<div class="sec">
+<p class="sech">מקורות</p>
+<div class="srcs three">
+<div>
+<p class="srch">יסוד — תנאים ואמוראים</p>
+<ul><li>ברכות ח ע&quot;א</li><li>שבת קיז ע&quot;ב</li><li>שבת קיח ע&quot;א–ע&quot;ב</li></ul>
+</div>
+<div>
+<p class="srch">ראשונים</p>
+<ul><li>רא&quot;ש ברכות פ&quot;א סי&#x27; ח</li><li>טור סי&#x27; רפ&quot;ה</li><li>רש&quot;י שבת קיז ע&quot;ב ד&quot;ה &quot;שלוש סעודות&quot;</li><li>תוס&#x27; שם ד&quot;ה &quot;במה&quot;</li><li>רא&quot;ש שבת פט&quot;ז סי&#x27; ה</li></ul>
+</div>
+</div>
+</div>
+<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רפ&quot;ה (שמו&quot;ת) הוא מוקד: מהו &quot;תרגום&quot;, האם רש&quot;י מועיל, וזמן ההשלמה. נשאל תדיר. רצ&quot;א: חובת פת (רי&quot;ף, רא&quot;ש) מול מיני תרגימא (תוס&#x27;, רמ&quot;א) — שאלת עיון מובהקת.</p></div>
+</div>
+</section>
+<section class="wk">
+<h2>
+<button class="tog" id="b8" aria-expanded="true" aria-controls="p8">
+<span>
+<span class="num">שבוע 8 <span class="dt">· 30.11–6.12</span></span>
+<span class="axis">ההבדלה: התפילה, הכוס, הבשמים</span>
+<span class="simline">רצ&quot;ד · רצ&quot;ה · רצ&quot;ו · רצ&quot;ז</span>
+</span>
+<span class="chev" aria-hidden="true"></span>
+</button>
+</h2>
+<div class="panel" id="p8" role="region" aria-labelledby="b8">
+<div class="sec">
+<p class="sech">הסימנים</p>
+<div class="sim">
+<b>רצ&quot;ד</b>
+<span class="t">&quot;אתה חוננתנו&quot;; טעה ולא הבדיל</span>
+<span class="all">כל הסימן · 5 סעיפים</span>
+</div>
+<div class="sim">
+<b>רצ&quot;ה</b>
+<span class="t">סדר קדושה ו&quot;ויהי נועם&quot;</span>
+<span class="all">כל הסימן · סעיף אחד</span>
+</div>
+<div class="sim">
+<b>רצ&quot;ו</b>
+<span class="t">סדר ההבדלה; חיוב נשים</span>
+<span class="all">כל הסימן · 8 סעיפים</span>
+</div>
+<div class="sim">
+<b>רצ&quot;ז</b>
+<span class="t">ברכת הבשמים; נשמה יתרה</span>
+<span class="all">כל הסימן · 5 סעיפים</span>
+</div>
+</div>
+<div class="sec">
+<p class="sech">נושאים עיקריים</p>
+<div class="chips"><span class="chip">אתה חוננתנו</span><span class="chip">טעה ולא הבדיל</span><span class="chip">סדר קדושה ו&quot;ויהי נועם&quot;</span><span class="chip">סדר ההבדלה</span><span class="chip">חיוב נשים</span><span class="chip">בשמים</span><span class="chip">נשמה יתרה</span></div>
+</div>
+<div class="sec">
+<p class="sech">מקורות</p>
+<div class="srcs three">
+<div>
+<p class="srch">יסוד — תנאים ואמוראים</p>
+<ul><li>ברכות כט ע&quot;א</li><li>ברכות לג ע&quot;א</li><li>פסחים קג ע&quot;ב</li><li>פסחים קז ע&quot;א</li><li>ברכות נא ע&quot;ב</li><li>ביצה לג ע&quot;ב</li></ul>
+</div>
+<div>
+<p class="srch">ראשונים</p>
+<ul><li>רשב&quot;ם פסחים קג ע&quot;ב</li><li>תוס&#x27; פסחים קז ע&quot;א</li><li>רא&quot;ש פסחים פ&quot;י סי&#x27; יז</li><li>רמב&quot;ם שבת פכ&quot;ט ה&quot;ו, כ&quot;ד</li></ul>
+</div>
+</div>
+</div>
+<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רצ&quot;ג (ערבית של מוצאי שבת) נלמד ביחידה א&#x27;, שבוע 3. חיוב נשים בהבדלה: ב&quot;י (חייבות) מול רמ&quot;א (יש להחמיר).</p></div>
+</div>
+</section>
+<section class="wk">
+<h2>
+<button class="tog" id="b9" aria-expanded="true" aria-controls="p9">
+<span>
+<span class="num">שבוע 9 <span class="dt">· 7–13.12</span></span>
+<span class="axis">האש, המלאכה, ומלווה מלכה</span>
+<span class="simline">רצ&quot;ח · רצ&quot;ט · ש&#x27;</span>
+</span>
+<span class="chev" aria-hidden="true"></span>
+</button>
+</h2>
+<div class="panel" id="p9" role="region" aria-labelledby="b9">
+<div class="sec"><p class="caln">חנוכה — נוכחות חלקית צפויה</p></div>
+<div class="sec">
+<p class="sech">הסימנים</p>
+<div class="sim">
+<b>רצ&quot;ח</b>
+<span class="t">ברכת האש; אבוקה</span>
+<span class="all">כל הסימן · 15 סעיפים</span>
+</div>
+<div class="sim">
+<b>רצ&quot;ט</b>
+<span class="t">מלאכה קודם הבדלה; תשלומי הבדלה</span>
+<span class="all">כל הסימן · 10 סעיפים</span>
+</div>
+<div class="sim">
+<b>ש&#x27;</b>
+<span class="t">סעודת מלווה מלכה</span>
+<span class="all">כל הסימן · סעיף אחד</span>
+</div>
+</div>
+<div class="sec">
+<p class="sech">נושאים עיקריים</p>
+<div class="chips"><span class="chip">ברכת האש</span><span class="chip">אבוקה</span><span class="chip">אור ששבת</span><span class="chip">מלאכה קודם הבדלה</span><span class="chip">תשלומין עד יום ג&#x27;</span><span class="chip">מלווה מלכה</span></div>
+</div>
+<div class="sec">
+<p class="sech">מקרה מבחן</p>
+<div class="case"><h4>הדלקת נר חנוכה בערב שבת</h4><p>לא תרגיל היפותטי אלא ההלכה של אותו שבוע: הנר הראשון דלק בערב שבת, 4.12. מחייב את בין השמשות, סדר ההדלקה וקבלת שבת מיחידה א&#x27;.</p></div>
+</div>
+<div class="sec">
+<p class="sech">מקורות</p>
+<div class="srcs three">
+<div>
+<p class="srch">יסוד — תנאים ואמוראים</p>
+<ul><li>ברכות נא ע&quot;ב</li><li>ברכות נג ע&quot;א–ע&quot;ב</li><li>פסחים נג ע&quot;ב</li><li>פסחים קה ע&quot;ב</li><li>שבת קיט ע&quot;ב</li></ul>
+</div>
+<div>
+<p class="srch">ראשונים</p>
+<ul><li>רש&quot;י ברכות נג ע&quot;א</li><li>תוס&#x27; ברכות נג ע&quot;א ד&quot;ה &quot;אין&quot;</li><li>רא&quot;ש ברכות פ&quot;ח</li><li>רמב&quot;ם שבת פכ&quot;ט הכ&quot;ה–הכ&quot;ז</li></ul>
+</div>
+</div>
+</div>
+<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רצ&quot;ט כבד. תשלומי הבדלה עד יום ג&#x27; — תשלומין או חיוב מחודש.</p></div>
+</div>
+</section>
+</main>
+<footer>
+<p>סיכום אינו מקור. העמוד הוא מפת יסודות ואינו תחליף ללימוד מן הספרים.</p>
+<p class="hint">העמוד נבנה מ-planning/plan/ ואינו נערך ידנית.</p>
+</footer>
+</div>
+<script>
+(function(){
+  var tg = [].slice.call(document.querySelectorAll('.tog'));
+  function set(b, open){
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.getElementById(b.getAttribute('aria-controls')).hidden = !open;
+  }
+  tg.forEach(function(b){
+    set(b, false);
+    b.addEventListener('click', function(){
+      set(b, b.getAttribute('aria-expanded') !== 'true');
+    });
+    b.addEventListener('keydown', function(e){
+      var i = tg.indexOf(b), j = null;
+      if (e.key === 'ArrowDown') j = i + 1;
+      else if (e.key === 'ArrowUp') j = i - 1;
+      else if (e.key === 'Home') j = 0;
+      else if (e.key === 'End') j = tg.length - 1;
+      if (j !== null && tg[j]) { e.preventDefault(); tg[j].focus(); }
+    });
+  });
+  // הדפסה: לפתוח הכול, ולהחזיר אחר כך
+  var was = [];
+  window.addEventListener('beforeprint', function(){
+    was = tg.map(function(b){ return b.getAttribute('aria-expanded') === 'true'; });
+    tg.forEach(function(b){ set(b, true); });
+  });
+  window.addEventListener('afterprint', function(){
+    tg.forEach(function(b, i){ set(b, was[i]); });
+  });
+})();
+</script>
+</body></html>

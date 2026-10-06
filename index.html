@@ -239,6 +239,47 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 .intl ul{list-style:none;padding-right:12px}
 .intl li{padding:2px 0}
 @media print{.elbox,.fq,.tens,.intl{background:#fff;border:1px solid #ccc}}
+
+.srcs.four{grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:760px){ .srcs.four{grid-template-columns:1fr;gap:18px} }
+
+.simrow{display:block;font-size:13.5px;color:var(--ink-2);margin-top:4px}
+.simrow:first-of-type{margin-top:8px}
+.simrow b{font-family:var(--serif);color:var(--day);font-weight:700;margin-left:4px}
+.simrow i{font-style:normal;font-size:12px;color:var(--ink-3);margin-right:4px}
+.umap{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:22px}
+.umap a{display:block;padding:9px 10px;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--panel);color:var(--ink);text-decoration:none;font-size:13.5px;line-height:1.35}
+.umap a:hover{border-color:var(--day)}
+.umap b{display:block;font-weight:600}
+.umap span{display:block;font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.umap em{display:block;font-style:normal;font-size:11px;color:var(--brass);margin-top:3px}
+@media (max-width:640px){ .umap{grid-template-columns:repeat(2,1fr)} }
+.stop{border:1px solid var(--line);border-radius:var(--r);background:var(--panel);margin-bottom:10px}
+.stop>summary{list-style:none;cursor:pointer;padding:11px 14px;display:flex;flex-wrap:wrap;
+  gap:6px 10px;align-items:baseline}
+.stop>summary::-webkit-details-marker{display:none}
+.stop[open]>summary{border-bottom:1px solid var(--line-2)}
+.stag{font-size:10.5px;letter-spacing:.05em;padding:2px 8px;border-radius:10px;white-space:nowrap}
+.stag.m{background:var(--rust-lt);color:var(--rust)}
+.stag.i{background:var(--day-lt);color:var(--day)}
+.stag.l{background:var(--moss-lt);color:var(--moss)}
+.ssf{font-size:12.5px;color:var(--ink-2);white-space:nowrap}
+.sq{flex-basis:100%;font-family:var(--serif);font-size:15.5px;font-weight:700;line-height:1.45}
+.sbody{padding:4px 14px 14px}
+.sbody dt{font-size:11px;letter-spacing:.09em;color:var(--ink-3);margin-top:12px}
+.sbody dd{font-size:14.5px;color:var(--ink-2);margin-top:3px}
+.sbody .fq{margin-top:8px}
+.st{border-collapse:collapse;width:100%;font-size:13.5px}
+.st td{border-bottom:1px solid var(--line-2);padding:7px 6px;vertical-align:top;color:var(--ink-2)}
+.st td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+.st td:last-child{font-size:12px;color:var(--ink-3);white-space:nowrap}
+.enr>summary{cursor:pointer;font-size:11px;letter-spacing:.11em;color:var(--ink-3);
+  padding-bottom:8px;border-bottom:1px solid var(--line-2)}
+@media print{
+  .enr{display:none}
+  .stop{break-inside:avoid}
+}
 </style>
 </head>
 <body>
@@ -247,6 +288,13 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 <p class="eyebrow">הלכות שבת · הכנה לבחינות הסמכה</p>
 <h1>תפילות שבת, קידוש, סעודות והבדלה</h1>
 <p class="meta">12.10–13.12.2026 · תשעה שבועות</p>
+<nav class="umap" aria-label="מפת היחידה">
+<a href="#b1"><b>ליל שבת</b><span>שבוע 1</span></a>
+<a href="#b2"><b>הנר</b><span>שבוע 2</span><em>לפי סדר הסימנים</em></a>
+<a href="#b3"><b>קידוש וסעודה</b><span>שבועות 3–5</span></a>
+<a href="#b6"><b>יום השבת</b><span>שבועות 6–7</span></a>
+<a href="#b8"><b>מוצאי שבת</b><span>שבועות 8–9</span></a>
+</nav>
 </header>
 <main>
 <section class="wk">
@@ -255,108 +303,20 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 <span>
 <span class="num">שבוע 1 <span class="dt">· 12–18.10</span></span>
 <span class="axis">תפילת ערבית, מעין שבע וקידוש בבית הכנסת</span>
-<span class="simline">רס&quot;ז · רס&quot;ח · רס&quot;ט · ר&quot;ע · ר&quot;פ</span>
+<span class="simrow"><b>רס&quot;ז</b> תפילת ערבית של שבת <i>3 סעיפים</i></span>
+<span class="simrow"><b>רס&quot;ח</b> טעה והזכיר של חול; ברכה מעין שבע <i>13 סעיפים</i></span>
+<span class="simrow"><b>רס&quot;ט</b> קידוש בבית הכנסת <i>סעיף אחד</i></span>
+<span class="simrow"><b>ר&quot;ע</b> אמירת &quot;במה מדליקין&quot; <i>שני סעיפים</i></span>
+<span class="simrow"><b>ר&quot;פ</b> תשמיש המיטה בשבת <i>שני סעיפים</i></span>
 </span>
 <span class="chev" aria-hidden="true"></span>
 </button>
 </h2>
 <div class="panel" id="p1" role="region" aria-labelledby="b1">
-<div class="sec">
-<p class="sech">ציר השבוע</p>
-<p class="thesis">ליל שבת בבית הכנסת הוא מבנה רב-שכבתי. כל שכבה נוצרה מצורך אחר, וכל שכבה מעוררת שאלות הלכתיות משלה.</p>
-<div class="dax"><span>חז&quot;ל</span><i>←</i><span>גאונים</span><i>←</i><span>צפת, המאה ה-16</span><i>←</i><span>סדר התפילה המאוחר</span></div>
-</div>
-<div class="sec">
-<p class="sech">הסימנים</p>
-<div class="sim">
-<b>רס&quot;ז</b>
-<span class="t">תפילת ערבית של שבת</span>
-<span class="all">כל הסימן · 3 סעיפים</span>
-</div>
-<div class="sim">
-<b>רס&quot;ח</b>
-<span class="t">טעה והזכיר של חול; ברכה מעין שבע</span>
-<span class="all">כל הסימן · 13 סעיפים</span>
-</div>
-<div class="sim">
-<b>רס&quot;ט</b>
-<span class="t">קידוש בבית הכנסת</span>
-<span class="all">כל הסימן · סעיף אחד</span>
-</div>
-<div class="sim">
-<b>ר&quot;ע</b>
-<span class="t">אמירת &quot;במה מדליקין&quot;</span>
-<span class="all">כל הסימן · שני סעיפים</span>
-</div>
-<div class="sim">
-<b>ר&quot;פ</b>
-<span class="t">תשמיש המיטה בשבת</span>
-<span class="all">כל הסימן · שני סעיפים</span>
-</div>
-</div>
-<div class="sec">
-<p class="sech">נושאים עיקריים</p>
-<div class="chips"><span class="chip">ערבית של שבת והקדמתה</span><span class="chip">מנייני פלג</span><span class="chip">טעה והתפלל של חול</span><span class="chip">ויכולו</span><span class="chip">ברכה מעין שבע</span><span class="chip">קידוש בבית הכנסת</span><span class="chip">במה מדליקין</span><span class="chip">עונה בליל שבת</span></div>
-</div>
-<div class="sec">
-<p class="sech">מוקדי השבוע</p>
-<div class="focus"><h3>ברכת מעין שבע: תקנה או חובה?</h3><div class="fq"><q>כי לא תקנוה אלא בשבת, ואפילו בשבת אינו חובה מצד הדין, רק שתקנוה משום סכנה... ומה דתיקון תיקון ואין להוסיף עליה</q><cite>מ&quot;ב רס&quot;ח ס&quot;ק כג</cite></div><div class="ftw"><table class="ft"><thead><tr><th>שאלה</th><th>מקור</th><th>הכרעה</th></tr></thead><tbody><tr><td>הטעם המקורי</td><td>מ&quot;ב ס&quot;ק כ</td><td>סכנת מזיקים — בתי הכנסת היו בשדה, ויש המאחרים לבוא; &quot;וגם האידנא לא זזה תקנה ממקומה&quot;</td></tr><tr><td>בית חתנים ואבלים</td><td>שו&quot;ע ס&quot;י</td><td>אין אומרים — &quot;דליכא טעמא דמאחרין לבא&quot;</td></tr><tr><td>גבול המניין</td><td>מ&quot;ב ס&quot;ק כד</td><td>מניין בבית, או לפרקים — לא; קביעות עם ספר תורה, &quot;וכמו בירידים דומה לבהכ&quot;נ קבוע ואומרים&quot;</td></tr><tr><td>מחלוקת אחרונים</td><td>מ&quot;ב ס&quot;ק כה</td><td>המ&quot;א בשם הרדב&quot;ז — במקום שנוהגים אין למחות; הפמ&quot;ג מפקפק, &quot;דהוי ספק ברכה לבטלה&quot;</td></tr><tr><td>יחיד</td><td>שו&quot;ע ס&quot;ח ורמ&quot;א</td><td>אין היחיד אומר; הרוצה להחמיר — &quot;בלא פתיחה ובלא חתימה&quot;</td></tr><tr><td>היקף האמירה</td><td>מ&quot;ב ס&quot;ק כא–כב</td><td>מ&quot;מגן אבות&quot; עד &quot;זכר למעשה בראשית&quot;; &quot;כי עיקר התקנה היה שהש&quot;ץ יברך אותה&quot;</td></tr><tr><td>שבת שאחר יו&quot;ט</td><td>שו&quot;ע ס&quot;יא</td><td>אומרים</td></tr></tbody></table></div><div class="tens"><span>הצדדים</span>ס&quot;י פוטר מן הברכה כשאין הטעם; ס&quot;ק כ כותב שלא זזה ממקומה.</div></div>
-<div class="focus"><h3>קידוש בבית הכנסת: ברכה לבטלה, או תקנה שאינה בטלה?</h3><div class="fq"><q>ועכשיו אע&quot;ג דלא אכלי אורחים בבי כנישתא לא בטלה התקנה... אבל יותר טוב להנהיג שלא לקדש בבהכ&quot;נ, וכן מנהג א&quot;י</q><cite>שו&quot;ע רס&quot;ט</cite></div><div class="fq"><q>ובמדינתנו נוהגין לקדש בבהכ&quot;נ... ואין לבטל המנהג כי הרבה גאונים יסדוהו כמ&quot;ש הרשב&quot;א</q><cite>מ&quot;ב רס&quot;ט ס&quot;ק ה</cite></div><ul class="fp"><li>המקדש אינו טועם, אלא מטעימו לקטן — &quot;דאין קידוש אלא במקום סעודה&quot;; והשו&quot;ע מפנה בעצמו לרע&quot;ג (שו&quot;ע רס&quot;ט)</li><li>לאיזה קטן: י&quot;א — רק לשלא הגיע לחינוך; המ&quot;א — אף לשהגיע, &quot;ואדרבה אם יתן רק לקטן שלא הגיע לחינוך יהיה ברכת המברך לבטלה&quot; (מ&quot;ב ס&quot;ק א)</li><li>אף שהמקדש עצמו לא יצא — &quot;מוציא את האחרים&quot; (מ&quot;ב ס&quot;ק ד)</li></ul></div>
-<div class="focus"><h3>טעה והתפלל של חול, ומבנה תפילת שבת</h3><p class="pr">ברכות החול ראויות מצד עצמן, וחכמים קיצרון מפני כבוד שבת — ולכן אם התחיל, גומר אותה ברכה. &quot;בדין הוא דבעי לצלויי י&quot;ח ברכות בשבת כמו בחול... ורק משום כבוד שבת לא אטרחוהו רבנן... ולכן בדיעבד שהתחיל הברכה גומרה שהיא ראויה לו מן הדין&quot; (מ&quot;ב רס&quot;ח ס&quot;ק ב)</p><ul class="fp"><li>שו&quot;ע ס&quot;ב: גומר אותה ברכה — בערבית, בשחרית, מוסף ומנחה; &quot;וי&quot;א דבמוסף פוסק אפילו באמצע ברכה&quot;; ומ&quot;ב ס&quot;ק ה: &quot;וכן פסקו האחרונים משום ספק ברכה לבטלה&quot;</li><li>שו&quot;ע ס&quot;ו: החליף של זו בזו אינו חוזר — &quot;וי&quot;א שאם החליף של מוסף באחרת או אחרת בשל מוסף חוזר&quot;; ומ&quot;ב ס&quot;ק יז: אף שהזכיר מעניין שבת חוזר, &quot;כיון שאמר מוסף תוך תפלתו ושקר לפני המקום&quot;</li><li>שו&quot;ע ס&quot;ג ומ&quot;ב ס&quot;ק ו: תיבת &quot;אתה&quot; — הב&quot;י סובר שאף בערבית ומנחה מקרי התחיל בשל חול; והמ&quot;א חולק: דווקא בשחרית, ש&quot;מינכר בדבורו&quot;</li><li>שו&quot;ע ס&quot;ד–ה: לא הזכיר של שבת — עקר רגליו, חוזר לראש; ומ&quot;ב ס&quot;ק ט: ספק — חוזר, &quot;דמסתמא התפלל של חול כמו שהוא רגיל&quot;</li><li>שו&quot;ע ס&quot;יג: שמע משליח ציבור ברכה מעין שבע מראש ועד סוף — יצא</li></ul><div class="tens"><span>הצדדים</span>מוסף יוצא מן הכלל בס&quot;ב ובס&quot;ו, מטעם אחד (מ&quot;ב ס&quot;ק ד): &quot;דבמוסף לא שייך כלל תפלת י&quot;ח ברכות דאף בחול א&quot;א רק שבע ברכות&quot; — ולכן &quot;ראויה לו מן הדין&quot; אינו חל עליו.</div></div>
-<div class="focus"><h3>ערבית מבעוד יום: מה מקבלים כשמקדימים</h3><ul class="fp"><li>שו&quot;ע ס&quot;ב: מפלג המנחה &quot;יכול להדליק ולקבל שבת בתפל&#x27; ערבי&#x27; ולאכול מיד&quot;</li><li>תרתי דסתרי: המ&quot;א מתיר ערבית מפלג אף לנוהגים להתפלל בזמנה — אך יתפלל מנחה קודם פלג, &quot;כדי שלא יהיה תרתי דסתרי אהדדי&quot; (מ&quot;ב ס&quot;ק ג)</li><li>שיעור פלג: י&quot;א שעה ורביע קודם הלילה, וי&quot;א שעה ורביע קודם השקיעה (מ&quot;ב ס&quot;ק ד)</li><li>אכילה מבעוד יום: השו&quot;ע — &quot;ולאכול מיד&quot;; ויש חולקין, שימשוך סעודתו ויאכל כזית בלילה — &quot;ולכתחלה נכון לחוש לדבריהם&quot; (מ&quot;ב ס&quot;ק ה)</li><li>קריאת שמע: יחזור ויקרא בלילה, בלא הברכות (מ&quot;ב ס&quot;ק ו)</li><li>חתימת השכיבנו: &quot;דבשבת א&quot;צ שמירה, כי השבת בעצמו הוא השומר אותנו&quot; (מ&quot;ב ס&quot;ק ז)</li></ul><div class="nafka"><span>נפקא מינה</span><p>מנייני פלג בקיץ.</p></div><span class="xr">← רס&quot;ג ס&quot;ד — יחידה א&#x27;, שבוע 3: שיעור פלג המנחה. המ&quot;ב (ס&quot;ק ד) מפנה לשם בעצמו</span></div>
-</div>
-<div class="sec">
-<p class="sech">סוגיות נוספות</p>
-<div class="theme"><h4>ויכולו — שתי שכבות, לא מחלוקת</h4><ol class="fl"><li><b>למה חוזרים עליו אחרי העמידה</b>שו&quot;ע רס&quot;ח ס&quot;ז: &quot;חוזרים לומר ויכלו משום יום טוב שחל להיו&#x27; בשב&#x27; שאין אומרים אותו בתפלה, וגם להוציא למי שאינו יודע&quot;; ומ&quot;ב ס&quot;ק יח: &quot;ואגב שבת זה תקנו לכל השבתות&quot;</li><li><b>למה בקול, בעמידה וביחד</b>מ&quot;ב ס&quot;ק יט: &quot;לפי שבזה אנו מעידים להקב&quot;ה במעשה בראשית, ודין עדים בעמידה, כדכתיב ועמדו שני האנשים&quot;; &quot;וטוב לומר אותה ביחד בצבור, דעדה שלמה בעינן להעיד להקב&quot;ה, ועכ&quot;פ יהיה בשנים&quot;</li></ol><div class="ftw"><table class="ft"><caption>יו&quot;ט שחל בשבת: ברס&quot;ח ס&quot;ז — טעם האמירה; ברס&quot;ח ס&quot;ט — אינו משנה את הנוסח.</caption><thead><tr><th></th><th>יו&quot;ט שחל בשבת</th></tr></thead><tbody><tr><td>ויכולו (ס&quot;ז)</td><td>הסיבה לאמירה הציבורית — נוסח יו&quot;ט השמיטו</td></tr><tr><td>מעין שבע (ס&quot;ט)</td><td>אינו משנה דבר — &quot;ומה דתיקון תיקון ואין להוסיף עליה&quot; (מ&quot;ב ס&quot;ק כג)</td></tr></tbody></table></div><ul class="fp"><li>ולעניין היחיד (מ&quot;ב ס&quot;ק יט): י&quot;א שאינו חוזר לאומרו, &quot;דאין עדות ליחיד&quot;; וי&quot;א שיכול, בלא עמידה — &quot;וטוב שגם היחיד יאמר, אבל לא יתכוין לשם עדות אלא כקורא בתורה&quot;</li></ul></div>
-<div class="theme"><h4>דין היחיד בשלוש האמירות</h4><ul class="fp"><li>ויכולו — &quot;אין עדות ליחיד&quot;, אך יאמר שלא בתורת עדות (מ&quot;ב רס&quot;ח ס&quot;ק יט)</li><li>מעין שבע — &quot;אין היחיד אומר אותה&quot;, ולרמ&quot;א בלא פתיחה ובלא חתימה (שו&quot;ע רס&quot;ח ס&quot;ח)</li><li>קידוש בבית הכנסת — נתקן לאורחים, והמקדש עצמו אינו יוצא (שו&quot;ע רס&quot;ט; מ&quot;ב ס&quot;ק ד)</li></ul></div>
-<div class="theme"><h4>במה מדליקין — ריבוי טעמים ומנהגים</h4><ul class="fp"><li>למה אומרים: &quot;לפי שיש בו דין הדלקה וג&#x27; דברים שצריך אדם לומר בתוך ביתו ע&quot;ש עם חשכה&quot; (מ&quot;ב ר&quot;ע ס&quot;ק א)</li><li>מתי: הספרדים קודם ערבית, והשו&quot;ע — &quot;והוא הנכון&quot;, &quot;דלאחר תפלת ערבית מאי נ&quot;מ&quot; (מ&quot;ב ס&quot;ק ב); והנוהגים לאומרו אחריה — במנהגי מהרא&quot;ק, כדי שהמאחר יספיק להתפלל</li><li>יו&quot;ט שחל בערב שבת — &quot;שאין מעשרין ביו&quot;ט&quot;; ויו&quot;ט שחל בשבת — &quot;משום לא פלוג&quot; (מ&quot;ב ס&quot;ק ג)</li><li>שבת של חנוכה — &quot;מפני שנזכר בה פסול שמנים שהם אסורים בשבת ולא בחנוכה&quot; (מ&quot;ב ס&quot;ק ד); ורמ&quot;א: &quot;ואין נוהגין כן בחנוכה&quot;</li></ul><span class="xr">← שבוע 9 — שבת חנוכה</span></div>
-<div class="theme"><h4>ר&quot;פ — עונה בליל שבת</h4><ul class="fp"><li>שו&quot;ע ס&quot;א: &quot;תשמיש המטה מתענוגי שבת הוא, לפיכך עונת תלמידי חכמים הבריאים מליל שבת לליל שבת&quot;</li><li>מ&quot;ב ס&quot;ק ג: לבד ליל טבילה; &quot;וצריך להזהר שקודם שיגיע הלילה חייב להראות חבה יתירה ואהבה עם אשתו, וא&quot;צ לומר שלא ירגיל שום קטטה בע&quot;ש&quot; (ב&quot;ח)</li><li>מ&quot;ב ס&quot;ק א: מצוה לאכול שום בערב שבת או בליל שבת</li></ul></div>
-</div>
-<div class="sec">
-<p class="sech">מקורות</p>
-<div class="srcs three">
-<div>
-<p class="srch">יסוד — תנאים ואמוראים</p>
-<ul><li>שבת קיט ע&quot;א — ר&#x27; חנינא מיעטף וקאי; ר&#x27; ינאי &quot;בואי כלה בואי כלה&quot;</li><li>שבת קיט ע&quot;ב — &quot;נעשה שותף להקב&quot;ה במעשה בראשית&quot;</li><li>פסחים קא ע&quot;א — אורחים דאכלו ושתו וגנו בבי כנישתא</li><li>ירושלמי ברכות ח, א (ומקבילה פסחים י, ב) — ר&#x27; יוסי בי רבי בון: במקום שאין יין, שליח ציבור אומר ברכה אחת מעין שבע, וחותם &quot;מקדש ישראל ואת יום השבת&quot;</li><li>עירובין מג ע&quot;ב — &quot;אין אליהו בא לא בערבי שבתות ולא בערבי ימים טובים, מפני הטורח&quot;</li><li>גיטין לח ע&quot;ב — שתי משפחות, אחת בשבת ואחת בערב שבת, ושתיהן נעקרו</li><li>בבא קמא לב ע&quot;א–ע&quot;ב — &quot;ומודה איסי בערב שבת בין השמשות שהוא פטור מפני שרץ ברשות&quot;; &quot;בערב שבת מאי ברשות איכא?&quot; — &quot;כדרבי חנינא&quot;<span class="xr">← שבת קיט ע&quot;א — הבבלי עצמו מנמק קולא בנזיקין בקבלת פני השבת</span></li><li>ברכות כז ע&quot;ב</li><li>שבת כד ע&quot;ב</li><li>שבת כד ע&quot;א</li><li>כתובות סב ע&quot;ב</li></ul>
-</div>
-<div>
-<p class="srch">ראשונים</p>
-<ul><li>סדר רב עמרם גאון — &quot;ולאחר שמקדשין בבית הכנסת אומר פרק ממס&#x27; שבת, וזה הוא הפרק במה מדליקין&quot;</li><li>ספר חסידים סי&#x27; קנ&quot;ד — &quot;מצוה לשנות ארבעים מלאכות חסר אחת כדי שלא ישכח איזו מלאכה אסורה... אחר התפלה תקנו וקבעו לומר במה מדליקין בבית הכנסת&quot;</li><li>ריטב&quot;א החדש ושלטי הגיבורים — ויכולו כעדות</li><li>רי&quot;ף ברכות</li><li>רא&quot;ש ברכות פ&quot;ד</li><li>רמב&quot;ם תפילה פ&quot;י ה&quot;ו–ה&quot;ז</li></ul>
-</div>
-<div>
-<p class="srch">אחרונים ועיונים</p>
-<ul><li>שו&quot;ע רס&quot;ז ס&quot;א–ג</li><li>שו&quot;ע רס&quot;ח ס&quot;ב–יג</li><li>שו&quot;ע רס&quot;ט</li><li>שו&quot;ע ר&quot;ע ס&quot;א–ב</li><li>שו&quot;ע ר&quot;פ ס&quot;א–ב</li><li>מ&quot;ב רס&quot;ז ס&quot;ק א–ט</li><li>מ&quot;ב רס&quot;ח ס&quot;ק ה–ט, טז–כו</li><li>מ&quot;ב רס&quot;ט ס&quot;ק א–ו</li><li>מ&quot;ב ר&quot;ע ס&quot;ק א–ה</li><li>מ&quot;ב ר&quot;פ ס&quot;ק א–ד</li></ul>
-</div>
-</div>
-</div>
-<div class="sec">
-<p class="sech">להרחבה</p>
-<div class="tr halakhic"><p class="trh">הרחבה הלכתית<em>מרחיב את הידע ההלכתי או פותח נושא חדש</em></p><ul>
-<li><b>הרב שריה דבליצקי</b>, חמישה מנהגים לעדות הספרדים למקום אמירתו של פרק במה מדליקין בליל שבת<i> · מוריה ריט–רכ (אלול תשנ&quot;ג)</i></li>
-<li><b>הרב גדליה אוברלנדר</b>, מנהג אמירת &quot;במה מדליקין&quot; בליל שבת<i> · אור ישראל מו (תשס&quot;ז)</i></li>
-<li><b>הרב אמנון בזק</b>, אמירת ויכולו בשבת<i> · עלון שבות 146</i></li>
-</ul></div>
-<div class="tr iyun"><p class="trh">העשרה עיונית<em>היסטורי, פילולוגי, ריאלי, ביקורתי</em></p><ul>
-<li><b>ד&quot;ר יעל קליין</b>, עיונים בסידור התפילה — במה מדליקין<i> · דפי מאורות, ואתחנן תשע&quot;ה</i></li>
-<li><b>Joseph Heinemann</b>, One Benediction Comprising Seven<i> · Revue des études juives 125 (1966)</i></li>
-<li><b>Joseph Heinemann</b>, &quot;משום סכנה&quot; כטעם לברכה מעין שבע — הסבר מאוחר<i> · One Benediction Comprising Seven, REJ 125 (1966)</i></li>
-<li><b>ר&#x27; משה בן מכיר</b>, ספר סדר היום<i> · שער &quot;הכנת יום הששי לכבוד שבת&quot; (שס&quot;ה)</i></li>
-<li><b>R. J. Z. Werblowsky</b>, Joseph Karo: Lawyer and Mystic<i> (1962)</i></li>
-<li><b>Lawrence Fine</b>, Physician of the Soul, Healer of the Cosmos<i> (2003)</i></li>
-<li><b>Lawrence Fine (ed.)</b>, Safed Spirituality: Rules of Mystical Piety<i></i></li>
-<li><b>Lawrence Fine</b>, Pietistic Customs from Safed<i> · Lawrence Fine (ed.), Judaism in Practice</i></li>
-<li><b>Morris Faierstein</b>, Jewish Customs of Kabbalistic Origin<i></i></li>
-<li><b>Arthur Green</b>, Some Aspects of Qabbalat Shabbat<i> · The Heart of the Matter</i></li>
-<li><b>פרופ&#x27; משה אידל</b>, שבת: על תפיסות הזמן במיסטיקה היהודית<i> · שבת: רעיון, היסטוריה, מציאות</i></li>
-</ul></div>
-</div>
-<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">שבוע ידע ועיצוב מפה, לא שבוע מחלוקת. אחרי אלול, שכולו מחלוקות כבדות, זה שינוי מכוון.</p></div>
-<aside class="elbox">
-<h4>חיבור לאלול: רגע קבלת השבת</h4>
-<p>את הדין — מאיזה רגע נאסרת המלאכה — למדנו ברס&quot;א. ברס&quot;ז המ&quot;ב מפנה לשם:</p>
-<div class="fq"><q>משום דהוי נהיגי עלמא לקבל עליהם שבת מכי פתח הש&quot;ץ ברכו, וכדלעיל בסימן רס&quot;א ס&quot;ד</q><cite>מ&quot;ב רס&quot;ז ס&quot;ק ב — ההפניה היא של המ&quot;ב</cite></div>
-<ol class="chron"><li><p class="p">בית יוסף — הושלם ~1542, נדפס ונציה שנות ה-1550</p></li><li><p class="p">דרכי משה — &quot;ובמדינות אלו אין נוהגין לומר מזמור בכניסת השבת&quot;</p></li><li><p class="p">מפה (הגהות שו&quot;ע) — אין הגהה על רס&quot;א ס&quot;ד</p></li><li><p class="p">האר&quot;י — הגיע לצפת ה&#x27;ש&quot;ל (1570), נפטר ה&#x27;של&quot;ב (1572)</p><p class="cn">דברי הב&quot;י קודמים לבוא האר&quot;י בכ-15 שנה לפחות ובסבירות בכ-30. עדות מתוארכת לכך שקבלת שבת התקיימה בצפת לפני האר&quot;י, ושמרן תיעד את שלב הרמ&quot;ק–אלקבץ.</p></li></ol>
-</aside>
+<div class="sec"><p class="sech">ציר השבוע</p><p class="thesis">סדר ליל שבת שבידינו מורכב מתקנות וממנהגים מתקופות שונות. כל שכבה נוצרה מצורך אחר, וכל שכבה מעוררת שאלות הלכתיות משלה.</p><div class="dax"><span>חז&quot;ל</span><i>←</i><span>גאונים</span><i>←</i><span>צפת, המאה ה-16</span><i>←</i><span>סדר התפילה המאוחר</span></div></div>
+<div class="sec"><p class="sech">נקודות שחייבים לעצור בהן</p><details class="stop"><summary><span class="stag l">למעשה</span><span class="ssf">רס&quot;ח ס&quot;ח–יג</span><span class="sq">ברכת מעין שבע — האם היא חזרת הש&quot;ץ, ובאיזה מניין אומרים אותה?</span></summary><dl class="sbody"><dt>איפה</dt><dd>ירושלמי ברכות ח, א · שו&quot;ע רס&quot;ח ס&quot;ח–יג · רמ&quot;א · מ&quot;ב ס&quot;ק כ–כה · ערוה&quot;ש רס&quot;ח ס&quot;יז · פניני הלכה שבת ה, יג</dd><dt>השאלה</dt><dd>אם הברכה כעין חזרת הש&quot;ץ — נאמרת בכל מניין; אם תקנה מיוחדת משום סכנה — רק היכן שנתקנה. ומכאן: בית חתנים ואבלים, מניין שאינו קבוע, היחיד, ומי שלא התפלל.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>מקדש ישראל ואת יום השבת</q><cite>ירושלמי ברכות ח, א, ר&#x27; יוסי בי רבי בון — ובמקום שאין יין, החתימה</cite></div><div class="fq"><q>כשמתפללים שם באקראי... אין אומרים אותה כלל</q><cite>ערוה&quot;ש רס&quot;ח ס&quot;יז — מניין שאינו קבוע</cite></div><div class="fq"><q>ויש אומרים על פי הקבלה... שיש צורך לעשות בשבת כעין חזרת הש&quot;ץ בתפילת ערבית</q><cite>פניני הלכה שבת ה, יג — ומנגד</cite></div><div class="fq"><q>ושורש מחלוקתם, האם &#x27;מעין שבע&#x27; נחשבת לחזרת הש&quot;ץ</q><cite>שם, והערה 8 — על מי שלא התפלל ושמע מן הש&quot;ץ (ס&quot;יג)</cite></div><div class="fq"><q>מפני שכל העיר נחשבת כבית כנסת</q><cite>שם — ירושלים</cite></div></dd><dt>נפקא מינה</dt><dd>מניין קבוע — &quot;אבל כשיש קביעות על איזה ימים ויש ס&quot;ת אצלם... דומה לבהכ&quot;נ קבוע ואומרים&quot; (מ&quot;ב ס&quot;ק כד); ובמקום שנהגו לאומרה — אין למחות, והפמ&quot;ג מפקפק (ס&quot;ק כה). ומכאן מניינים שאינם בבית כנסת קבוע: בתי ספר, מרפסות וחצרות.</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רס&quot;ט</span><span class="sq">קידוש בבית הכנסת — ברכה לבטלה, או תקנה שאינה בטלה?</span></summary><dl class="sbody"><dt>איפה</dt><dd>פסחים קא ע&quot;א · שו&quot;ע רס&quot;ט · מ&quot;ב ס&quot;ק א–ה</dd><dt>השאלה</dt><dd>השו&quot;ע — &quot;ועכשיו... לא בטלה התקנה&quot;, &quot;אבל יותר טוב להנהיג שלא לקדש בבהכ&quot;נ, וכן מנהג א&quot;י&quot;; והמ&quot;ב — &quot;ואין לבטל המנהג כי הרבה גאונים יסדוהו כמ&quot;ש הרשב&quot;א&quot; (ס&quot;ק ה).</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>ושמואל, למה לי לקדושי בבי כנישתא? לאפוקי אורחים ידי חובתן, דאכלו ושתו וגנו בבי כנישתא</q><cite>פסחים קא ע&quot;א</cite></div><div class="fq"><q>ולמה מקדשין בבית הכנסת? מפני האורחין שאוכלין ושותין שם</q><cite>רמב&quot;ם שבת כט, ח</cite></div></dd><dt>נפקא מינה</dt><dd>המקדש אינו טועם, אלא מטעים קטן — ולאיזה קטן, מחלוקת (מ&quot;ב ס&quot;ק א); ואף שהמקדש אינו יוצא בו, מוציא את האחרים (ס&quot;ק ד). ← רע&quot;ג, שבוע 5: רבנו יונה והרא&quot;ש על אותו קידוש.</dd></dl></details><details class="stop"><summary><span class="stag i">ציר עיוני</span><span class="ssf">רס&quot;ח ס&quot;א–ו</span><span class="sq">טעה והתפלל של חול — ומה זה מלמד על מבנה תפילת שבת</span></summary><dl class="sbody"><dt>איפה</dt><dd>שו&quot;ע רס&quot;ח ס&quot;א–ו · מ&quot;ב ס&quot;ק ב, ד–ו, ט, טז–יז</dd><dt>השאלה</dt><dd>ברכות החול ראויות מצד עצמן, וחכמים קיצרון מפני כבוד שבת — ולכן אם התחיל, גומר אותה ברכה; ובמוסף — לי&quot;א פוסק אפילו באמצע, שאין בו י&quot;ח ברכות כלל (מ&quot;ב ס&quot;ק ב, ד).</dd><dt>נפקא מינה</dt><dd>החליף של זו בזו — אינו חוזר, ובמוסף י&quot;א חוזר (ס&quot;ו; מ&quot;ב ס&quot;ק טז–יז); תיבת &quot;אתה&quot; — הב&quot;י והמ&quot;א (ס&quot;ק ו); לא הזכיר של שבת — עקר רגליו, חוזר לראש (ס&quot;ד–ה; מ&quot;ב ס&quot;ק ט).</dd></dl></details><details class="stop"><summary><span class="stag l">למעשה</span><span class="ssf">רס&quot;ז ס&quot;ב–ג</span><span class="sq">ערבית של שבת מבעוד יום — פלג, תרתי דסתרי וקריאת שמע בזמנה</span></summary><dl class="sbody"><dt>איפה</dt><dd>שו&quot;ע רס&quot;ז ס&quot;ב · מ&quot;ב ס&quot;ק ג–ז · ← רס&quot;ג ס&quot;ד, יחידה א&#x27;</dd><dt>השאלה</dt><dd>מפלג המנחה מותר לקבל שבת בתפילת ערבית ולאכול מיד; והמ&quot;א — אף לנוהגים בזמנה, ובלבד שלא יתפלל מנחה אחר פלג (מ&quot;ב ס&quot;ק ג).</dd><dt>נפקא מינה</dt><dd>שיעור פלג — שתי דעות (ס&quot;ק ד); אכילה מבעוד יום — &quot;ולכתחלה נכון לחוש&quot; לחולקים, ויאכל כזית בלילה (ס&quot;ק ה); קריאת שמע — חוזר וקורא בלילה (ס&quot;ק ו). מנייני פלג בקיץ.</dd></dl></details></div>
+<div class="sec"><p class="sech">שאר הסעיפים</p><table class="st"><tbody><tr><td>רס&quot;ז ס&quot;א, ג</td><td>במנחה של ערב שבת אין נופלים על פניהם; השכיבנו חותם &quot;הפורס סוכת שלום&quot;</td><td>שו&quot;ע ס&quot;א, ג · מ&quot;ב ס&quot;ק ז</td></tr><tr><td>רס&quot;ח ס&quot;ז</td><td>ויכולו אחר התפילה — משום יו&quot;ט שחל בשבת, ולהוציא את מי שאינו יודע; בעמידה וביחד — כעדות</td><td>שו&quot;ע ס&quot;ז · מ&quot;ב ס&quot;ק יח–יט</td></tr><tr><td>רס&quot;ח ס&quot;ח; ס&quot;ז</td><td>היחיד — אינו אומר מעין שבע, ולרמ&quot;א בלא פתיחה וחתימה; ויכולו — שלא בתורת עדות</td><td>שו&quot;ע ס&quot;ח · רמ&quot;א · מ&quot;ב ס&quot;ק יט</td></tr><tr><td>רס&quot;ח ס&quot;ט–יא</td><td>יו&quot;ט שחל בשבת — אינו מזכיר של יו&quot;ט במעין שבע; שבת שאחר יו&quot;ט — אומרים</td><td>שו&quot;ע ס&quot;ט–יא · מ&quot;ב ס&quot;ק כג</td></tr><tr><td>ר&quot;ע</td><td>במה מדליקין — למה ומתי; יו&quot;ט שחל בערב שבת או בשבת; שבת של חנוכה (← שבוע 9)</td><td>שו&quot;ע ס&quot;א–ב · רמ&quot;א · מ&quot;ב ס&quot;ק א–ד</td></tr><tr><td>ר&quot;פ</td><td>עונה בליל שבת — מתענוגי שבת; ואכילת שום</td><td>שו&quot;ע ס&quot;א–ב · מ&quot;ב ס&quot;ק א–ג</td></tr></tbody></table></div>
+<div class="sec"><details class="enr"><summary>להעשרה</summary><div class="elbox"><span class="stag i">ציר עיוני</span><h4>חיבור לאלול: רגע קבלת השבת</h4><p>את הדין — מאיזה רגע נאסרת המלאכה — למדנו ברס&quot;א. ברס&quot;ז המ&quot;ב מפנה לשם:</p><div class="fq"><q>משום דהוי נהיגי עלמא לקבל עליהם שבת מכי פתח הש&quot;ץ ברכו, וכדלעיל בסימן רס&quot;א ס&quot;ד</q><cite>מ&quot;ב רס&quot;ז ס&quot;ק ב — ההפניה היא של המ&quot;ב</cite></div><ol class="chron"><li><p class="p">בית יוסף — הושלם ~1542, נדפס ונציה שנות ה-1550</p></li><li><p class="p">דרכי משה — &quot;ובמדינות אלו אין נוהגין לומר מזמור בכניסת השבת&quot;</p></li><li><p class="p">מפה (הגהות שו&quot;ע) — אין הגהה על רס&quot;א ס&quot;ד</p></li><li><p class="p">האר&quot;י — הגיע לצפת ה&#x27;ש&quot;ל (1570), נפטר ה&#x27;של&quot;ב (1572)</p><p class="cn">דברי הב&quot;י (&quot;ונראה דלדידן מכי אמר מזמור דשבת קבליה לשבת עליה&quot;, רס&quot;א) קודמים לבוא האר&quot;י בכ-15 שנה לפחות ובסבירות בכ-30. זיקתם לסדרי הרמ&quot;ק–אלקבץ טעונה בירור מן המקורות ההיסטוריים.</p></li></ol></div><div class="tr halakhic"><p class="trh">הרחבה הלכתית<em>מרחיב את הידע ההלכתי או פותח נושא חדש</em></p><ul><li><b>הרב אליעזר מלמד</b>, פניני הלכה, שבת ה, יג — מגן אבות, מעין שבע<i></i></li><li><b>הרב שריה דבליצקי</b>, חמישה מנהגים לעדות הספרדים למקום אמירתו של פרק במה מדליקין בליל שבת<i> · מוריה ריט–רכ (אלול תשנ&quot;ג)</i></li><li><b>הרב גדליה אוברלנדר</b>, מנהג אמירת &quot;במה מדליקין&quot; בליל שבת<i> · אור ישראל מו (תשס&quot;ז)</i></li><li><b>הרב אמנון בזק</b>, אמירת ויכולו בשבת<i> · עלון שבות 146</i></li></ul></div><div class="tr iyun"><p class="trh">העשרה עיונית<em>היסטורי, פילולוגי, ריאלי, ביקורתי</em></p><ul><li><b>ד&quot;ר יעל קליין</b>, עיונים בסידור התפילה — במה מדליקין<i> · דפי מאורות, ואתחנן תשע&quot;ה</i></li><li><b>Joseph Heinemann</b>, One Benediction Comprising Seven<i> · Revue des études juives 125 (1966)</i></li><li><b>Joseph Heinemann</b>, &quot;משום סכנה&quot; כטעם לברכה מעין שבע — הסבר מאוחר<i> · One Benediction Comprising Seven, REJ 125 (1966)</i></li><li><b>ר&#x27; משה בן מכיר</b>, ספר סדר היום<i> · שער &quot;הכנת יום הששי לכבוד שבת&quot; (שס&quot;ה)</i></li><li><b>R. J. Z. Werblowsky</b>, Joseph Karo: Lawyer and Mystic<i> (1962)</i></li><li><b>Lawrence Fine</b>, Physician of the Soul, Healer of the Cosmos<i> (2003)</i></li><li><b>Lawrence Fine (ed.)</b>, Safed Spirituality: Rules of Mystical Piety<i></i></li><li><b>Lawrence Fine</b>, Pietistic Customs from Safed<i> · Lawrence Fine (ed.), Judaism in Practice</i></li><li><b>Morris Faierstein</b>, Jewish Customs of Kabbalistic Origin<i></i></li><li><b>Arthur Green</b>, Some Aspects of Qabbalat Shabbat<i> · The Heart of the Matter</i></li><li><b>פרופ&#x27; משה אידל</b>, שבת: על תפיסות הזמן במיסטיקה היהודית<i> · שבת: רעיון, היסטוריה, מציאות</i></li></ul></div></details></div>
 </div>
 </section>
 <section class="wk">
@@ -364,107 +324,19 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 <button class="tog" id="b2" aria-expanded="true" aria-controls="p2">
 <span>
 <span class="num">שבוע 2 <span class="dt">· 19–25.10</span></span>
-<span class="axis">דיני הנר בשבת: גזירה, גרמא וכוונה</span>
-<span class="simline">רע&quot;ה · רע&quot;ז · רע&quot;ח</span>
+<span class="axis">דיני הנר בשבת: שמא יטה, פסיק רישיה ומלאכה שאינה צריכה לגופה</span>
+<span class="simrow"><b>רע&quot;ה</b> קריאה לאור הנר <i>12 סעיפים</i></span>
+<span class="simrow"><b>רע&quot;ז</b> טלטול הנר ופתיחת הדלת כנגדו <i>5 סעיפים</i></span>
+<span class="simrow"><b>רע&quot;ח</b> כיבוי הנר בשביל החולה <i>סעיף אחד</i></span>
 </span>
 <span class="chev" aria-hidden="true"></span>
 </button>
 </h2>
 <div class="panel" id="p2" role="region" aria-labelledby="b2">
-<div class="sec">
-<p class="sech">ציר השבוע</p>
-<p class="thesis">שלושת הסימנים הם מדרג של ייחוס מלאכה לאדם: ברע&quot;ה הוא עושה מעשה מותר לחלוטין, וחוששים שבעתיד ישכח ויטה; ברע&quot;ז מעשהו עלול או מוכרח לגרום למלאכה שאינו רוצה בה; וברע&quot;ח הוא מכבה בכוונה, אך לא לתכלית המלאכה.</p>
-</div>
-<div class="sec">
-<p class="sech">הסימנים</p>
-<div class="sim">
-<b>רע&quot;ה</b>
-<span class="t">קריאה לאור הנר</span>
-<span class="all">כל הסימן · 12 סעיפים</span>
-</div>
-<div class="sim">
-<b>רע&quot;ז</b>
-<span class="t">טלטול הנר ופתיחת הדלת כנגדו</span>
-<span class="all">כל הסימן · 5 סעיפים</span>
-</div>
-<div class="sim">
-<b>רע&quot;ח</b>
-<span class="t">כיבוי הנר בשביל החולה</span>
-<span class="all">כל הסימן · סעיף אחד</span>
-</div>
-</div>
-<div class="sec">
-<p class="sech">נושאים עיקריים</p>
-<div class="chips"><span class="chip">קריאה לאור הנר</span><span class="chip">שמא יטה</span><span class="chip">אדם חשוב</span><span class="chip">נר שעווה</span><span class="chip">נר שאחורי הדלת</span><span class="chip">פסיק רישיה</span><span class="chip">כיבוי הנר לחולה</span><span class="chip">מלאכה שאינה צריכה לגופה</span></div>
-</div>
-<div class="sec">
-<p class="sech">המחלוקות</p>
-<div class="mach">
-<p class="mq">רע&quot;ה: אם &quot;לא חלקו חכמים בדבר&quot; — כיצד יש בכלל חריגים, ומה נחשב מנגנון שמנטרל את החשש?</p>
-<p class="lyh">כיצד הגיעה השאלה לכאן</p>
-<ol class="layers"><li>המשנה (שבת יא ע&quot;א): &quot;ולא יקרא לאור הנר. באמת אמרו, החזן רואה היכן תינוקות קוראין, אבל הוא לא יקרא&quot;</li><li>הגמרא (שבת יב ע&quot;ב): רבה — &quot;אפילו גבוה שתי קומות... חד הוא דלא ליקרי, הא תרי שפיר דמי&quot;; &quot;והתניא לא אחד ולא שנים!&quot; — ר&#x27; אלעזר: &quot;כאן בענין אחד, כאן בשני ענינים&quot;</li><li>השו&quot;ע (ס&quot;א): אסור אפילו גבוה עשר קומות, &quot;שלא חלקו חכמים בדבר&quot;, ומטעם זה אף בעששית</li></ol>
-<p class="lyh">הצדדים</p>
-<ul class="sides"><li>יש מתירים (מ&quot;ב ס&quot;ק ב): סגורה במפתח — אין דרכו לפתוח אלא מחמת איסור שבת, ולכן אית ליה היכרא, &quot;דדמי לקורא פרק במה מדליקין&quot;</li><li>יש אוסרין (מ&quot;ב ס&quot;ק ב): &quot;בכל גוונא, משום לא פלוג&quot;</li><li>אליה רבה (הובא במ&quot;ב ס&quot;ק ב): מסר המפתח לאחר — מצדד להתיר, &quot;דדמי לאומר לחבירו תן דעתך עלי&quot;</li></ul>
-<div class="nafka"><span>נפקא מינה</span><p>פיוטים וזמירות (מ&quot;ב ס&quot;ק ח): בבית הכנסת יש להחמיר בכל גוונא, &quot;משום לא פלוג&quot;; &quot;ומש&quot;כ לומר פיוטים, ה&quot;ה הזמירות שאומרים בשבת בבית&quot; — אם לא מי שרגיל קצת בהם, או שאומר לחבירו &quot;תן דעתך עלי&quot;.</p></div>
-<p class="mnote">החריגים שבמ&quot;ב לפי סוג: היכר, פיקוח, תוכן הטקסט, שגירות בפה.</p>
-<div class="branch"><h4>אדם חשוב</h4><ul class="fp"><li>שבת יב ע&quot;ב: רבא — &quot;אם אדם חשוב הוא — מותר&quot;</li><li>ומיד באותה סוגיה: ר&#x27; ישמעאל בן אלישע — &quot;אני אקרא ולא אטה&quot;. &quot;פעם אחת קרא ובקש להטות. אמר: כמה גדולים דברי חכמים שהיו אומרים לא יקרא לאור הנר&quot;</li><li>מ&quot;ב ס&quot;ק יב: &quot;שהיה משים עצמו על דברי תורה כהדיוט&quot;; &quot;וכתב הפמ&quot;ג: ועכשיו אין להתיר באדם חשוב, כי כמה פעמים ראינו שמתוך עיון שוכחים ומטים ומוחטים&quot;</li></ul></div>
-<div class="branch"><h4>נר שעווה</h4><ul class="fp"><li>ב&quot;י רע&quot;ה: &quot;ול&quot;נ פשוט לאסור, דהא שייך בו שימחוט ויחתוך ראש הפתילה&quot;</li><li>מ&quot;ב ס&quot;ק ג–ד: אין בו שמא יטה, אבל שמא ימחוט; הב&quot;ח בשם רש&quot;ל, וכ&quot;כ הט&quot;ז, הקלו — דכיבוי כאן מלאכה שאינה צריכה לגופה ואינו דאורייתא; &quot;ומסיק המג&quot;א דשלא לצורך יש להחמיר&quot;</li><li>ט&quot;ז או&quot;ח רע&quot;ח — חוזר במפורש לב&quot;י רע&quot;ה, ולשאלה אם גזרו קריאה לאור נר שעווה</li></ul></div>
-<div class="branch"><h4>תאורה שאין בה הטיה</h4><div class="fq"><q>והנה כהיום אין המנהג במדינותינו בהדלקת נר השעוה, רק בהדלקת נרות ממש [שקורין לאמפ], ומעולם תמהתי על מה נוהגין כהיום רובא דאינשי להקל בזה לקרות לאורם — הלא שייך בזה שמא יטה כדרכו בחול</q><cite>ביאור הלכה רע&quot;ה ד&quot;ה לאור הנר</cite></div></div>
-<span class="xr">← רע&quot;ה ס&quot;ז — &quot;מותר לקרות במה מדליקין לאור הנר, שהרי הוא מזכיר איסור שבת&quot; ← ר&quot;ע, שבוע 1</span>
-</div>
-<div class="mach">
-<p class="mq">רע&quot;ז: נר שאחורי הדלת — מה בדיוק קורה, ומה בדיוק אסור?</p>
-<div class="fq"><q>תנא: נר שאחורי הדלת — פותח ונועל כדרכו, ואם כבתה — כבתה. לייט עלה רב... בהא אפילו רבי שמעון מודה, דהא אביי ורבא דאמרי תרוייהו: מודה רבי שמעון ב&quot;פסיק רישיה ולא ימות&quot;</q><cite>שבת קכ ע&quot;ב</cite></div>
-<p class="lyh">כיצד הגיעה השאלה לכאן</p>
-<ol class="layers"><li>הברייתא מתירה, ורב &quot;לייט עלה&quot; — ובהא אפילו ר&quot;ש מודה, שהוא פסיק רישיה.</li><li>הרא&quot;ש (מובא בב&quot;י) משחזר את המקרה שלוש פעמים — רש&quot;י, ר&quot;ח, ר&quot;י — ואין הכרעה ביניהם; והב&quot;י מוסיף את פר&quot;ת</li><li>הטור: &quot;משום דלא ברירא ליה כהי מינייהו נקטי&#x27; — כתב כדברי כל הפירושים לאסור&quot; (ב&quot;י)</li><li>השו&quot;ע ס&quot;א: לכן הוא נראה כשלושה משפטים בלתי-קשורים — אחד לכל שחזור</li></ol>
-<p class="lyh">הצדדים</p>
-<ul class="sides"><li>רש&quot;י (בב&quot;י מהרא&quot;ש): &quot;שהנר מונח אחורי הדלת, וחיישינן שמא יכבנו הרוח&quot;</li><li>ר&quot;ח (בב&quot;י מהרא&quot;ש): &quot;שהנר מונח בכותל שאחורי הדלת, וכשפותח הדלת נוקש בכותל&quot;</li><li>ר&quot;י (בב&quot;י מהרא&quot;ש): &quot;שהנר קבוע באחורי הדלת, ובפתיחת הדלת ובנעילתו מרחיק את השמן מן הפתילה או מקרבו&quot;</li><li>ר&quot;ת (בב&quot;י): &quot;לא מיתסר אלא כשפותח ונועל כדרכו, אבל אם פותח ונועל בנחת — מותר&quot;</li><li>רמב&quot;ם (שבת פ&quot;ה הי&quot;ז), כר&quot;ת: &quot;אסור לפתח הדלת ולנעל כדרכו... אלא יזהר בשעה שפותח ובשעה שנועל&quot;; &quot;וכתב ה&quot;ה שהרמב&quot;ם מפרש כפר&quot;ת&quot; (ב&quot;י)</li></ul>
-<div class="nafka"><span>נפקא מינה</span><p>בנחת (מ&quot;ב ס&quot;ק ז): &quot;ואם הוא פותחו ונועלו בנחת בענין שלא יהא פסיק רישיה — מותר&quot; — ההיתר הוא שיטת ר&quot;ת כולה, לא קולא מקומית. ונעילה: &quot;ולפירש&quot;י פשיטא דלא מיתסר אלא לפתוח... שהרי מאחר שאינו לא מכבה ולא מבעיר לא לייט רב עליה&quot; (ב&quot;י), וכן ת&quot;ה סי&#x27; נ&quot;ט, והמרדכי &quot;שהורה הר&quot;ם שמותר לסגור החלון בשבת מפני הרוח&quot;; ומ&quot;ב ס&quot;ק יא: &quot;אינו עושה כלום אלא עוצר הרוח, ואם תכבה — תכבה&quot;.</p></div>
-<p class="mnote">כשאין הכרעה בין השחזורים, פוסקים כחומרת כולם.</p>
-<div class="branch"><h4>מלאכה שאינה צריכה לגופה ופסיק רישיה</h4><div class="fq"><q>ההפרש שיש בין מלאכה שאינה צריכה לגופה ובין פסיק רישיה ולא ימות, הוא דגבי פסיק רישיה אינו מכוון למלאכה כל עיקר אלא שהיא נעשית בהכרח, כגון שסגר פתח ביתו והיה שם צבי... אבל מלאכה שאינה צריכה לגופה הוא מתכוין לגוף המלאכה, אלא שאינו מכוין לתכליתה</q><cite>כסף משנה שבת פ&quot;א ה&quot;ז</cite></div><p class="attr"><span>ייחוס</span>הכ&quot;מ מביא זאת בלשון &quot;מצאתי כתוב&quot;, ובחתימה &quot;מיסוד ה&quot;ר אברהם החסיד בשם אביו ז&quot;ל&quot; — ר&#x27; אברהם בן הרמב&quot;ם בשם אביו. אין לייחס זאת למרן.</p><ul class="fp"><li>אינם נלמדים בשבוע זה: פסיק רישא דלא ניחא ליה · שיטת הערוך · תרי דרבנן</li></ul></div>
-<span class="xr">← רע&quot;ז ס&quot;ג ומ&quot;ב ס&quot;ק יח → ש&quot;ט, מוקצה (השולחן עם הנרות כבסיס)</span>
-<span class="xr">← רע&quot;ז ס&quot;ד ומ&quot;ב ס&quot;ק כא → תקי&quot;ד ס&quot;ו</span>
-<span class="xr">← מ&quot;ב רע&quot;ז ס&quot;ק כ → רע&quot;ט</span>
-<span class="xr">← מושגי הכוונה → מלאכת מחשבת (נושא רוחב)</span>
-<span class="xr">← פסיק רישיה → חטיבה 10</span>
-</div>
-</div>
-<div class="sec">
-<p class="sech">מוקדי השבוע</p>
-<div class="focus"><h3>רע&quot;ח: מה נכתב בשו&quot;ע ומה נשמט</h3><p class="pr">לא מחלוקת ולא סוגיה: סימן בן שורה אחת, וההלכה סגורה.</p><div class="fq"><q>מותר לכבות הנר בשביל שישן החולה שיש בו סכנה</q><cite>שו&quot;ע רע&quot;ח</cite></div><ul class="fp"><li>הדין למעשה (מ&quot;ב ס&quot;ק ג): יש בו סכנה, ואף ספק סכנה — מותר; &quot;אבל בשביל חולה שאין בו סכנה אסור לכבות לכו&quot;ע, ואפי&#x27; להפוסקים דס&quot;ל דאין על כיבוי חיוב חטאת משום דהוי מלאכה שאין צריך לגופה — אפ&quot;ה אסור מדברי סופרים&quot;</li><li>מדרג הפתרונות (מ&quot;ב ס&quot;ק א, בשם הרמב&quot;ם בפירוש המשנה): מכבים רק כשאי אפשר להוציא את החולה או להסתיר את האור — &quot;דאל&quot;ה בודאי יותר טוב לטלטל מוקצה מלעבור על איסור כביה&quot;. ו&quot;להסתיר האור&quot; הוא רע&quot;ז ס&quot;ה, כפיית קערה.</li><li>ערוה&quot;ש רע&quot;ח ס&quot;ב: &quot;ורבינו הב&quot;י לא כתב רק &#x27;מותר לכבות הנר בשביל שיישן החולה שיש בו סכנה&#x27; עכ&quot;ל, ולא כתב יותר — שלא רצה ליכנס בפלוגתא זו&quot;</li><li>הכסף משנה על אותה משנה: באותו כסף משנה (שבת פ&quot;א ה&quot;ז) מביא מרן את הרמ&quot;ך המונה ראיות שהלכה כר&quot;ש נגד פסק הרמב&quot;ם — ובהן &quot;וההיא דכחס על הנר, דמוקי ליה הכא כר&quot;ש, דיקא מתניתין כוותיה&quot;. זו המשנה של רע&quot;ח (שבת כט ע&quot;ב).</li></ul><div class="tens"><span>להשוואה</span>מרן דן במחלוקת בכסף משנה שבת פ&quot;א ה&quot;ז, ובשו&quot;ע רע&quot;ח כתב את הדין בלבד; וערוה&quot;ש ס&quot;ב: &quot;שלא רצה ליכנס בפלוגתא זו&quot;.</div><span class="xr">← מ&quot;ב רע&quot;ח ס&quot;ק ב–ג → שכ&quot;ח (חולה)</span></div>
-</div>
-<div class="sec">
-<p class="sech">מקורות</p>
-<div class="srcs three">
-<div>
-<p class="srch">יסוד — תנאים ואמוראים</p>
-<ul><li>שבת יא ע&quot;א (משנה) — &quot;ולא יפלה את כליו, ולא יקרא לאור הנר. באמת אמרו, החזן רואה היכן תינוקות קוראין, אבל הוא לא יקרא&quot;</li><li>שבת יב ע&quot;א</li><li>שבת יב ע&quot;ב — רבה; ר&#x27; אלעזר; רבא ואדם חשוב; ר&#x27; ישמעאל בן אלישע</li><li>שבת כט ע&quot;ב (משנה) — המכבה את הנר מפני שהוא מתירא... כחס על הנר</li><li>שבת קכ ע&quot;ב — נר שאחורי הדלת; מודה ר&quot;ש בפסיק רישיה</li></ul>
-</div>
-<div>
-<p class="srch">ראשונים</p>
-<ul><li>ר&#x27; אברהם בן הרמב&quot;ם בשם אביו — ההבחנה בין מלאכה שאינה צריכה לגופה לפסיק רישיה (מובא בכסף משנה שבת פ&quot;א ה&quot;ז)<span class="xr">ייחוס: בכ&quot;מ בלשון &quot;מצאתי כתוב&quot;, &quot;מיסוד ה&quot;ר אברהם החסיד בשם אביו ז&quot;ל&quot; — לא דברי מרן.</span></li><li>רמב&quot;ם שבת פ&quot;ה הי&quot;ז</li><li>תרומת הדשן סי&#x27; נ&quot;ט</li><li>הרא&quot;ש (מובא בב&quot;י רע&quot;ז) — פירושי רש&quot;י, ר&quot;ח ור&quot;י לנר שאחורי הדלת</li></ul>
-</div>
-<div>
-<p class="srch">אחרונים ועיונים</p>
-<ul><li>שו&quot;ע רע&quot;ה ס&quot;א–יב</li><li>שו&quot;ע רע&quot;ז ס&quot;א–ה</li><li>שו&quot;ע רע&quot;ח</li><li>ב&quot;י רע&quot;ה (נר של שעוה)</li><li>ב&quot;י רע&quot;ז — שלושת הפירושים מהרא&quot;ש, ופר&quot;ת</li><li>מ&quot;ב רע&quot;ה ס&quot;ק א–יז</li><li>מ&quot;ב רע&quot;ז ס&quot;ק א–כד</li><li>מ&quot;ב רע&quot;ח ס&quot;ק א–ג</li><li>ביאור הלכה רע&quot;ה ד&quot;ה לאור הנר</li><li>ערוה&quot;ש רע&quot;ח ס&quot;א–ב</li><li>ט&quot;ז או&quot;ח רע&quot;ח</li></ul>
-</div>
-</div>
-</div>
-<div class="sec">
-<p class="sech">להרחבה</p>
-<div class="tr halakhic"><p class="trh">הרחבה הלכתית<em>מרחיב את הידע ההלכתי או פותח נושא חדש</em></p><ul>
-<li><b>מאור צוברי</b>, לא יקרא לאור הנר<i> · מבית מדרשנו — שבת (תשע&quot;א)</i></li>
-<li><b>הרב ברוך גיגי</b>, דבר שאין מתכוון | 15 | קרוב לפסיק רישיה<i> · תורת הר עציון (3.4.2017)</i></li>
-<li><b>מיקרופדיה תלמודית</b>, ערך &quot;דבר שאינו מתכוין&quot;<i></i></li>
-<li><b>הרב אליעזר מלמד</b>, הרחבות לפניני הלכה, שבת ט, ה — דבר שאינו מתכוון ופסיק רישא<i></i></li>
-</ul></div>
-<div class="tr iyun"><p class="trh">העשרה עיונית<em>היסטורי, פילולוגי, ריאלי, ביקורתי</em></p><ul>
-<li><b>Gregg E. Gardner</b>, Material Culture, Experimentation, and Household Lighting in Early Rabbinic Judaism<i> · Material Religion 20, 2 (2024)</i></li>
-<li><b>Aryeh Klapper</b>, Permission to Forbid: New Gezeirot in the History of Halakhah<i> · The Lehrhaus (18.3.2021)</i></li>
-<li><b>Shana Strauch Schick</b>, Intention in Talmudic Law: Between Thought and Deed<i> · Brill Reference Library of Judaism 65 (2021)</i></li>
-</ul></div>
-</div>
-<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רע&quot;ה הועבר לכאן מחטיבה 2 (D-004). רע&quot;ט (טלטול הנר) — עיון בחטיבה 8.</p></div>
+<div class="sec"><p class="sech">ציר השבוע</p><p class="thesis">שלושת הסימנים הם מדרג של ייחוס מלאכה לאדם: ברע&quot;ה הוא עושה מעשה מותר לחלוטין, וחוששים שבעתיד ישכח ויטה; ברע&quot;ז מעשהו עלול או מוכרח להביא למלאכה שאינו מתכוון אליה; וברע&quot;ח הוא מכבה במכוון לצורך אחר, ומתעוררת שאלת מלאכה שאינה צריכה לגופה.</p></div>
+<div class="sec"><p class="sech">נקודות שחייבים לעצור בהן</p><details class="stop"><summary><span class="stag i">ציר עיוני</span><span class="ssf">רע&quot;ה ס&quot;א–ו</span><span class="sq">&quot;שלא חלקו חכמים בדבר&quot; — ובכל זאת חריגים: מה מנטרל את החשש שמא יטה?</span></summary><dl class="sbody"><dt>איפה</dt><dd>שבת יא ע&quot;א · יב ע&quot;ב · שו&quot;ע רע&quot;ה ס&quot;א–ו · מ&quot;ב ס&quot;ק ב, ח, יב, טו</dd><dt>השאלה</dt><dd>השו&quot;ע אוסר אפילו גבוה עשר קומות &quot;שלא חלקו חכמים בדבר&quot;, ומתיר שניים בעניין אחד, &quot;תן דעתך עלי&quot;, אדם חשוב ותינוקות; והמ&quot;ב (ס&quot;ק ב) מביא מתירים ואוסרים בנר סגור במפתח.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>ולא יקרא לאור הנר. באמת אמרו, החזן רואה היכן תינוקות קוראין, אבל הוא לא יקרא</q><cite>שבת יא ע&quot;א (משנה)</cite></div><div class="fq"><q>אפילו גבוה שתי קומות... חד הוא דלא ליקרי, הא תרי שפיר דמי</q><cite>שבת יב ע&quot;ב, רבה</cite></div><div class="fq"><q>כאן בענין אחד, כאן בשני ענינים</q><cite>שם, ר&#x27; אלעזר</cite></div><div class="fq"><q>אם אדם חשוב הוא — מותר</q><cite>שם, רבא</cite></div><div class="fq"><q>אני אקרא ולא אטה</q><cite>שם, ר&#x27; ישמעאל בן אלישע</cite></div><div class="fq"><q>פעם אחת קרא ובקש להטות. אמר: כמה גדולים דברי חכמים שהיו אומרים לא יקרא לאור הנר</q><cite>שם</cite></div></dd><dt>נפקא מינה</dt><dd>פיוטים וזמירות לאור הנר — בבית הכנסת יש להחמיר בכל גוונא; בבית — למי שרגיל בהם, או שאומר לחבירו &quot;תן דעתך עלי&quot; (מ&quot;ב ס&quot;ק ח). ואדם חשוב בזמננו — הפמ&quot;ג אוסר (מ&quot;ב ס&quot;ק יב).</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רע&quot;ז ס&quot;א</span><span class="sq">נר שאחורי הדלת — מה בדיוק קורה, ומה בדיוק אסור?</span></summary><dl class="sbody"><dt>איפה</dt><dd>שבת קכ ע&quot;ב · שו&quot;ע רע&quot;ז ס&quot;א · מ&quot;ב ס&quot;ק ז–ח, יא · ב&quot;י רע&quot;ז</dd><dt>השאלה</dt><dd>הרא&quot;ש מביא שלושה פירושים למקרה — רש&quot;י, ר&quot;ח ור&quot;י — והב&quot;י מוסיף את פר&quot;ת; והטור כתב כדברי כל הפירושים לאסור (ב&quot;י). השו&quot;ע ס&quot;א הוא שלושה דינים, אחד לכל פירוש.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>תנא: נר שאחורי הדלת — פותח ונועל כדרכו, ואם כבתה — כבתה. לייט עלה רב... בהא אפילו רבי שמעון מודה, דהא אביי ורבא דאמרי תרוייהו: מודה רבי שמעון ב&quot;פסיק רישיה ולא ימות&quot;</q><cite>שבת קכ ע&quot;ב</cite></div><div class="fq"><q>אסור לפתח הדלת ולנעל כדרכו... אלא יזהר בשעה שפותח ובשעה שנועל</q><cite>רמב&quot;ם שבת פ&quot;ה הי&quot;ז, כר&quot;ת</cite></div></dd><dt>נפקא מינה</dt><dd>פתיחה בנחת — מותר, אם אינו פסיק רישיה (מ&quot;ב ס&quot;ק ז); ואם יש לחוש שיכבה לגמרי — אסור אף בשעווה (ס&quot;ק ח). ונעילה — מותר: תרומת הדשן והמרדכי, בב&quot;י; מ&quot;ב ס&quot;ק יא.</dd></dl></details><details class="stop"><summary><span class="stag i">ציר עיוני</span><span class="ssf">רע&quot;ח</span><span class="sq">כיבוי הנר לחולה — מה כתב השו&quot;ע, ומה השמיט?</span></summary><dl class="sbody"><dt>איפה</dt><dd>שבת כט ע&quot;ב (משנה) · שו&quot;ע רע&quot;ח · מ&quot;ב ס&quot;ק א–ג · ערוה&quot;ש רע&quot;ח ס&quot;ב</dd><dt>השאלה</dt><dd>מאחורי השורה האחת בשו&quot;ע עומדת מחלוקת ר&#x27; יהודה ור&#x27; שמעון במלאכה שאינה צריכה לגופה, והרמב&quot;ם מול רוב הפוסקים (מ&quot;ב ס&quot;ק ג).</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>גורר אדם מטה וכסא וספסל... ובלבד שלא יתכוון לחפור חריץ בקרקע בשעת גרירתן; ולפיכך אם חפרו הקרקע אינו חושש בכך</q><cite>רמב&quot;ם שבת פ&quot;א ה&quot;ה — דבר שאין מתכוון</cite></div><div class="fq"><q>אבל עשה מעשה ונעשית בגללו מלאכה שודאי תיעשה בשביל אותו מעשה, אף על פי שלא נתכוון לה — חייב</q><cite>שם ה&quot;ו — פסיק רישא</cite></div><div class="fq"><q>כל העושה מלאכה בשבת אף על פי שאינו צריך לגופה של מלאכה — חייב עליה. כיצד? הרי שכיבה את הנר מפני שהוא צריך לשמן או לפתילה</q><cite>שם ה&quot;ז — מלאכה שאינה צריכה לגופה</cite></div><div class="fq"><q>ההפרש שיש בין מלאכה שאינה צריכה לגופה ובין פסיק רישיה ולא ימות, הוא דגבי פסיק רישיה אינו מכוון למלאכה כל עיקר אלא שהיא נעשית בהכרח, כגון שסגר פתח ביתו והיה שם צבי... אבל מלאכה שאינה צריכה לגופה הוא מתכוין לגוף המלאכה, אלא שאינו מכוין לתכליתה</q><cite>כסף משנה שם — &quot;מיסוד ה&quot;ר אברהם החסיד בשם אביו ז&quot;ל&quot;, לא דברי מרן</cite></div><div class="fq"><q>וההיא דכחס על הנר, דמוקי ליה הכא כר&quot;ש, דיקא מתניתין כוותיה</q><cite>כסף משנה שם, בשם הרמ&quot;ך — ראיה שהלכה כר&quot;ש</cite></div><div class="fq"><q>ורבינו הב&quot;י לא כתב רק &#x27;מותר לכבות הנר בשביל שיישן החולה שיש בו סכנה&#x27; עכ&quot;ל, ולא כתב יותר — שלא רצה ליכנס בפלוגתא זו</q><cite>ערוה&quot;ש רע&quot;ח ס&quot;ב</cite></div></dd><dt>נפקא מינה</dt><dd>חולה שאין בו סכנה — אסור לכבות לכו&quot;ע, ולפוסקים שאין בו חיוב חטאת — מדברי סופרים (מ&quot;ב ס&quot;ק ג); וכשאפשר להוציא את החולה או להסתיר את האור — כך עושים, ולא מכבים (ס&quot;ק א).</dd></dl></details></div>
+<div class="sec"><p class="sech">שאר הסעיפים</p><table class="st"><tbody><tr><td>רע&quot;ה ס&quot;א</td><td>נר של שעווה, ומנורות שבזמנם — המחלוקת אם שייך בהם שמא יטה</td><td>שו&quot;ע ס&quot;א · ב&quot;י · מ&quot;ב ס&quot;ק ג–ד · ביאור הלכה ד&quot;ה לאור הנר</td></tr><tr><td>רע&quot;ה ס&quot;ה</td><td>מדורה — אפילו עשרה כאחד אין קורין</td><td>שו&quot;ע ס&quot;ה</td></tr><tr><td>רע&quot;ה ס&quot;ז–ט</td><td>במה מדליקין, מחזורים בליל יום הכיפורים, הגדה בליל פסח — מותר</td><td>שו&quot;ע ס&quot;ז–ט</td></tr><tr><td>רע&quot;ה ס&quot;י</td><td>הרב רואה מהיכן יקראו התינוקות, וקורא השאר על פה</td><td>שו&quot;ע ס&quot;י</td></tr><tr><td>רע&quot;ה ס&quot;יא–יב</td><td>בדיקת כלים ובגדים הדומים זה לזה; שמש קבוע ושאינו קבוע</td><td>שו&quot;ע ס&quot;יא–יב · רמ&quot;א</td></tr><tr><td>רע&quot;ז ס&quot;ב</td><td>אין פותחים דלת כנגד מדורה, אף ברוח מצויה; פתוחה — מותר לסגור</td><td>שו&quot;ע ס&quot;ב · מ&quot;ב ס&quot;ק י</td></tr><tr><td>רע&quot;ז ס&quot;ג</td><td>שכח נר על הטבלא — מנער, בנר בלי שמן; הניח מדעת — בסיס לדבר האסור</td><td>שו&quot;ע ס&quot;ג · רמ&quot;א · מ&quot;ב ס&quot;ק יח</td></tr><tr><td>רע&quot;ז ס&quot;ד</td><td>נר של שבת על גבי אילן — מותר; של יום טוב — לא</td><td>שו&quot;ע ס&quot;ד</td></tr><tr><td>רע&quot;ז ס&quot;ה</td><td>מותר לכפות קערה על הנר שלא יאחוז האור בקורה</td><td>שו&quot;ע ס&quot;ה</td></tr></tbody></table></div>
+<div class="sec"><details class="enr"><summary>להעשרה</summary><div class="tr halakhic"><p class="trh">הרחבה הלכתית<em>מרחיב את הידע ההלכתי או פותח נושא חדש</em></p><ul><li><b>מאור צוברי</b>, לא יקרא לאור הנר<i> · מבית מדרשנו — שבת (תשע&quot;א)</i></li><li><b>הרב ברוך גיגי</b>, דבר שאין מתכוון | 15 | קרוב לפסיק רישיה<i> · תורת הר עציון (3.4.2017)</i></li><li><b>מיקרופדיה תלמודית</b>, ערך &quot;דבר שאינו מתכוין&quot;<i></i></li><li><b>הרב אליעזר מלמד</b>, הרחבות לפניני הלכה, שבת ט, ה — דבר שאינו מתכוון ופסיק רישא<i></i></li><li><b>חיים סלמון</b>, מלאכה שאינה צריכה לגופה ופסיק רישיה<i> · מבית מדרשנו — שבת (תשע&quot;א)</i></li></ul></div><div class="tr iyun"><p class="trh">העשרה עיונית<em>היסטורי, פילולוגי, ריאלי, ביקורתי</em></p><ul><li><b>Gregg E. Gardner</b>, Material Culture, Experimentation, and Household Lighting in Early Rabbinic Judaism<i> · Material Religion 20, 2 (2024)</i></li><li><b>Aryeh Klapper</b>, Permission to Forbid: New Gezeirot in the History of Halakhah<i> · The Lehrhaus (18.3.2021)</i></li><li><b>Shana Strauch Schick</b>, Intention in Talmudic Law: Between Thought and Deed<i> · Brill Reference Library of Judaism 65 (2021)</i></li></ul></div></details></div>
 </div>
 </section>
 <section class="wk">
@@ -473,38 +345,16 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 <span>
 <span class="num">שבוע 3 <span class="dt">· 26.10–1.11</span></span>
 <span class="axis">מצוות קידוש: חיובה וגדרה</span>
-<span class="simline">רע&quot;א</span>
+<span class="simrow"><b>רע&quot;א</b> קידוש — מצוותו וחיובו <i>ס&quot;א–ח</i></span>
 </span>
 <span class="chev" aria-hidden="true"></span>
 </button>
 </h2>
 <div class="panel" id="p3" role="region" aria-labelledby="b3">
-<div class="sec">
-<p class="sech">הסימנים</p>
-<div class="sim">
-<b>רע&quot;א</b>
-<span class="t">קידוש — מצוותו וחיובו</span>
-<span class="sf">ס&quot;א–ח</span>
-</div>
-</div>
-<div class="sec">
-<p class="sech">נושאים עיקריים</p>
-<div class="chips"><span class="chip">קידוש דאורייתא</span><span class="chip">&quot;זכור&quot; ו&quot;שמור&quot;</span><span class="chip">חיוב נשים — &quot;הואיל ואיתנהו בשמירה איתנהו בזכירה&quot;</span><span class="chip">יין לקידוש מול צורכי הסעודה</span><span class="chip">אסור לטעום</span><span class="chip">תשלומין למחר</span></div>
-</div>
-<div class="sec">
-<p class="sech">מקורות</p>
-<div class="srcs three">
-<div>
-<p class="srch">יסוד — תנאים ואמוראים</p>
-<ul><li>פסחים קו ע&quot;א</li><li>ברכות כ ע&quot;ב</li><li>שבועות כ ע&quot;ב</li><li>נזיר ד ע&quot;א</li><li>פסחים קה ע&quot;א</li></ul>
-</div>
-<div>
-<p class="srch">ראשונים</p>
-<ul><li>רש&quot;י פסחים קו ע&quot;א</li><li>תוס&#x27; ברכות כ ע&quot;ב ד&quot;ה &quot;בתפילה&quot;</li><li>רמב&quot;ם שבת פכ&quot;ט ה&quot;א</li><li>רא&quot;ש פסחים פ&quot;י</li></ul>
-</div>
-</div>
-</div>
-<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רע&quot;א הוא הכבד בסדר היום, ולכן נפרס על שבועיים. החיתוך נקבע מול סעיפי השו&quot;ע: ס&quot;א–ח הם החיוב — מהירות לאכול, נשים, יין מול סעודה, איסור טעימה, תשלומין; ס&quot;ט–יז הם דיני הכוס.</p></div>
+<div class="sec"><p class="sech">ציר השבוע</p><p class="thesis">זכור את יום השבת לקדשו: מה חייבה התורה, ומה הוסיפו חכמים.</p></div>
+<div class="sec"><p class="sech">נקודות שחייבים לעצור בהן</p><details class="stop"><summary><span class="stag i">ציר עיוני</span><span class="ssf">רע&quot;א ס&quot;א</span><span class="sq">מה מן התורה בקידוש, ומה מדברי סופרים — ומכאן: האם יוצאים בתפילה?</span></summary><dl class="sbody"><dt>איפה</dt><dd>פסחים קו ע&quot;א · קיז ע&quot;ב · ברכות לג ע&quot;ב · שו&quot;ע רע&quot;א ס&quot;א · מ&quot;ב ס&quot;ק א–ב · ביאור הלכה ד&quot;ה מיד</dd><dt>השאלה</dt><dd>לרמב&quot;ם הזכירה בדברים מן התורה והיין מדברי סופרים, ומכאן המ&quot;א: היוצא בתפילה יצא מן התורה; והמ&quot;ב מפקפק, שמסתמא אינו מכוון לצאת בה (ס&quot;ק ב). מפת הראשונים — בביאור הלכה ד&quot;ה מיד.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>תנו רבנן: &quot;זכור את יום השבת לקדשו&quot; — זוכרהו על היין... הכי קאמר: &quot;זכור את יום השבת לקדשו&quot; — זוכרהו על היין בכניסתו; אין לי אלא בלילה, ביום מנין? תלמוד לומר: &quot;זכור את יום השבת&quot;</q><cite>פסחים קו ע&quot;א</cite></div><div class="fq"><q>מצות עשה מן התורה לקדש את יום השבת בדברים</q><cite>רמב&quot;ם שבת פכ&quot;ט ה&quot;א</cite></div><div class="fq"><q>מדברי סופרים לקדש על היין</q><cite>שם ה&quot;ו</cite></div><div class="fq"><q>ונראה דקידוש על היין אסמכתא היא</q><cite>תוס&#x27; פסחים קו ע&quot;א ד&quot;ה זוכרהו על היין</cite></div><div class="fq"><q>ועוד מצינו למימר דקידוש על היין דבר תורה, אבל הא דאמר המברך צריך שיטעום — זהו מדרבנן</q><cite>שם, דרך שנייה</cite></div><div class="fq"><q>מה קידוש אף על גב דמקדש בצלותא מקדש אכסא</q><cite>ברכות לג ע&quot;ב</cite></div><div class="fq"><q>אמר רב אחא בר יעקב: וצריך שיזכיר יציאת מצרים בקידוש היום</q><cite>פסחים קיז ע&quot;ב — ומה בתוכן הזכירה</cite></div></dd><dt>נפקא מינה</dt><dd>ספק קידש — אינו חוזר (מ&quot;ב ס&quot;ק ב). מי שאינו תאב לאכול — רשאי להמתין, אלא אם יש בזה משום שלום בית או אורחים (ס&quot;ק א). ולמסקנת המ&quot;ב — אין לצאת בקידוש על ידי קטן (ס&quot;ק ב).</dd></dl></details><details class="stop"><summary><span class="stag l">למעשה</span><span class="ssf">רע&quot;א ס&quot;ב</span><span class="sq">נשים בקידוש — ומי מוציא את מי?</span></summary><dl class="sbody"><dt>איפה</dt><dd>ברכות כ ע&quot;ב · שבועות כ ע&quot;ב · שו&quot;ע רע&quot;א ס&quot;ב · מ&quot;ב ס&quot;ק ב–ה · ביאור הלכה ד&quot;ה דאיתקש זכור לשמור</dd><dt>השאלה</dt><dd>נשים חייבות מן התורה מכוח ההיקש, ולכן מוציאות אנשים (שו&quot;ע ס&quot;ב); והשאלה למעשה — מי מוציא את מי: קטן, בעל שהתפלל, מי שכבר יצא.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>אמר רבא: אמר קרא &quot;זכור ושמור&quot; — כל שישנו בשמירה ישנו בזכירה; והני נשי הואיל ואיתנהו בשמירה, איתנהו בזכירה</q><cite>ברכות כ ע&quot;ב</cite></div><div class="fq"><q>זכור ושמור בדיבור אחד נאמרו, מה שאין יכול הפה לדבר ומה שאין האוזן יכול לשמוע</q><cite>שבועות כ ע&quot;ב</cite></div><div class="fq"><q>אמר רב אדא בר אהבה: נשים חייבות בקידוש היום דבר תורה</q><cite>שם</cite></div></dd><dt>נפקא מינה</dt><dd>קטן אינו מוציא אישה (מ&quot;ב ס&quot;ק ג); בעל שהתפלל — אם יצא בתפילה, ואם מוציא אותה (מ&quot;ב ס&quot;ק ב); מי שכבר יצא מוציא אחרים (ס&quot;ק ה ← רע&quot;ג ס&quot;ד, שבוע 5); ולכתחילה אישה אינה מוציאה אנשים שאינם מבני ביתה (ס&quot;ק ד).</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רע&quot;א ס&quot;ד–ו</span><span class="sq">שבת נכנסת לתוך סעודה שהתחילה — איזה רגע קובע את זהות הסעודה?</span></summary><dl class="sbody"><dt>איפה</dt><dd>פסחים ק ע&quot;א–ע&quot;ב · שו&quot;ע רע&quot;א ס&quot;ד, ו · רמ&quot;א · מ&quot;ב ס&quot;ק יא, טו, יז–יח, כט–ל, לו</dd><dt>השאלה</dt><dd>גמר סעודתו וקידש קודם ברכת המזון: השו&quot;ע — מזכיר של שבת, שהולכים אחר שעת הברכה; הרמ&quot;א — אינו מזכיר, אחר תחילת הסעודה; ו&quot;הכי נהוג&quot; — פורס מפה, מקדש ואוכל מעט (ס&quot;ו).</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>מפסיקין לשבתות, דברי רבי יהודה. רבי יוסי אומר: אין מפסיקין... אמר רב יהודה אמר שמואל: אין הלכה לא כרבי יהודה ולא כרבי יוסי, אלא פורס מפה ומקדש</q><cite>פסחים ק ע&quot;א</cite></div><div class="fq"><q>פורס מפה על השלחן ומקדש, וגומר סעודתו, ואחר כך מברך ברכת המזון</q><cite>רמב&quot;ם שבת פכ&quot;ט הי&quot;ב</cite></div></dd><dt>נפקא מינה</dt><dd>המוציא אחר הקידוש: לשו&quot;ע — מברך, שהקידוש הפסק; ולי&quot;א — אינו מברך, וספק ברכות להקל (מ&quot;ב ס&quot;ק יז–יח). ואסור לטעום קודם קידוש, אף מים (ס&quot;ד) — איסור דרבנן (ס&quot;ק יא).</dd></dl></details></div>
+<div class="sec"><p class="sech">שאר הסעיפים</p><table class="st"><tbody><tr><td>רע&quot;א ס&quot;ג</td><td>יין לקידוש הלילה קודם לצורכי הסעודה ולקידוש היום</td><td>שו&quot;ע ס&quot;ג · מ&quot;ב ס&quot;ק ז–ח</td></tr><tr><td>רע&quot;א ס&quot;ה</td><td>&quot;בואו ונקדש&quot; — נאסר עליהם לשתות עד שיקדשו; שכח עד אחר המוציא — מקדש על הפת</td><td>שו&quot;ע ס&quot;ה · רמ&quot;א · מ&quot;ב ס&quot;ק יט</td></tr><tr><td>רע&quot;א ס&quot;ז</td><td>טעם קודם קידוש — מקדש</td><td>שו&quot;ע ס&quot;ז</td></tr><tr><td>רע&quot;א ס&quot;ח</td><td>לא קידש בלילה — תשלומין למחר כל היום, בלי ויכלו (← רצ&quot;ט ס&quot;ו, שבוע 9)</td><td>שו&quot;ע ס&quot;ח · רמ&quot;א</td></tr></tbody></table></div>
+<div class="sec"><details class="enr"><summary>להעשרה</summary><div class="tr halakhic"><p class="trh">הרחבה הלכתית<em>מרחיב את הידע ההלכתי או פותח נושא חדש</em></p><ul><li><b>הרב אליעזר מלמד</b>, פניני הלכה, שבת ו, ב — כיצד מקיימים מצוות זכור<i></i></li></ul></div><div class="tr iyun"><p class="trh">העשרה עיונית<em>היסטורי, פילולוגי, ריאלי, ביקורתי</em></p><ul><li><b>Elizabeth Shanks Alexander</b>, Gender and Timebound Commandments in Judaism<i> · Cambridge University Press (2013) — רקע על היווצרות הקטגוריה &quot;מצוות עשה שהזמן גרמא&quot;; אינו עוסק בקידוש</i></li></ul></div></details></div>
 </div>
 </section>
 <section class="wk">
@@ -513,43 +363,16 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 <span>
 <span class="num">שבוע 4 <span class="dt">· 2–8.11</span></span>
 <span class="axis">הכוס והיין</span>
-<span class="simline">רע&quot;א · רע&quot;ב</span>
+<span class="simrow"><b>רע&quot;א</b> קידוש — מצוותו וחיובו <i>ס&quot;ט–יז</i></span>
+<span class="simrow"><b>רע&quot;ב</b> על איזה יין מקדשים; חמר מדינה <i>10 סעיפים</i></span>
 </span>
 <span class="chev" aria-hidden="true"></span>
 </button>
 </h2>
 <div class="panel" id="p4" role="region" aria-labelledby="b4">
-<div class="sec">
-<p class="sech">הסימנים</p>
-<div class="sim">
-<b>רע&quot;א</b>
-<span class="t">קידוש — מצוותו וחיובו</span>
-<span class="sf">ס&quot;ט–יז</span>
-</div>
-<div class="sim">
-<b>רע&quot;ב</b>
-<span class="t">על איזה יין מקדשים; חמר מדינה</span>
-<span class="all">כל הסימן · 10 סעיפים</span>
-</div>
-</div>
-<div class="sec">
-<p class="sech">נושאים עיקריים</p>
-<div class="chips"><span class="chip">סדר הקידוש</span><span class="chip">כוס של ברכה</span><span class="chip">מלא לוגמיו</span><span class="chip">יין ראוי</span><span class="chip">יין מגתו</span><span class="chip">חמר מדינה</span><span class="chip">קידוש על הפת</span></div>
-</div>
-<div class="sec">
-<p class="sech">מקורות</p>
-<div class="srcs three">
-<div>
-<p class="srch">יסוד — תנאים ואמוראים</p>
-<ul><li>פסחים קז ע&quot;א</li><li>ברכות נא ע&quot;א</li><li>ב&quot;ב צז ע&quot;ב</li><li>פסחים קו ע&quot;ב</li></ul>
-</div>
-<div>
-<p class="srch">ראשונים</p>
-<ul><li>רשב&quot;ם פסחים קז ע&quot;א</li><li>תוס&#x27; שם</li><li>רא&quot;ש פסחים פ&quot;י סי&#x27; יז</li><li>רמב&quot;ם שבת פכ&quot;ט ה&quot;ט, הי&quot;ז</li></ul>
-</div>
-</div>
-</div>
-<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רע&quot;ב כבד.</p></div>
+<div class="sec"><p class="sech">ציר השבוע</p><p class="thesis">לקידוש נדרשים לא רק דברים אלא גם כוס ומשקה: מהו דין הכוס, מה תפקידה של השתייה, ומה הופך משקה ליין הראוי לקידוש.</p></div>
+<div class="sec"><p class="sech">נקודות שחייבים לעצור בהן</p><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רע&quot;א ס&quot;יג–טו</span><span class="sq">טעימת הכוס — האם המקדש עצמו חייב לטעום, ובמה שונה הקידוש מכל כוס של ברכה?</span></summary><dl class="sbody"><dt>איפה</dt><dd>ברכות נא ע&quot;א · עירובין מ ע&quot;ב · פסחים קז ע&quot;א · שו&quot;ע רע&quot;א ס&quot;יג–טו · מ&quot;ב ס&quot;ק סה, עד, עח · ב&quot;י וטור רע&quot;א · ערוה&quot;ש רע&quot;א ס&quot;ל–לח</dd><dt>השאלה</dt><dd>בכוס של ברכה די בטעימת אחר; בקידוש — הגאונים: המקדש עצמו, והשו&quot;ע ס&quot;יד &quot;וראוי לחוש לדבריהם&quot;; והרא&quot;ש: גם בקידוש די באחד מן המסובין (טור). ומה פירוש &quot;ואם לאו — לא יצא&quot; — לעיכובא, או למצווה כתיקונה (ב&quot;י מול מ&quot;א)?</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>אמר רבי זירא אמר רבי אבהו, ואמרי לה במתניתא תנא: עשרה דברים נאמרו בכוס של ברכה: טעון הדחה ושטיפה. חי ומלא. עיטור ועיטוף. נוטלו בשתי ידיו, ונותנו בימין. ומגביהו מן הקרקע טפח, ונותן עיניו בו. ויש אומרים: אף משגרו במתנה לאנשי ביתו</q><cite>ברכות נא ע&quot;א</cite></div><div class="fq"><q>לברוך עליה ולנחיה — המברך צריך שיטעום! ליתביה לינוקא</q><cite>עירובין מ ע&quot;ב</cite></div><div class="fq"><q>דהאי שיטעום דקאמר לאו דווקא קאמר אמברך, דהוא הדין כי שתי אחרינא, דטעמא משום דגנאי הוא לכוס של ברכה שלא יהנה אדם ממנו לאלתר, שתהא ברכת היין דבורא פרי הגפן שלא לצורך</q><cite>רש&quot;י שם</cite></div><div class="fq"><q>אמר רב הונא אמר רב, וכן תני רב גידל דמן נרש: המקדש וטעם מלא לוגמא — יצא, ואם לאו — לא יצא</q><cite>פסחים קז ע&quot;א</cite></div><div class="fq"><q>אלא וודאי דזהו דעתו של רבינו הב&quot;י — דבלא טעימה אין המצוה כתקונה, אבל יצא ידי קידוש</q><cite>ערוה&quot;ש רע&quot;א ס&quot;לח, בדעת הב&quot;י</cite></div></dd><dt>נפקא מינה</dt><dd>נשפך הכוס קודם שטעם — יביא כוס אחר ומברך בורא פרי הגפן, ואינו חוזר ומקדש (שו&quot;ע ס&quot;טו); ולמ&quot;א — רק אם לא הסיח דעתו (מ&quot;ב ס&quot;ק עח). ובשעת הדחק — ערוה&quot;ש ס&quot;לז: &quot;דבשעת הדחק יוצא ידי קידוש גם בלא שתיית מלא לוגמיו&quot;.</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רע&quot;ב ס&quot;א–ח</span><span class="sq">&quot;יין הראוי לינסך&quot; — זהות הלכתית של יין, או איכות ראויה? ויין מבושל</span></summary><dl class="sbody"><dt>איפה</dt><dd>בבא בתרא צז ע&quot;א–ע&quot;ב · ר&quot;ן על הרי&quot;ף פסחים כב ע&quot;ב · שו&quot;ע רע&quot;ב ס&quot;א–ח · רמ&quot;א · מ&quot;ב ס&quot;ק ב, ו, יט, כג · ערוה&quot;ש רע&quot;ב ס&quot;ח–ט</dd><dt>השאלה</dt><dd>מזוג ויין מגתו אינם מתמעטים, ומבושל — הרמב&quot;ם והגאונים: אין מקדשין, שנשתנה לגריעותא; ר&quot;ת, ר&quot;י והרא&quot;ש: מקדשין, שהפסול לנסכים מפני שנשתנה מברייתו (ערוה&quot;ש ס&quot;ט, מהטור).</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>אמר רב זוטרא בר טוביה אמר רב: אין אומרים קידוש היום אלא על היין הראוי לינסך על גבי המזבח</q><cite>בבא בתרא צז ע&quot;א</cite></div><div class="fq"><q>דאמר רבא: סוחט אדם אשכול של ענבים ואומר עליו קידוש היום</q><cite>שם צז ע&quot;ב</cite></div><div class="fq"><q>אי למעוטי מזוג, עלויי עלייה</q><cite>שם</cite></div><div class="fq"><q>אמאי לא אמרינן למעוטי מעושן ומבושל דפסילי לגבי מזבח</q><cite>ר&quot;ן על הרי&quot;ף, פסחים כב ע&quot;ב</cite></div><div class="fq"><q>לא אמרו אלא באותו שאין ראוי לנסך מפני גריעות שבו, והיינו דאמרינן גבי יין מזוג עלויי עליוה</q><cite>ומשיב</cite></div><div class="fq"><q>אין מבשלין יין של תרומה, מפני שהוא ממעיטו. רבי יהודה מתיר, מפני שהוא משביחו</q><cite>משנה תרומות פי&quot;א מ&quot;א — ראיית המקילים</cite></div><div class="fq"><q>זבח ונסכים, מה זבח שלא נשתנה אף נסכים שלא נשתנו</q><cite>בכורות יז ע&quot;א</cite></div><div class="fq"><q>ואפש&#x27; שהגאוני&#x27; ז&quot;ל שאמרו שאין מברכין בפ&quot;הג על יין מבושל, וכ&quot;ש שאין מקדשין עליו, לא אמרו כן על היין שנתבשל ממנו ונשאר שם יין עליו, אלא על היין שנתבשל הרבה ונעשה כעין דבש ולא נשאר עליו שם יין</q><cite>תשב&quot;ץ ח&quot;א סי&#x27; פה — שיעור הבישול</cite></div></dd><dt>נפקא מינה</dt><dd>המנהג לקדש על המבושל (רמ&quot;א ס&quot;ח); אך כשיש לו יין אחר שוה לו — יש לחוש למחמירים (מ&quot;ב ס&quot;ק כג). ומיץ ענבים: לשון רבא היא לשון השו&quot;ע ס&quot;ב, ומותר אף חדש לגמרי (מ&quot;ב ס&quot;ק ו); והמפוסטר — לפי מחלוקת זו.</dd></dl></details><details class="stop"><summary><span class="stag l">למעשה</span><span class="ssf">רע&quot;ב ס&quot;ט</span><span class="sq">חמר מדינה — האם קידוש טעון יין, או משקה חשוב?</span></summary><dl class="sbody"><dt>איפה</dt><dd>פסחים קז ע&quot;א · שו&quot;ע רע&quot;ב ס&quot;ט · רמ&quot;א · טור רע&quot;ב · ב&quot;י · ערוה&quot;ש רע&quot;ב ס&quot;יא–יד</dd><dt>השאלה</dt><dd>במקום שאין יין מצוי: הרמב&quot;ם, הרי&quot;ף והר&quot;ן — אין מקדשין על השכר; הרא&quot;ש — מקדשין כשהוא חמר מדינה; והשו&quot;ע: בלילה על הפת, ובבוקר על השכר. ומהו &quot;חמר מדינה&quot; — רשב&quot;ם ו&quot;יש מפרשין&quot; בטור.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>זימנא חדא איקלע אמימר לאתרין, ולא הוה לן חמרא. אייתינא ליה שיכרא, ולא אבדיל ובת טוות. למחר, טרחנא ואייתינא ליה חמרא, ואבדיל וטעים מידי. לשנה תו איקלע לאתרין, לא הוה לן חמרא, אייתינא שיכרא, אמר: אי הכי, חמר מדינה הוא, אבדיל וטעים מידי</q><cite>פסחים קז ע&quot;א, מעשה אמימר</cite></div><div class="fq"><q>הכי אמר רב: כשם שאין מקדשין עליו, כך אין מבדילין עליו</q><cite>שם, רב</cite></div><div class="fq"><q>כי היכי דלא קי&quot;ל כוותיה במאי דאמר אין מבדילין עליו, הכי נמי בקידוש לא קי&quot;ל כוותיה, אלא כמו שמבדילין עליו כך מקדשין עליו</q><cite>רא&quot;ש פסחים פ&quot;י סי&#x27; יז</cite></div><div class="fq"><q>מדינה שרב יינה שכר, אף על פי שהוא פסול לקדוש מתר להבדיל עליו, הואיל והוא חמר המדינה</q><cite>רמב&quot;ם שבת כט, יז</cite></div><div class="fq"><q>לענין קידוש, אפילו קבע סעודתיה עילויה, אי נמי הוי חמר מדינה — אין מקדשין עליו, דהא אמרינן בפרק המוכר פירות שאין מקדשין אלא על היין הראוי לנסך על גבי המזבח; דקידוש אפשר בפת, אבל בהבדלה וברכת המזון שאי אפשר בפת — התירו בהבדלה כל היכא דהוי חמר מדינה</q><cite>ר&quot;ן על הרי&quot;ף, פסחים כב ע&quot;ב</cite></div><div class="fq"><q>והנה כל קדמונינו וכן הגאונים הקדמונים היו בבבל ובספרד ובצרפת ואשכנז, ששם יש יינות הרבה... אבל במדינות הצפוניות כשלנו — ידוע שאין אצלינו יין כלל, והמובאים ממדינות אחרות אין באפשרי להשיגם מפני היוקר הגדול</q><cite>ערוה&quot;ש רע&quot;ב ס&quot;יד</cite></div></dd><dt>נפקא מינה</dt><dd>קידוש הלילה — על הפת ולא על השכר; קידוש היום — על השכר, שברכת שהכל קודם המוציא היא השינוי (שו&quot;ע ס&quot;ט); &quot;ואם יין בעיר לא יקדש על הפת&quot; (רמ&quot;א). ← רע&quot;ג, שבוע 5.</dd></dl></details></div>
+<div class="sec"><p class="sech">שאר הסעיפים</p><table class="st"><tbody><tr><td>רע&quot;א ס&quot;ט</td><td>מפה תחת הפת ומפה פרוסה על גביו</td><td>שו&quot;ע ס&quot;ט · מ&quot;ב ס&quot;ק מא</td></tr><tr><td>רע&quot;א ס&quot;י</td><td>כוס מלא שאינו פגום, טעון כל מה שטעון כוס של ברכה; ויכלו מעומד, ונוהגים לישב</td><td>שו&quot;ע ס&quot;י · רמ&quot;א · מ&quot;ב ס&quot;ק מט</td></tr><tr><td>רע&quot;א ס&quot;יא</td><td>כוס אחד בלבד — שופך ממנו וטועם מן השני; ומוטב להניחו להבדלה, שאי אפשר בפת (← רצ&quot;ו ס&quot;ד, שבוע 8)</td><td>שו&quot;ע ס&quot;יא · מ&quot;ב ס&quot;ק נ–נא</td></tr><tr><td>רע&quot;א ס&quot;יב</td><td>נטל ידיו קודם קידוש — מקדש על הפת; ולרמ&quot;א נוטלים לכתחילה ומקדשים על היין</td><td>שו&quot;ע ס&quot;יב · רמ&quot;א · מ&quot;ב ס&quot;ק סא–סב</td></tr><tr><td>רע&quot;א ס&quot;טז–יז</td><td>המסובים אינם טועמים קודם המקדש אם זקוקים לכוסו; שופכים לכוסות פגומים</td><td>שו&quot;ע ס&quot;טז–יז</td></tr><tr><td>רע&quot;ב ס&quot;י</td><td>ברכת יין של קידוש פוטרת יין שבתוך הסעודה</td><td>שו&quot;ע ס&quot;י</td></tr></tbody></table></div>
 </div>
 </section>
 <section class="wk">
@@ -558,48 +381,17 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 <span>
 <span class="num">שבוע 5 <span class="dt">· 9–15.11</span></span>
 <span class="axis">אין קידוש אלא במקום סעודה</span>
-<span class="simline">רע&quot;ג · רע&quot;ד · רפ&quot;ט</span>
+<span class="simrow"><b>רע&quot;ג</b> קידוש במקום סעודה <i>7 סעיפים</i></span>
+<span class="simrow"><b>רע&quot;ד</b> בציעה על לחם משנה <i>4 סעיפים</i></span>
+<span class="simrow"><b>רפ&quot;ט</b> קידושא רבה וסעודת שחרית <i>שני סעיפים</i></span>
 </span>
 <span class="chev" aria-hidden="true"></span>
 </button>
 </h2>
 <div class="panel" id="p5" role="region" aria-labelledby="b5">
-<div class="sec">
-<p class="sech">הסימנים</p>
-<div class="sim">
-<b>רע&quot;ג</b>
-<span class="t">קידוש במקום סעודה</span>
-<span class="all">כל הסימן · 7 סעיפים</span>
-</div>
-<div class="sim">
-<b>רע&quot;ד</b>
-<span class="t">בציעה על לחם משנה</span>
-<span class="all">כל הסימן · 4 סעיפים</span>
-</div>
-<div class="sim">
-<b>רפ&quot;ט</b>
-<span class="t">קידושא רבה וסעודת שחרית</span>
-<span class="all">כל הסימן · שני סעיפים</span>
-</div>
-</div>
-<div class="sec">
-<p class="sech">נושאים עיקריים</p>
-<div class="chips"><span class="chip">קידוש במקום סעודה</span><span class="chip">שיעור הסעודה</span><span class="chip">שינוי מקום</span><span class="chip">בציעה על לחם משנה</span><span class="chip">קידושא רבה — מעמדו ביחס לקידוש הלילה</span></div>
-</div>
-<div class="sec">
-<p class="sech">מקורות</p>
-<div class="srcs three">
-<div>
-<p class="srch">יסוד — תנאים ואמוראים</p>
-<ul><li>פסחים קא ע&quot;א</li><li>פסחים קב ע&quot;א</li><li>שבת קיז ע&quot;ב</li><li>פסחים קו ע&quot;א — קידושא רבה</li></ul>
-</div>
-<div>
-<p class="srch">ראשונים</p>
-<ul><li>רשב&quot;ם פסחים קא ע&quot;א ד&quot;ה &quot;אין קידוש&quot;</li><li>תוס&#x27; שם ד&quot;ה &quot;ידי קידוש&quot;</li><li>רא&quot;ש פסחים פ&quot;י סי&#x27; ה</li><li>רמב&quot;ם שבת פכ&quot;ט הי&quot;ב</li></ul>
-</div>
-</div>
-</div>
-<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רפ&quot;ט נלמד כאן, ליד קידוש הלילה, ולא עם סעודות היום.</p></div>
+<div class="sec"><p class="sech">ציר השבוע</p><p class="thesis">קידוש וסעודה כרוכים זה בזה: הקידוש צריך להיאמר במקום סעודה; סעודת שבת נפתחת בלחם משנה; וביום, עצם ברכת היין שלפני הסעודה היא הקידושא רבה.</p></div>
+<div class="sec"><p class="sech">נקודות שחייבים לעצור בהן</p><details class="stop"><summary><span class="stag i">ציר עיוני</span><span class="ssf">רע&quot;ג ס&quot;א–ג</span><span class="sq">&quot;אין קידוש אלא במקום סעודה&quot; — תנאי בקידוש, או דין שסעודת שבת טעונה קידוש?</span></summary><dl class="sbody"><dt>איפה</dt><dd>פסחים קא ע&quot;א · שו&quot;ע רע&quot;ג ס&quot;א–ג · מ&quot;ב ס&quot;ק א, יא · ב&quot;י רע&quot;ג</dd><dt>השאלה</dt><dd>שני ראשונים קוראים את אותה דרשה בסדר הפוך, ומכאן שתי הבנות של הדין.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>במקום שאתה קורא לשבת, כלומר קרייה דקידוש שם תהא עונג. ומדרש הוא, אי נמי סברא היא, מדאיקבע קידוש על היין</q><cite>רשב&quot;ם פסחים קא ע&quot;א</cite></div><div class="fq"><q>במקום עונג שם תהא קריאה</q><cite>רא&quot;ש פסחים פ&quot;י סי&#x27; ה</cite></div><div class="fq"><q>היינו מדרבנן ואסמכוה רבנן אקרא... ועיקר הקידוש מן התורה הוא כדכתיב זכרהו על היין בכניסה. הלכך כיון שיש בני אדם שאינם יודעים לקדש, נהגו לקדש בבית הכנסת כדי שיצאו ידי קידוש מן התורה</q><cite>ורבנו יונה, בתוך הרא&quot;ש</cite></div><div class="fq"><q>לא משמע כפירושו, דמשמע שאינו קידוש כלל</q><cite>ודחיית הרא&quot;ש</cite></div></dd><dt>נפקא מינה</dt><dd>קידוש בבית הכנסת בלי אורחים (← שבוע 1). והשו&quot;ע ס&quot;ג מכריע כרא&quot;ש בתיבת &quot;אף&quot;: &quot;אף ידי קידוש לא יצא&quot; — לא רק ידי סעודה.</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רע&quot;ד ס&quot;א</span><span class="sq">לחם משנה — אוחז שתיהן ובוצע אחת, או בוצע את שתיהן?</span></summary><dl class="sbody"><dt>איפה</dt><dd>שבת קיז ע&quot;ב · ברכות לט ע&quot;ב · שו&quot;ע רע&quot;ד ס&quot;א · מ&quot;ב ס&quot;ק ד</dd><dt>השאלה</dt><dd>השו&quot;ע — אוחז שתיהן ובוצע אחת; רש&quot;ל ושל&quot;ה, כפירוש הרשב&quot;א, וכן הגר&quot;א — חותכים את שתיהן (מ&quot;ב ס&quot;ק ד).</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>אמר רב אשי: חזינא ליה לרב כהנא דנקט תרתי ובצע חדא. אמר: &quot;לקטו&quot; כתיב</q><cite>שבת קיז ע&quot;ב</cite></div><div class="fq"><q>לקטו כתיב — דמשמע אחיזה, אבל בציעה לא כתיב משנה</q><cite>רש&quot;י שם</cite></div></dd><dt>נפקא מינה</dt><dd>כמה חלות לשבת כולה: לשו&quot;ע, שהעולם נוהג כמותו — שתיים לכל סעודה; לחותכים את שתיהן — ג&#x27; גדולות וג&#x27; קטנות (מ&quot;ב ס&quot;ק ד). ולצד האחיזה, הבציעה עצמה: ס&quot;ב, כרבי זירא — פרוסה גדולה לכל הסעודה; ורש&quot;י שבת קיז ע&quot;ב נותן לה טעם משלה: &quot;פרוסה גדולה ודי לו בה לאותה סעודה ולכבוד שבת&quot;.</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רפ&quot;ט ס&quot;א–ב</span><span class="sq">קידושא רבה — אם אין בו אלא בורא פרי הגפן, האם אפשר לקדש ביום על הפת?</span></summary><dl class="sbody"><dt>איפה</dt><dd>פסחים קו ע&quot;א · שו&quot;ע רפ&quot;ט ס&quot;א–ב · מ&quot;ב ס&quot;ק ג, ט, י · ב&quot;י רפ&quot;ט</dd><dt>השאלה</dt><dd>הראב&quot;ד — מקדש על הפת, והמוציא במקום ברכת היין; המגיד משנה — אינו מקדש, שאין בפת היכר (שניהם בב&quot;י רפ&quot;ט). והשו&quot;ע ס&quot;ב: אין לו יין ולא שכר — &quot;אוכל בלא קידוש&quot;; ובלילה ממתין, ולאדם חלש מתיר המ&quot;ב לאכול ולסמוך על התפילה (ס&quot;ק י).</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>ביום מאי מברך? אמר רב יהודה: בורא פרי הגפן. רב אשי איקלע למחוזא, אמרו ליה: ליקדיש לן מר קידושא רבה. סבר: מאי ניהו קידושא רבה?... אמר בורא פרי הגפן ואגיד ביה. חזייה לההוא סבא דגחין ושתי, קרי אנפשיה: החכם עיניו בראשו</q><cite>פסחים קו ע&quot;א</cite></div><div class="fq"><q>ומצוה לברך על היין ביום השבת קודם שיסעוד סעודה שנייה, וזה הוא הנקרא קידושא רבה. מברך בורא פרי הגפן בלבד ושותה... וגם קידוש זה לא יהיה אלא במקום סעודה</q><cite>רמב&quot;ם שבת כט, י</cite></div></dd><dt>נפקא מינה</dt><dd>מה מקדשים ביום: יין, ובמקום שאינו מצוי — חמר מדינה (ס&quot;ב); ומשקה שאינו חמר מדינה — אין מקדשין עליו אף בשחרית (מ&quot;ב ס&quot;ק ט).</dd></dl></details></div>
+<div class="sec"><p class="sech">שאר הסעיפים</p><table class="st"><tbody><tr><td>רע&quot;ג ס&quot;ד</td><td>מקדש לאחרים אף שאינו אוכל עמהם; מקום הסעודה נמדד לשומעים</td><td>שו&quot;ע ס&quot;ד · רמ&quot;א</td></tr><tr><td>רע&quot;ג ס&quot;ה</td><td>אכל מעט פת או שתה כוס יין — יצא ידי קידוש במקום סעודה; פירות — לא; ועל כוס יין — רק במקום הדחק</td><td>שו&quot;ע ס&quot;ה · מ&quot;ב ס&quot;ק כה–כו</td></tr><tr><td>רע&quot;ג ס&quot;ו</td><td>שכנו ששמע, ושולחנו ערוך לפניו — יוצא, אם נתכוונו השומע והמשמיע</td><td>שו&quot;ע ס&quot;ו</td></tr><tr><td>רע&quot;ג ס&quot;ז</td><td>אם הקידוש תלוי בנר — שתי דעות; מכריע שאינו תלוי, במצטער הרבה</td><td>שו&quot;ע ס&quot;ז · מ&quot;ב ס&quot;ק לב</td></tr><tr><td>רע&quot;ד ס&quot;א, הגה</td><td>בליל שבת בוצעים את התחתונה; ביום ובליל יו&quot;ט — את העליונה</td><td>רמ&quot;א ס&quot;א · מ&quot;ב ס&quot;ק ה</td></tr><tr><td>רע&quot;ד ס&quot;ב</td><td>מצוה לבצוע פרוסה גדולה לכל הסעודה, ואינו נראה כרעבתן</td><td>שו&quot;ע ס&quot;ב · מ&quot;ב ס&quot;ק ו · ברכות לט ע&quot;ב</td></tr><tr><td>רע&quot;ד ס&quot;ג</td><td>המסובים אינם טועמים לפני הבוצע, אלא אם יש לפני כל אחד לחם משנה</td><td>שו&quot;ע ס&quot;ג</td></tr><tr><td>רע&quot;ד ס&quot;ד</td><td>סעודת הלילה וסעודת שחרית — רק בפת</td><td>שו&quot;ע ס&quot;ד · מ&quot;ב ס&quot;ק ט</td></tr></tbody></table></div>
 </div>
 </section>
 <section class="wk">
@@ -607,64 +399,22 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 <button class="tog" id="b6" aria-expanded="true" aria-controls="p6">
 <span>
 <span class="num">שבוע 6 <span class="dt">· 16–22.11</span></span>
-<span class="axis">תפילות היום: שחרית, קריאה, מוסף, מנחה</span>
-<span class="simline">רפ&quot;א · רפ&quot;ב · רפ&quot;ג · רפ&quot;ד · רפ&quot;ו · רצ&quot;ב</span>
+<span class="axis">סדר תפילת הציבור: קריאת התורה, הפטרה ומוסף</span>
+<span class="simrow"><b>רפ&quot;א</b> תפילת שחרית של שבת <i>סעיף אחד</i></span>
+<span class="simrow"><b>רפ&quot;ב</b> קריאת התורה בשבת <i>7 סעיפים</i></span>
+<span class="simrow"><b>רפ&quot;ג</b> מדוע אין מוציאין ספר תורה שני <i>סעיף אחד</i></span>
+<span class="simrow"><b>רפ&quot;ד</b> הפטרה וברכותיה <i>7 סעיפים</i></span>
+<span class="simrow"><b>רפ&quot;ו</b> תפילת מוסף וזמנה <i>5 סעיפים</i></span>
+<span class="simrow"><b>רצ&quot;ב</b> תפילת מנחה של שבת <i>שני סעיפים</i></span>
 </span>
 <span class="chev" aria-hidden="true"></span>
 </button>
 </h2>
 <div class="panel" id="p6" role="region" aria-labelledby="b6">
-<div class="sec">
-<p class="sech">הסימנים</p>
-<div class="sim">
-<b>רפ&quot;א</b>
-<span class="t">תפילת שחרית של שבת</span>
-<span class="all">כל הסימן · סעיף אחד</span>
-</div>
-<div class="sim">
-<b>רפ&quot;ב</b>
-<span class="t">קריאת התורה בשבת</span>
-<span class="all">כל הסימן · 7 סעיפים</span>
-</div>
-<div class="sim">
-<b>רפ&quot;ג</b>
-<span class="t">מספר העולים לתורה</span>
-<span class="all">כל הסימן · סעיף אחד</span>
-</div>
-<div class="sim">
-<b>רפ&quot;ד</b>
-<span class="t">הפטרה וברכותיה</span>
-<span class="all">כל הסימן · 7 סעיפים</span>
-</div>
-<div class="sim">
-<b>רפ&quot;ו</b>
-<span class="t">תפילת מוסף וזמנה</span>
-<span class="all">כל הסימן · 5 סעיפים</span>
-</div>
-<div class="sim">
-<b>רצ&quot;ב</b>
-<span class="t">תפילת מנחה של שבת</span>
-<span class="all">כל הסימן · שני סעיפים</span>
-</div>
-</div>
-<div class="sec">
-<p class="sech">נושאים עיקריים</p>
-<div class="chips"><span class="chip">שחרית של שבת</span><span class="chip">קריאת התורה</span><span class="chip">מספר העולים</span><span class="chip">הפטרה ומפטיר</span><span class="chip">מוסף וזמנו</span><span class="chip">תפילת מנחה</span></div>
-</div>
-<div class="sec">
-<p class="sech">מקורות</p>
-<div class="srcs three">
-<div>
-<p class="srch">יסוד — תנאים ואמוראים</p>
-<ul><li>מגילה כא ע&quot;ב</li><li>מגילה כג ע&quot;א</li><li>מגילה כט ע&quot;ב</li></ul>
-</div>
-<div>
-<p class="srch">ראשונים</p>
-<ul><li>רמב&quot;ם תפילה פי&quot;ב–פי&quot;ג</li></ul>
-</div>
-</div>
-</div>
-<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">שיא העומס ביחידה — עלות דחיסת חטיבה 4 לשני שבועות. החלוקה בין שבוע זה לבא אחריו היא ציבור מול יחיד.</p></div>
+<div class="sec"><p class="sech">ציר השבוע</p><p class="thesis">השבת מוסיפה רכיבים לסדר היום — שבעה קרואים במקום שלושה, הפטרה, מוסף, וקריאה נוספת במנחה. הסימנים מבררים את שיעור ההוספה ואת גבולותיה.</p></div>
+<div class="sec"><p class="sech">נקודות שחייבים לעצור בהן</p><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רפ&quot;ב ס&quot;ד–ו</span><span class="sq">המפטיר — האם הוא מן שבעת הקרואים?</span></summary><dl class="sbody"><dt>איפה</dt><dd>מגילה כג ע&quot;א · שו&quot;ע רפ&quot;ב ס&quot;ד–ו · מ&quot;ב ס&quot;ק יט · רפ&quot;ד ס&quot;א · מ&quot;ב רפ&quot;ד ס&quot;ק ב</dd><dt>השאלה</dt><dd>רב הונא ורבי ירמיה בר אבא נחלקו אם המפטיר עולה למניין שבעה; והשו&quot;ע פוסק &quot;מפטיר עולה&quot;, ובכל זאת קורא שבעה לפניו.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>איבעיא להו: מפטיר, מהו שיעלה למנין שבעה? רב הונא ורבי ירמיה בר אבא, חד אמר: עולה, וחד אמר: אינו עולה</q><cite>מגילה כג ע&quot;א</cite></div><div class="fq"><q>מיתיבי: המפטיר בנביא לא יפחות מעשרים ואחד פסוקין, כנגד שבעה שקראו בתורה. ואם איתא, עשרים וארבעה הויין!</q><cite>שם</cite></div><div class="fq"><q>מפני מה המפטיר בנביא צריך שיקרא בתורה תחלה — מפני כבוד תורה, וכיון דמשום כבוד תורה הוא — למנינא לא סליק</q><cite>שם, עולא — הטעם לצד &quot;אינו עולה&quot;</cite></div></dd><dt>נפקא מינה</dt><dd>סדר הקריאה: שבעה, קדיש, ואחר כך המפטיר — כדי לצאת גם דעת &quot;אינו עולה&quot; (שו&quot;ע ס&quot;ד; מ&quot;ב ס&quot;ק יט); ובדיעבד, סיים עם הששי ואמר קדיש — אינו צריך לקרות אחר (ס&quot;ו). ו&quot;מפני כבוד התורה&quot; חוזר בטעם ההפטרה — מ&quot;ב רפ&quot;ד ס&quot;ק ב.</dd></dl></details><details class="stop"><summary><span class="stag l">למעשה</span><span class="ssf">רפ&quot;ב ס&quot;א–ג</span><span class="sq">הוספה על הקרואים, ומי מצטרף — מן הדין למנהג הקהילה</span></summary><dl class="sbody"><dt>איפה</dt><dd>מגילה כג ע&quot;א · שו&quot;ע רפ&quot;ב ס&quot;א–ג · רמ&quot;א · מ&quot;ב ס&quot;ק ד–ז, יא–יב, יח, כג</dd><dt>השאלה</dt><dd>הדין מתיר להוסיף ומצרף אישה וקטן; המנהג מצמצם — ביום טוב אין מוסיפים, אישה אינה קוראת, וקטן — רק למפטיר; וקהילות נחלקו בעליית קטן.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>תנו רבנן: הכל עולין למנין שבעה, ואפילו קטן ואפילו אשה. אבל אמרו חכמים: אשה לא תקרא בתורה, מפני כבוד צבור</q><cite>מגילה כג ע&quot;א</cite></div><div class="fq"><q>מעלים קטן למניין שבעה ולמפטיר, אך כשמוציאים ספר שני למפטיר, רבים נהגו שלא להעלות קטן</q><cite>פניני הלכה, חפצי קודש טו, טו — תימן</cite></div><div class="fq"><q>וכן הוא מנהג תוניס... ולוב</q><cite>שם — למפטיר בלבד</cite></div><div class="fq"><q>מנהג יוצאי אשכנז... וכן מנהג אלג&#x27;יריה (מטה יהודה)</q><cite>שם — לא גם למפטיר</cite></div><div class="fq"><q>אם הגיע נער לקריאת בר מצווה בבית הכנסת, והתברר לגבאים שאירעה טעות והוא עדיין לא בן שלוש עשרה, כיון שזו שעת הדחק רשאים להעלותו לתורה</q><cite>שם — שעת הדחק</cite></div></dd><dt>נפקא מינה</dt><dd>קטן בזמננו — רק למפטיר, וכהן קטן אינו עולה במקום כהן (מ&quot;ב ס&quot;ק יב); ארבע פרשיות — יש מחמירין (ס&quot;ק כג); ושמחת תורה — מוסיפים (ס&quot;ק ז).</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רפ&quot;ו ס&quot;א–ד</span><span class="sq">מוסף — חובת כל יחיד, או תפילה כנגד קרבן הציבור?</span></summary><dl class="sbody"><dt>איפה</dt><dd>משנה ברכות ד, ז · ברכות ל ע&quot;א–ע&quot;ב · שו&quot;ע רפ&quot;ו ס&quot;א–ד · מ&quot;ב ס&quot;ק א, ג, ה–ו, י–יג · ב&quot;י רפ&quot;ו</dd><dt>השאלה</dt><dd>ראב&quot;ע — אין מוסף אלא בחבר עיר; חכמים — בכל מקום; ור&#x27; יהודה משמו — היחיד פטור במקום חבר עיר. והגמרא חוזרת ופוסקת כר&#x27; יהודה, ושוב דוחה.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>רבי אלעזר בן עזריה אומר, אין תפלת המוספין אלא בחבר עיר. וחכמים אומרים, בחבר עיר ושלא בחבר עיר. רבי יהודה אומר משמו, כל מקום שיש חבר עיר, היחיד פטור מתפלת המוספין</q><cite>משנה ברכות ד, ז</cite></div><div class="fq"><q>אמר רב הונא בר חיננא אמר רב חייא בר רב: הלכה כרבי יהודה שאמר משום רבי אלעזר בן עזריה</q><cite>ברכות ל ע&quot;א</cite></div><div class="fq"><q>מימי לא מצלינא צלותא דמוספין ביחיד</q><cite>שם, שמואל</cite></div><div class="fq"><q>יתיב רבי חנינא קרא קמיה דרבי ינאי, ויתיב וקאמר: הלכה כרבי יהודה... אמר ליה: פוק קרא קראיך לברא, דאין הלכה כרבי יהודה שאמר משום רבי אלעזר בן עזריה</q><cite>ברכות ל ע&quot;ב</cite></div><div class="fq"><q>וכל יום שיש קרבן מוסף תקנו בו תפלה שלישית כנגד קרבן מוסף</q><cite>רמב&quot;ם תפילה א, ה</cite></div></dd><dt>נפקא מינה</dt><dd>כל יחיד חייב במוסף (שו&quot;ע ס&quot;ב; מ&quot;ב ס&quot;ק ו), ואין לו תשלומין, שנזכר בו הקרבן (ס&quot;ק ג). ומוסף מול מנחה — מנחה תחילה, שהיא תדיר, ובדיעבד יצא (ס&quot;ד; מ&quot;ב ס&quot;ק י–יג).</dd></dl></details></div>
+<div class="sec"><p class="sech">שאר הסעיפים</p><table class="st"><tbody><tr><td>רפ&quot;א</td><td>אין לשחות בתיבות &quot;ולך אנחנו מודים&quot;; מאחרים לבוא בשבת, מרבים בזמירות, ומחזירין על &quot;לאל אשר שבת&quot;</td><td>שו&quot;ע · רמ&quot;א · מ&quot;ב ס&quot;ק א–ה</td></tr><tr><td>רפ&quot;ג</td><td>אין מוציאים ספר שני לפרשת המוספין — שאין בה אלא שני פסוקים; ותוס&#x27; — שההפטרות יהיו מעניין אחד</td><td>שו&quot;ע · מ&quot;ב ס&quot;ק א</td></tr><tr><td>רפ&quot;ד ס&quot;א</td><td>הפטרה מעניינה של פרשה, כ&quot;א פסוקים; ואינה נתקנת אלא אחר קריאת התורה</td><td>שו&quot;ע · רמ&quot;א · מ&quot;ב ס&quot;ק א–ב</td></tr><tr><td>רפ&quot;ד ס&quot;ב–ז</td><td>ר&quot;ח שחל בשבת; עניית אמן ומאה ברכות; קטן מפטיר; נשתתק; עד שיגמור הגולל; פרשיות מחוברות</td><td>שו&quot;ע ס&quot;ב–ז · רמ&quot;א</td></tr><tr><td>רפ&quot;ו ס&quot;א</td><td>מוסף — עד שבע שעות, ואחריהן &quot;נקרא פושע&quot; ויצא; ויש בו נשיאת כפים</td><td>שו&quot;ע ס&quot;א</td></tr><tr><td>רפ&quot;ו ס&quot;ג</td><td>טעימה קודם מוסף — מותר, סעודה אסורה; וקידוש במקום סעודה (← רע&quot;ג, שבוע 5)</td><td>שו&quot;ע ס&quot;ג · מ&quot;ב ס&quot;ק ז · ב&quot;י</td></tr><tr><td>רפ&quot;ו ס&quot;ה</td><td>אין אומרים ברכו אחר קדיש בתרא</td><td>שו&quot;ע ס&quot;ה</td></tr><tr><td>רצ&quot;ב</td><td>במנחה קורין שלושה מפרשה הבאה, אף ביום טוב שחל בשבת; צדקתך; פרקי אבות ושיר המעלות</td><td>שו&quot;ע ס&quot;א–ב · רמ&quot;א · ב&quot;ק פב ע&quot;א</td></tr></tbody></table></div>
+<div class="sec"><details class="enr"><summary>להעשרה</summary><div class="tr halakhic"><p class="trh">הרחבה הלכתית<em>מרחיב את הידע ההלכתי או פותח נושא חדש</em></p><ul><li><b>הרב פרופ&#x27; דניאל שפרבר</b>, דרכה של הלכה<i> (תשס&quot;ז) — מתיר</i></li><li><b>הרב פרופ&#x27; דניאל שפרבר</b>, &quot;כבוד הציבור וכבוד הבריות&quot;<i> · דעות 16 (תשס&quot;ג) — מתיר</i></li><li><b>הרב יהודה הרצל הנקין</b>, שו&quot;ת בני בנים א, ד; ב, יא; ד, ג<i> — מפרט את יסודות ההיתר ונמנע מלהתיר למעשה; ובמניין משפחתי — &quot;אולי ניתן להעלות את אם המשפחה, כיוון שאין בעיה של כבוד ציבור בקרב בני משפחה&quot; (ד, ג)</i></li><li><b>הרב יהודה הרצל הנקין</b>, &quot;מהו כבוד הציבור&quot;<i> · הדרום נה (תשמ&quot;ו) — מברר את יסודות ההיתר ונמנע מלהתיר למעשה</i></li><li><b>אריה ודב פרימר</b>, &quot;&#x27;כבוד הציבור&#x27; בקריאת נשים בתורה&quot;<i> · תחומין לו, 300–308 (תשע&quot;ו) — שולל · זמין חופשית באסיף</i></li><li><b>אליאב שוחטמן</b>, &quot;עליית נשים לתורה&quot;<i> · סיני קלה–קלו, רעא–שמט (תשס&quot;ה) — שולל</i></li><li><b>הרב שגיא מזוז</b>, &quot;עליית נשים לתורה בימינו&quot;<i> · אסיף י, 312–340 (תשפ&quot;ה) — סקירה · זמין חופשית</i></li></ul></div></details></div>
 </div>
 </section>
 <section class="wk">
@@ -672,59 +422,20 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 <button class="tog" id="b7" aria-expanded="true" aria-controls="p7">
 <span>
 <span class="num">שבוע 7 <span class="dt">· 23–29.11</span></span>
-<span class="axis">שנים מקרא, תענית בשבת, וסעודות היום</span>
-<span class="simline">רפ&quot;ה · רפ&quot;ז · רפ&quot;ח · ר&quot;צ · רצ&quot;א</span>
+<span class="axis">השבת של היחיד: תורה, עונג וסעודות</span>
+<span class="simrow"><b>רפ&quot;ה</b> שניים מקרא ואחד תרגום <i>7 סעיפים</i></span>
+<span class="simrow"><b>רפ&quot;ז</b> ביקור חולים ותנחומין בשבת <i>סעיף אחד</i></span>
+<span class="simrow"><b>רפ&quot;ח</b> איסור תענית בשבת; צום חלום <i>10 סעיפים</i></span>
+<span class="simrow"><b>ר&quot;צ</b> מאה ברכות בשבת; תורה ועונג <i>שני סעיפים</i></span>
+<span class="simrow"><b>רצ&quot;א</b> סעודה שלישית <i>6 סעיפים</i></span>
 </span>
 <span class="chev" aria-hidden="true"></span>
 </button>
 </h2>
 <div class="panel" id="p7" role="region" aria-labelledby="b7">
-<div class="sec">
-<p class="sech">הסימנים</p>
-<div class="sim">
-<b>רפ&quot;ה</b>
-<span class="t">שניים מקרא ואחד תרגום</span>
-<span class="all">כל הסימן · 7 סעיפים</span>
-</div>
-<div class="sim">
-<b>רפ&quot;ז</b>
-<span class="t">ביקור חולים ותנחומין בשבת</span>
-<span class="all">כל הסימן · סעיף אחד</span>
-</div>
-<div class="sim">
-<b>רפ&quot;ח</b>
-<span class="t">איסור תענית בשבת; צום חלום</span>
-<span class="all">כל הסימן · 10 סעיפים</span>
-</div>
-<div class="sim">
-<b>ר&quot;צ</b>
-<span class="t">סעודת שחרית; שינה ותלמוד תורה</span>
-<span class="all">כל הסימן · שני סעיפים</span>
-</div>
-<div class="sim">
-<b>רצ&quot;א</b>
-<span class="t">סעודה שלישית</span>
-<span class="all">כל הסימן · 6 סעיפים</span>
-</div>
-</div>
-<div class="sec">
-<p class="sech">נושאים עיקריים</p>
-<div class="chips"><span class="chip">שניים מקרא ואחד תרגום</span><span class="chip">ביקור חולים ותנחומין בשבת</span><span class="chip">איסור תענית בשבת</span><span class="chip">צום חלום</span><span class="chip">סעודת שחרית</span><span class="chip">שינה ותלמוד תורה</span><span class="chip">סעודה שלישית</span></div>
-</div>
-<div class="sec">
-<p class="sech">מקורות</p>
-<div class="srcs three">
-<div>
-<p class="srch">יסוד — תנאים ואמוראים</p>
-<ul><li>ברכות ח ע&quot;א</li><li>שבת קיז ע&quot;ב</li><li>שבת קיח ע&quot;א–ע&quot;ב</li></ul>
-</div>
-<div>
-<p class="srch">ראשונים</p>
-<ul><li>רא&quot;ש ברכות פ&quot;א סי&#x27; ח</li><li>טור סי&#x27; רפ&quot;ה</li><li>רש&quot;י שבת קיז ע&quot;ב ד&quot;ה &quot;שלוש סעודות&quot;</li><li>תוס&#x27; שם ד&quot;ה &quot;במה&quot;</li><li>רא&quot;ש שבת פט&quot;ז סי&#x27; ה</li></ul>
-</div>
-</div>
-</div>
-<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רפ&quot;ה (שמו&quot;ת) הוא מוקד: מהו &quot;תרגום&quot;, האם רש&quot;י מועיל, וזמן ההשלמה. נשאל תדיר.</p></div>
+<div class="sec"><p class="sech">ציר השבוע</p><p class="thesis">אחרי סדרי הציבור, הסימנים עוברים אל היחיד: לימוד הפרשה לעצמו, חלוקת הזמן בין תורה לעונג, היחס לצער ולתענית, וסעודות היום.</p></div>
+<div class="sec"><p class="sech">נקודות שחייבים לעצור בהן</p><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רפ&quot;ה ס&quot;א–ב</span><span class="sq">שניים מקרא ואחד תרגום — ומה ממלא את מקום התרגום?</span></summary><dl class="sbody"><dt>איפה</dt><dd>ברכות ח ע&quot;א–ע&quot;ב · שו&quot;ע רפ&quot;ה ס&quot;א–ב · מ&quot;ב ס&quot;ק ב–ו · ביאור הלכה ד&quot;ה תרגום וגם פירש&quot;י · טור וב&quot;י רפ&quot;ה</dd><dt>השאלה</dt><dd>הסמ&quot;ג — הפירוש מועיל יותר מן התרגום; ר&quot;י, רב עמרם ורב נטרונאי — התרגום עדיף, שניתן בסיני; ותוס&#x27; והרא&quot;ש — פירוש המבאר כרש&quot;י אינו גרוע (ב&quot;י; ביאור הלכה שם).</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>אמר רב הונא בר יהודה, אמר רבי אמי: לעולם ישלים אדם פרשיותיו עם הצבור. שנים מקרא ואחד תרגום</q><cite>ברכות ח ע&quot;א</cite></div><div class="fq"><q>כדאמר להו רבי יהושע בן לוי לבניה: אשלימו פרשיותייכו עם הצבור שנים מקרא ואחד תרגום</q><cite>ברכות ח ע&quot;ב</cite></div><div class="fq"><q>ופסוק שאין בו תרגום קוראהו שלש פעמים, עד שישלים פרשיותיו עם הצבור</q><cite>רמב&quot;ם תפילה יג, כה</cite></div></dd><dt>נפקא מינה</dt><dd>ירא שמים — תרגום וגם רש&quot;י (ס&quot;ב); ביאור הלכה מכריע לנהוג כב&quot;י, שהתרגום מפרש כל פסוק וכל תיבה; ומ&quot;ב ס&quot;ק ו: &quot;ובאמת כן ראוי לנהוג לכל אדם שילמוד בכל שבוע הסדרה עם פירש&quot;י לבד התרגום&quot;.</dd></dl></details><details class="stop"><summary><span class="stag i">ציר עיוני</span><span class="ssf">רפ&quot;ח; ר&quot;צ</span><span class="sq">עונג וצער — מה נחשב עונג לאדם המסוים, ועד היכן?</span></summary><dl class="sbody"><dt>איפה</dt><dd>ברכות לא ע&quot;ב · שבת יא ע&quot;א · ירושלמי שבת טו, ג · שו&quot;ע רפ&quot;ח ס&quot;א–ז · ר&quot;צ · רמ&quot;א · מ&quot;ב רפ&quot;ח ס&quot;ק א, ד–ה · ר&quot;צ ס&quot;ק ג–ז</dd><dt>השאלה</dt><dd>הקריטריון בשו&quot;ע הוא עונג לאדם המסוים — מי שהאכילה מזיקה לו, המתענה תמיד, שינת צהרים; וממנו גם החלוקה בין בני אדם ברמ&quot;א ר&quot;צ ס&quot;ב, בשם ירושלמי.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>ואמר רבי אלעזר משום רבי יוסי בן זמרא: כל היושב בתענית בשבת קורעים לו גזר דינו של שבעים שנה. ואף על פי כן חוזרין ונפרעין ממנו דין עונג שבת</q><cite>ברכות לא ע&quot;ב</cite></div><div class="fq"><q>יפה תענית לחלום כאש לנעורת. אמר רב חסדא: ובו ביום. ואמר רב יוסף: אפילו בשבת</q><cite>שבת יא ע&quot;א</cite></div><div class="fq"><q>רבי חגי בשם רבי שמואל בר נחמן: לא ניתנו שבתות וימים טובים אלא לאכילה ולשתייה... התירו לו לעסוק בהן בדברי תורה. רבי ברכיה בשם רבי חייא בר בא: לא ניתנו שבתות וימים טובים אלא לעסוק בהן בדברי תורה</q><cite>ירושלמי שבת טו, ג</cite></div><div class="fq"><q>הא כיצד? תן חלק לתלמוד תורה וחלק לאכול ולשתות</q><cite>שם</cite></div><div class="fq"><q>כך היה מנהג הצדיקים הראשונים: מתפלל אדם בשבת שחרית ומוסף בבית הכנסת, ויבוא לביתו ויסעוד סעודה שנייה, וילך לבית המדרש יקרא וישנה עד המנחה, ויתפלל מנחה, ואחר כך יקבע סעודה שלישית</q><cite>רמב&quot;ם שבת ל, י — חלוקה בתוך היום</cite></div></dd><dt>נפקא מינה</dt><dd>תענית לשם תענית — אסורה אפילו שעה, והמתענים עד חצות על הגזרות &quot;שלא כדין עושין&quot; (מ&quot;ב רפ&quot;ח ס&quot;ק א); בכייה — הט&quot;ז מצמצם, וא&quot;ר ותו&quot;ש מתירים (ס&quot;ק ד); תענית חלום — מותר, ויש אומרים שבזמן הזה לא (רפ&quot;ח ס&quot;ד–ה).</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רצ&quot;א ס&quot;ה</span><span class="sq">סעודה שלישית — רק בפת, או גם במזונות, במלפתן ובפירות?</span></summary><dl class="sbody"><dt>איפה</dt><dd>שבת קיז ע&quot;ב · שו&quot;ע רצ&quot;א ס&quot;ה · רמ&quot;א · מ&quot;ב ס&quot;ק כב–כד · טור רצ&quot;א</dd><dt>השאלה</dt><dd>ר&quot;י (טור): כיון שג&#x27; סעודות נלמדות מג&#x27; &quot;היום&quot; שבמן — צריך לעשותה בפת; ויש אומרים במזונות, במלפתן או אף בפירות; והשו&quot;ע: &quot;וסברא ראשונה עיקר&quot; (ס&quot;ה).</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>תנו רבנן: כמה סעודות חייב אדם לאכול בשבת — שלש. רבי חידקא אומר: ארבע. אמר רבי יוחנן, ושניהם מקרא אחד דרשו: &quot;ויאמר משה אכלוהו היום כי שבת היום לה&#x27; היום לא תמצאהו בשדה&quot;</q><cite>שבת קיז ע&quot;ב</cite></div></dd><dt>נפקא מינה</dt><dd>מי שאינו יכול לאכול פת — שבע ביותר (שו&quot;ע), וערב פסח שחל בשבת (רמ&quot;א); ולמצווה מן המובחר לכו&quot;ע — בפת ושתי ככרות (מ&quot;ב ס&quot;ק כג).</dd></dl></details></div>
+<div class="sec"><p class="sech">שאר הסעיפים</p><table class="st"><tbody><tr><td>רפ&quot;ה ס&quot;ג–ד</td><td>&quot;עם הציבור&quot; — מיום ראשון; מן המובחר קודם סעודת שבת, ובדיעבד עד המנחה, עד רביעי או עד שמיני עצרת (← רצ&quot;ט ס&quot;ו, שבוע 9)</td><td>שו&quot;ע ס&quot;ג–ד · מ&quot;ב ס&quot;ק ז–יג · ביאור הלכה ד&quot;ה ישלים אחר אכילה</td></tr><tr><td>רפ&quot;ה ס&quot;ה</td><td>שניים מקרא בשעת קריאת התורה — יכול; והשל&quot;ה והגר&quot;א מחמירים</td><td>שו&quot;ע ס&quot;ה · מ&quot;ב ס&quot;ק יד–טו · ביאור הלכה ד&quot;ה יכול לקרות</td></tr><tr><td>רפ&quot;ה ס&quot;ו–ז</td><td>מלמדי תינוקות פטורים; אין צריך לקרות פרשת יו&quot;ט, ונהגו לקרות ההפטרה</td><td>שו&quot;ע ס&quot;ו–ז · רמ&quot;א</td></tr><tr><td>רפ&quot;ז</td><td>ניחום אבלים וביקור חולים — מותר, ובנוסח של שבת; &quot;בקושי התירו&quot; (שבת יב ע&quot;ב)</td><td>שו&quot;ע · רמ&quot;א · מ&quot;ב ס&quot;ק א–ג</td></tr><tr><td>רפ&quot;ח ס&quot;ח–י</td><td>אין מתענין ואין צועקין על צרה, חוץ מצרת מזונות, עיר שהקיפוה, ספינה ונרדף; וחולה בסכנה — מצלאים</td><td>שו&quot;ע ס&quot;ח–י · רמ&quot;א</td></tr><tr><td>ר&quot;צ</td><td>מאה ברכות בפירות ומיני ריח; שינת צהרים — עונג; אחר סעודת שחרית קובעים מדרש</td><td>שו&quot;ע ס&quot;א–ב · רמ&quot;א · מ&quot;ב ס&quot;ק ג–ז</td></tr><tr><td>רצ&quot;א ס&quot;א–ד, ו</td><td>כביצה; זמנה מן המנחה; נמשכה סעודת הבוקר — מפסיק; שתי ככרות; נשים חייבות</td><td>שו&quot;ע ס&quot;א–ד, ו · רמ&quot;א · מ&quot;ב ס&quot;ק ב</td></tr></tbody></table></div>
 </div>
 </section>
 <section class="wk">
@@ -732,54 +443,21 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 <button class="tog" id="b8" aria-expanded="true" aria-controls="p8">
 <span>
 <span class="num">שבוע 8 <span class="dt">· 30.11–6.12</span></span>
-<span class="axis">ההבדלה: התפילה, הכוס, הבשמים</span>
-<span class="simline">רצ&quot;ד · רצ&quot;ה · רצ&quot;ו · רצ&quot;ז</span>
+<span class="axis">ההבדלה: התפילה, הכוס והבשמים</span>
+<span class="simrow"><b>רצ&quot;ד</b> &quot;אתה חוננתנו&quot;; טעה ולא הבדיל <i>5 סעיפים</i></span>
+<span class="simrow"><b>רצ&quot;ה</b> הבדלת שליח הציבור; ויהי נועם וסדר קדושה <i>סעיף אחד</i></span>
+<span class="simrow"><b>רצ&quot;ו</b> סדר ההבדלה; חיוב נשים <i>8 סעיפים</i></span>
+<span class="simrow"><b>רצ&quot;ז</b> ברכת הבשמים; נשמה יתרה <i>5 סעיפים</i></span>
 </span>
 <span class="chev" aria-hidden="true"></span>
 </button>
 </h2>
 <div class="panel" id="p8" role="region" aria-labelledby="b8">
-<div class="sec">
-<p class="sech">הסימנים</p>
-<div class="sim">
-<b>רצ&quot;ד</b>
-<span class="t">&quot;אתה חוננתנו&quot;; טעה ולא הבדיל</span>
-<span class="all">כל הסימן · 5 סעיפים</span>
-</div>
-<div class="sim">
-<b>רצ&quot;ה</b>
-<span class="t">סדר קדושה ו&quot;ויהי נועם&quot;</span>
-<span class="all">כל הסימן · סעיף אחד</span>
-</div>
-<div class="sim">
-<b>רצ&quot;ו</b>
-<span class="t">סדר ההבדלה; חיוב נשים</span>
-<span class="all">כל הסימן · 8 סעיפים</span>
-</div>
-<div class="sim">
-<b>רצ&quot;ז</b>
-<span class="t">ברכת הבשמים; נשמה יתרה</span>
-<span class="all">כל הסימן · 5 סעיפים</span>
-</div>
-</div>
-<div class="sec">
-<p class="sech">נושאים עיקריים</p>
-<div class="chips"><span class="chip">אתה חוננתנו</span><span class="chip">טעה ולא הבדיל</span><span class="chip">סדר קדושה ו&quot;ויהי נועם&quot;</span><span class="chip">סדר ההבדלה</span><span class="chip">חיוב נשים</span><span class="chip">בשמים</span><span class="chip">נשמה יתרה</span></div>
-</div>
-<div class="sec">
-<p class="sech">מקורות</p>
-<div class="srcs three">
-<div>
-<p class="srch">יסוד — תנאים ואמוראים</p>
-<ul><li>ברכות כט ע&quot;א</li><li>ברכות לג ע&quot;א</li><li>פסחים קג ע&quot;ב</li><li>פסחים קז ע&quot;א</li><li>ברכות נא ע&quot;ב</li><li>ביצה לג ע&quot;ב</li></ul>
-</div>
-<div>
-<p class="srch">ראשונים</p>
-<ul><li>רשב&quot;ם פסחים קג ע&quot;ב</li><li>תוס&#x27; פסחים קז ע&quot;א</li><li>רא&quot;ש פסחים פ&quot;י סי&#x27; יז</li><li>רמב&quot;ם שבת פכ&quot;ט ה&quot;ו, כ&quot;ד</li></ul>
-</div>
-</div>
-</div>
-<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רצ&quot;ג (ערבית של מוצאי שבת) נלמד ביחידה א&#x27;, שבוע 3.</p></div>
+<div class="sec"><p class="caln">שבוע קצר — מסתיים ביום חמישי 3.12; בערב שבת 4.12 נדלק הנר הראשון של חנוכה. רצ&quot;ו ס&quot;ה (נר חנוכה ויין להבדלה) נלמד בימים שבהם חנוכה מתחיל.</p></div>
+<div class="sec"><p class="sech">ציר השבוע</p><p class="thesis">יציאת השבת אינה נעשית ברגע אחד: מבדילים בתפילה ועל הכוס, ומנהגי מוצאי שבת מלווים את המעבר מן הקודש אל ימי המעשה.</p></div>
+<div class="sec"><p class="sech">נקודות שחייבים לעצור בהן</p><details class="stop"><summary><span class="stag i">ציר עיוני</span><span class="ssf">רצ&quot;ד ס&quot;א–ב</span><span class="sq">עיקר תקנת ההבדלה — בתפילה, או על הכוס?</span></summary><dl class="sbody"><dt>איפה</dt><dd>ברכות לג ע&quot;א · שו&quot;ע רצ&quot;ד ס&quot;א–ב · מ&quot;ב ס&quot;ק א–ה</dd><dt>השאלה</dt><dd>הגמרא מתארת תקנה שנעה בין תפילה לכוס לפי מצב הדור; ורב נחמן בר יצחק קורא לתפילה &quot;עיקר תקנתא&quot; — ומכאן מה קורה למי שטעה באחת מהן.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>אנשי כנסת הגדולה תקנו להם לישראל ברכות ותפלות, קדושות והבדלות</q><cite>ברכות לג ע&quot;א, ר&#x27; חייא בר אבא בשם ר&#x27; יוחנן</cite></div><div class="fq"><q>בתחלה קבעוה בתפלה. העשירו — קבעוה על הכוס. חזרו והענו — קבעוה בתפלה. והם אמרו: המבדיל בתפלה — צריך שיבדיל על הכוס</q><cite>שם</cite></div><div class="fq"><q>ומה תפלה דעיקר תקנתא היא, אמרי: המבדיל בתפלה — צריך שיבדיל על הכוס. המבדיל על הכוס, דלאו עיקר תקנתא היא — לא כל שכן!</q><cite>שם, רב נחמן בר יצחק</cite></div><div class="fq"><q>לא תימא מפני שיכול לאומרה על הכוס, אלא אימא מפני שאומרה על הכוס</q><cite>שם, רבא — ותיקון הגמרא</cite></div></dd><dt>נפקא מינה</dt><dd>טעה ולא הבדיל בתפילה — אינו חוזר, שמבדיל על הכוס (ס&quot;א); טעם קודם הבדלה על הכוס — חוזר ומבדיל בתפילה, כקנס (מ&quot;ב ס&quot;ק ד); אין לו כוס ואינו מצפה שיהיה לו למחר — חוזר (ס&quot;ב). ושלוש הרמות — תפילה, כוס, &quot;המבדיל בין קודש לחול&quot; — מ&quot;ב ס&quot;ק ג (← רצ&quot;ט ס&quot;י, שבוע 9).</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רצ&quot;ו ס&quot;ח</span><span class="sq">נשים בהבדלה — ההבדלה שייכת ל&quot;זכור&quot; של שבת, או שהיא מצוות מוצאי שבת?</span></summary><dl class="sbody"><dt>איפה</dt><dd>שו&quot;ע רצ&quot;ו ס&quot;ח · רמ&quot;א · מ&quot;ב ס&quot;ק א, לד–לו</dd><dt>השאלה</dt><dd>חייבות — &quot;דבדיני שבת איש ואשה שוין, דאיתקש זכור לשמור&quot;, והבדלה בכלל זכור; פטורות — שהבדלה &quot;כיון שהיא בחול&quot; אינה מדיני שבת (מ&quot;ב ס&quot;ק לד).</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>וצריך לזכרהו בכניסתו וביציאתו — בכניסתו בקידוש היום, וביציאתו בהבדלה</q><cite>רמב&quot;ם שבת כט, א</cite></div></dd><dt>נפקא מינה</dt><dd>לא יבדילו לעצמן, אלא ישמעו מן האנשים (רמ&quot;א); הב&quot;ח — יכולות להמשיך על עצמן חיוב, והמ&quot;א מסיק כמותו (מ&quot;ב ס&quot;ק לה); מי שכבר הבדיל — לא יבדיל להוציא נשים לבדן (ס&quot;ק לו). ← רע&quot;א ס&quot;ב, שבוע 3: אותו היקש — ובקידוש מוציאות את האנשים.</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רצ&quot;ז ס&quot;א, ה</span><span class="sq">בשמים — חובה, או מנהג חכמים שאינו מוציא את מי שאינו יודע?</span></summary><dl class="sbody"><dt>איפה</dt><dd>ביצה טז ע&quot;א · שו&quot;ע רצ&quot;ז ס&quot;א–ה · רמ&quot;א · מ&quot;ב ס&quot;ק ב, יג</dd><dt>השאלה</dt><dd>השו&quot;ע ס&quot;ה מתיר למי שאינו מריח לברך כדי להוציא את מי שאינו יודע; וכל האחרונים חולקים: הבשמים &quot;רק מנהג החכמים&quot;, ואין בהם ערבות כבקידוש ובהבדלה (מ&quot;ב ס&quot;ק יג).</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>דאמר רבי שמעון בן לקיש: נשמה יתירה נותן הקדוש ברוך הוא באדם ערב שבת, ולמוצאי שבת נוטלין אותה הימנו</q><cite>ביצה טז ע&quot;א</cite></div></dd><dt>נפקא מינה</dt><dd>אין לו בשמים — אינו צריך לחזור אחריהם (ס&quot;א); של בית הכסא ושל מתים — לא יצא (ס&quot;ב ורמ&quot;א); הדס — יניח עם הבשמים, &quot;דאז עושין ככולי עלמא&quot; (רמ&quot;א ס&quot;ד).</dd></dl></details></div>
+<div class="sec"><p class="sech">שאר הסעיפים</p><table class="st"><tbody><tr><td>רצ&quot;ד ס&quot;ג–ה</td><td>ת&quot;ב שחל באחד בשבת; סיים הברכה — אינו חוזר; המחמיר לחזור — רק אם סיים תפילתו</td><td>שו&quot;ע ס&quot;ג–ה · מ&quot;ב ס&quot;ק ט</td></tr><tr><td>רצ&quot;ה</td><td>שליח הציבור מבדיל למי שאין לו יין; ויהי נועם וסדר קדושה — ובשבוע שאינו שלם במלאכה אין אומרים ויהי נועם</td><td>שו&quot;ע · רמ&quot;א · מ&quot;ב ס&quot;ק ג · טור רצ&quot;ה</td></tr><tr><td>רצ&quot;ו ס&quot;א</td><td>סדר הבדלה — יבנ&quot;ה; נותנים עיניים בכוס ובנר; שפיכת היין</td><td>שו&quot;ע ס&quot;א · רמ&quot;א</td></tr><tr><td>רצ&quot;ו ס&quot;ב–ג</td><td>אין מבדילין על הפת; על השכר — כשהוא חמר מדינה; אין לו יין ולא שכר</td><td>שו&quot;ע ס&quot;ב–ג · רמ&quot;א · מ&quot;ב ס&quot;ק יא–יג</td></tr><tr><td>רצ&quot;ו ס&quot;ד–ה</td><td>יין להבדלה קודם ליין לקידוש, שקידוש אפשר בפת (← רע&quot;א ס&quot;יא, שבוע 4); נר חנוכה קודם ליין להבדלה (→ חנוכה)</td><td>שו&quot;ע ס&quot;ד–ה · טור · ב&quot;י · מ&quot;ב ס&quot;ק כו</td></tr><tr><td>רצ&quot;ו ס&quot;ו–ז</td><td>מבדיל מיושב, ונוהגים מעומד; שמעו בבית הכנסת ונתכוונו שלא לצאת — מבדילין בבית</td><td>שו&quot;ע ס&quot;ו–ז · רמ&quot;א</td></tr><tr><td>רצ&quot;ז ס&quot;ג–ד</td><td>בשמים שבקנקני יין של עכו&quot;ם — אין מבדילין עליהם; ההדס</td><td>שו&quot;ע ס&quot;ג–ד · רמ&quot;א</td></tr></tbody></table></div>
+<div class="sec"><details class="enr"><summary>להעשרה</summary><div class="tr iyun"><p class="trh">העשרה עיונית<em>היסטורי, פילולוגי, ריאלי, ביקורתי</em></p><ul><li><b>Lawrence A. Hoffman</b>, Beyond the Text: A Holistic Approach to Liturgy<i> — ובו פרק &quot;Havdalah: A Case of Categories&quot; — הבדלה כטקס המארגן את ההבחנה קודש/חול</i></li><li><b>Moshe Lavee</b>, Literary Canonization at Work: The Authority of Aggadic Midrash and the Evolution of Havdalah Poetry in the Genizah<i> · AJS Review 37:2, 285–313 (2013)</i></li></ul></div></details></div>
 </div>
 </section>
 <section class="wk">
@@ -788,53 +466,19 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
 <span>
 <span class="num">שבוע 9 <span class="dt">· 7–13.12</span></span>
 <span class="axis">האש, המלאכה, ומלווה מלכה</span>
-<span class="simline">רצ&quot;ח · רצ&quot;ט · ש&#x27;</span>
+<span class="simrow"><b>רצ&quot;ח</b> ברכת האש; אבוקה <i>15 סעיפים</i></span>
+<span class="simrow"><b>רצ&quot;ט</b> מלאכה קודם הבדלה; תשלומי הבדלה <i>10 סעיפים</i></span>
+<span class="simrow"><b>ש&#x27;</b> סעודת מלווה מלכה <i>סעיף אחד</i></span>
 </span>
 <span class="chev" aria-hidden="true"></span>
 </button>
 </h2>
 <div class="panel" id="p9" role="region" aria-labelledby="b9">
-<div class="sec"><p class="caln">חנוכה — נוכחות חלקית צפויה</p></div>
-<div class="sec">
-<p class="sech">הסימנים</p>
-<div class="sim">
-<b>רצ&quot;ח</b>
-<span class="t">ברכת האש; אבוקה</span>
-<span class="all">כל הסימן · 15 סעיפים</span>
-</div>
-<div class="sim">
-<b>רצ&quot;ט</b>
-<span class="t">מלאכה קודם הבדלה; תשלומי הבדלה</span>
-<span class="all">כל הסימן · 10 סעיפים</span>
-</div>
-<div class="sim">
-<b>ש&#x27;</b>
-<span class="t">סעודת מלווה מלכה</span>
-<span class="all">כל הסימן · סעיף אחד</span>
-</div>
-</div>
-<div class="sec">
-<p class="sech">נושאים עיקריים</p>
-<div class="chips"><span class="chip">ברכת האש</span><span class="chip">אבוקה</span><span class="chip">אור ששבת</span><span class="chip">מלאכה קודם הבדלה</span><span class="chip">תשלומין עד יום ג&#x27;</span><span class="chip">מלווה מלכה</span></div>
-</div>
-<div class="sec">
-<p class="sech">מקרה מבחן</p>
-<div class="case"><h4>הדלקת נר חנוכה בערב שבת</h4><p>לא תרגיל היפותטי אלא ההלכה של אותו שבוע: הנר הראשון דלק בערב שבת, 4.12. מחייב את בין השמשות, סדר ההדלקה וקבלת שבת מיחידה א&#x27;.</p></div>
-</div>
-<div class="sec">
-<p class="sech">מקורות</p>
-<div class="srcs three">
-<div>
-<p class="srch">יסוד — תנאים ואמוראים</p>
-<ul><li>ברכות נא ע&quot;ב</li><li>ברכות נג ע&quot;א–ע&quot;ב</li><li>פסחים נג ע&quot;ב</li><li>פסחים קה ע&quot;ב</li><li>שבת קיט ע&quot;ב</li></ul>
-</div>
-<div>
-<p class="srch">ראשונים</p>
-<ul><li>רש&quot;י ברכות נג ע&quot;א</li><li>תוס&#x27; ברכות נג ע&quot;א ד&quot;ה &quot;אין&quot;</li><li>רא&quot;ש ברכות פ&quot;ח</li><li>רמב&quot;ם שבת פכ&quot;ט הכ&quot;ה–הכ&quot;ז</li></ul>
-</div>
-</div>
-</div>
-<div class="sec"><p class="sech">הערת הציר</p><p class="wnote">רצ&quot;ט כבד.</p></div>
+<div class="sec"><p class="caln">שבוע חנוכה — שבוע לימוד מלא; נוכחות חלקית צפויה. ובשבת שבתוכו: הדלקת נר חנוכה בערב שבת, מיד לפני כניסתה.</p></div>
+<div class="sec"><p class="sech">ציר השבוע</p><p class="thesis">השבת אינה מסתיימת ברגע אחד: האש מציינת את חזרת האדם ליצירה, ההבדלה מתירה בהדרגה את חיי החול, ותשלומי ההבדלה ומלווה מלכה מראים שהזיקה לשבת נמשכת גם לאחר צאתה.</p></div>
+<div class="sec"><p class="sech">נקודות שחייבים לעצור בהן</p><details class="stop"><summary><span class="stag i">ציר עיוני</span><span class="ssf">רצ&quot;ח</span><span class="sq">ברכת האש — על בריאת האש, או על אש שחזרה להיות מותרת?</span></summary><dl class="sbody"><dt>איפה</dt><dd>פסחים נד ע&quot;א · ברכות נא ע&quot;ב · נג ע&quot;ב · שו&quot;ע רצ&quot;ח · מ&quot;ב ס&quot;ק ג, כו, לד, לז</dd><dt>השאלה</dt><dd>במוצאי שבת מברכים על בריאת האור, ובמוצאי יום הכפורים — רק על אור ששבת, שהותר עתה (מ&quot;ב ס&quot;ק כו); ומכאן ההבדלים בין שני המוצאים בס&quot;א, ו, ח.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>אין מברכין על האור אלא במוצאי שבת, הואיל ותחילת ברייתו הוא... תני חדא: אור היוצא מן העצים ומן האבנים מברכין עליו, ותני חדא: אין מברכין עליו. לא קשיא: כאן במוצאי שבת, כאן במוצאי יום הכפורים</q><cite>פסחים נד ע&quot;א</cite></div><div class="fq"><q>ובמוצאי שבת נתן הקדוש ברוך הוא דיעה באדם הראשון מעין דוגמא של מעלה, והביא שני אבנים וטחנן זו בזו, ויצא מהן אור</q><cite>שם</cite></div><div class="fq"><q>אמר רב יהודה אמר רב: אין מחזרין על האור כדרך שמחזרים על המצות. אמר רבי זירא: מריש הוה מהדרנא, כיון דשמענא להא דרב יהודה אמר רב, אנא נמי לא מהדרנא, אלא אי מקלע לי ממילא — מבריכנא</q><cite>ברכות נג ע&quot;ב</cite></div><div class="fq"><q>בית שמאי אומרים: שברא מאור האש, ובית הלל אומרים: בורא מאורי האש</q><cite>ברכות נא ע&quot;ב</cite></div><div class="fq"><q>כתב הרי&quot;ט ז&quot;ל: ודאי שברכת האור אינה ברכת הנהנין, דאם כן כל שעה שנהנה ממנו היה לו לברך עליו... ועוד דהא מסיקנא בפרק אלו דברים דלא בעינן כל שאותו ממש אלא כל שיכולין ליהנות ממנו... אלא שודאי זו ברכת השבח</q><cite>ריטב&quot;א פסחים נד ע&quot;א</cite></div></dd><dt>נפקא מינה</dt><dd>ובכל זאת — אין מברכין עד שיאותו לאורו (ס&quot;ד; ברכות נא ע&quot;ב), וסומא אינו מברך (ס&quot;יג). אור שהודלק לחולה — מברכין, שלא הודלק לעבירה (ס&quot;ה); &quot;עשוי להאיר&quot; (ס&quot;ט–י); ושלהבת מאחורי זכוכית — אין להקל לכתחילה (מ&quot;ב ס&quot;ק לז). ונורת להט — לפי כל אלה.</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רצ&quot;ט ס&quot;י</span><span class="sq">איזו הבדלה מתירה את החול?</span></summary><dl class="sbody"><dt>איפה</dt><dd>שבת קנ ע&quot;ב · שו&quot;ע רצ&quot;ט ס&quot;י · רמ&quot;א · מ&quot;ב ס&quot;ק לד–לה · ב&quot;י רצ&quot;ט</dd><dt>השאלה</dt><dd>הרמב&quot;ם והרא&quot;ש — אף שהבדיל בתפילה, אסור במלאכה עד שיאמר &quot;המבדיל בין קודש לחול&quot;; הגאונים — הבדלה בתפילה מתירה (ב&quot;י רצ&quot;ט). והר&quot;ן — לרש&quot;י &quot;המבדיל&quot; בלא שם, ולרי&quot;ף בשם.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>אסור לו לאדם שיעשה חפציו קודם שיבדיל! וכי תימא דאבדיל בתפלה — והאמר רב יהודה אמר שמואל: המבדיל בתפלה צריך שיבדיל על הכוס! וכי תימא דאבדיל על הכוס, כוס בשדה מי איכא?!... אמר ליה רבי אבא לרב אשי: במערבא אמרינן הכי: &quot;המבדיל בין קודש לחול&quot; ועבדינן צורכין. אמר רב אשי: כי הוינא בי רב כהנא הוה אמר &quot;המבדיל בין קודש לחול&quot; ומסלתינן סילתי</q><cite>שבת קנ ע&quot;ב</cite></div><div class="fq"><q>המבדיל בין קודש לחול — להיכרא בעלמא ללוות את המלך</q><cite>רש&quot;י שם</cite></div><div class="fq"><q>ועבדינן צורכין — ואחר כך אנו מברכין על הכוס ברכה גמורה דהבדלה, וכ&quot;ש דאי אבדיל בתפלה מותר לעשות צרכיו וחוזר ומבדיל על הכוס</q><cite>רש&quot;י שם</cite></div></dd><dt>נפקא מינה</dt><dd>הבדיל בתפילה — מותר במלאכה; לא הבדיל — אומר &quot;המבדיל&quot; בלא ברכה (שו&quot;ע ס&quot;י); ולאכילה לא מהני (מ&quot;ב ס&quot;ק לה). נשים — ילמדו לומר &quot;המבדיל&quot; (רמ&quot;א; ← רצ&quot;ו ס&quot;ח, שבוע 8). ושלוש הרמות ← מ&quot;ב רצ&quot;ד ס&quot;ק ג, שבוע 8.</dd></dl></details><details class="stop"><summary><span class="stag m">מחלוקת מפורשת</span><span class="ssf">רצ&quot;ט ס&quot;ו</span><span class="sq">עד מתי מבדילים — עד סוף יום ג&#x27;, או יום ראשון בלבד?</span></summary><dl class="sbody"><dt>איפה</dt><dd>פסחים קו ע&quot;א–קז ע&quot;א · שו&quot;ע רצ&quot;ט ס&quot;ו · רמ&quot;א · מ&quot;ב ס&quot;ק טז–יח · ב&quot;י רצ&quot;ט</dd><dt>השאלה</dt><dd>בדברי רבא גורסים הרי&quot;ף והגאונים &quot;כל היום כולו&quot;, והתוס&#x27; והרא&quot;ש &quot;כל השבת כולה&quot; — עד יום ד&#x27;, כרבי זירא (ב&quot;י רצ&quot;ט); והשו&quot;ע מביא את שתי הדעות.</dd><dt>לראות בפנים</dt><dd><div class="fq"><q>אמרי בני רבי חייא: מי שלא הבדיל במוצאי שבת — מבדיל והולך בכל השבת כולו. ועד כמה? אמר רבי זירא: עד רביעי בשבת... לענין גיטין — חדא בשבתא, תרי ותלתא — בתר שבתא; ארבע וחמשא ומעלי יומא — קמי שבתא</q><cite>פסחים קו ע&quot;א</cite></div></dd><dt>נפקא מינה</dt><dd>והעיקר — עד סוף יום ג&#x27; (רמ&quot;א); ונר ובשמים — רק במוצאי שבת (ס&quot;ו; מ&quot;ב ס&quot;ק יח ← רצ&quot;ז, שבוע 8). שלושת הימים &quot;שייכין עדיין קצת לשבת שעבר&quot; — גם בהשלמת הפרשה (← מ&quot;ב רפ&quot;ה ס&quot;ק יא, שבוע 7).</dd></dl></details></div>
+<div class="sec"><p class="sech">שאר הסעיפים</p><table class="st"><tbody><tr><td>רצ&quot;ח ס&quot;ב–ג</td><td>אבוקה — מצוה מן המובחר; נר בעל שתי פתילות; מסתכלים בכפות ובצפרנים</td><td>שו&quot;ע ס&quot;ב–ג · רמ&quot;א</td></tr><tr><td>רצ&quot;ח ס&quot;יא–יד</td><td>נר בית הכנסת; סומא; מי שמברך לכולם</td><td>שו&quot;ע ס&quot;יא–יד</td></tr><tr><td>רצ&quot;ט ס&quot;א</td><td>אסור לאכול ולשתות משחשכה עד שיבדיל; היושב ואוכל מבעוד יום — אינו מפסיק</td><td>שו&quot;ע ס&quot;א · רמ&quot;א · מ&quot;ב ס&quot;ק ד</td></tr><tr><td>רצ&quot;ט ס&quot;ה</td><td>טעה ואכל קודם שהבדיל — יבדיל אחר כך (← רצ&quot;ד, שבוע 8)</td><td>שו&quot;ע ס&quot;ה</td></tr><tr><td>רצ&quot;ט ס&quot;ב–ד, ז–ט</td><td>שאר דיני הבדלה על הכוס וכיסוי הלחם (← רע&quot;א ס&quot;ד–ו, שבוע 3)</td><td>שו&quot;ע · רמ&quot;א</td></tr><tr><td>ש&#x27;</td><td>מלווה מלכה — יסדר שלחנו במוצאי שבת אפילו לכזית; ואינה חובה כשלוש סעודות</td><td>שבת קיט ע&quot;ב · שו&quot;ע · ב&quot;י · מ&quot;ב ס&quot;ק ב</td></tr></tbody></table></div>
+<div class="sec"><details class="enr"><summary>להעשרה</summary><div class="tr iyun"><p class="trh">העשרה עיונית<em>היסטורי, פילולוגי, ריאלי, ביקורתי</em></p><ul><li><b>Elliot K. Ginsburg</b>, The Sabbath in the Classical Kabbalah<i> · Littman Library of Jewish Civilization — פרק ד: &quot;Rituals of Separation: The Drama of Sabbath&#x27;s Departure in Zoharic Kabbalah&quot;, עמ&#x27; 256–284</i></li></ul></div></details></div>
 </div>
 </section>
 </main>
